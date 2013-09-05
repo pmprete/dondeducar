@@ -21,7 +21,7 @@ namespace dondEducar.Controllers
         {
             ViewBag.Message = "Your app description page.";
             var server = Client.GetServer();
-            var database = server.GetDatabase("test");
+            var database = server.GetDatabase(Url.DatabaseName);
             var collection = database.GetCollection<Item>("Item");
 
             var entity = new Item { Nombre = "Tom" };
@@ -31,13 +31,16 @@ namespace dondEducar.Controllers
             var query = Query<Item>.EQ(e => e.Id, id);
             entity = collection.FindOne(query);
 
-            //entity.Name = "Dick";
-            //collection.Save(entity);
+            entity.Nombre = "Dick";
+            collection.Save(entity);
 
-            //var update = Update<Entity>.Set(e => e.Name, "Harry");
-            //collection.Update(query, update);
+            var update = Update<Item>.Set(e => e.Nombre, "Harry");
+            collection.Update(query, update);
 
-            //collection.Remove(query);
+            collection.Remove(query);
+
+            entity = new Item { Nombre = "Josh" };
+            collection.Insert(entity);
 
             return View();
         }
