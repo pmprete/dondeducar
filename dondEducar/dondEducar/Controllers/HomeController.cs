@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MongoDB.Driver.Builders;
+using dondEducar.Models;
 
 namespace dondEducar.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {
@@ -18,6 +20,24 @@ namespace dondEducar.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your app description page.";
+            var server = Client.GetServer();
+            var database = server.GetDatabase("test");
+            var collection = database.GetCollection<Item>("Item");
+
+            var entity = new Item { Nombre = "Tom" };
+            collection.Insert(entity);
+
+            var id = entity.Id;
+            var query = Query<Item>.EQ(e => e.Id, id);
+            entity = collection.FindOne(query);
+
+            //entity.Name = "Dick";
+            //collection.Save(entity);
+
+            //var update = Update<Entity>.Set(e => e.Name, "Harry");
+            //collection.Update(query, update);
+
+            //collection.Remove(query);
 
             return View();
         }
