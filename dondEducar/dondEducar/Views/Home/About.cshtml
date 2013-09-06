@@ -32,3 +32,21 @@
         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
     </ul>
 </aside>
+
+@* grid *@
+<div id="gridEscuelas" class="grid"></div>
+@* /grid *@
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        //>>>Ventas
+        $.getJSON("@Url.Action("GetEscuelas")", { tagId: 1 }, function (data) {       
+            $("#gridEscuelas").slickgrid({
+                columns: EDUCAR.Grids.ColumnasEscuelas,
+                data: data,
+                slickGridOptions: EDUCAR.Grids.DefaultSlickGridOptions
+            });//<<<slickgrid            
+        });
+    });//<<<ready
+</script>

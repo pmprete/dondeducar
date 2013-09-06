@@ -1,16 +1,19 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="as-AR">
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/slickgrid")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/educar")
     <head>
         <meta charset="utf-8" />
         <title>@ViewBag.Title - My ASP.NET MVC Application</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
-        @Scripts.Render("~/bundles/angular")
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/jqueryui")
-        @Scripts.Render("~/bundles/jqueryval")
-        @Scripts.Render("~/bundles/modernizr")
-        @Styles.Render("~/Content/css")
     </head>
     <body>
         <header>
@@ -33,6 +36,8 @@
             </div>
         </header>
         <div id="body">
+            @* modal *@
+            <div id="educarModal" class="modal hide fade"></div>
             @RenderSection("featured", required: false)
             <section class="content-wrapper main-content clear-fix">
                 @RenderBody()

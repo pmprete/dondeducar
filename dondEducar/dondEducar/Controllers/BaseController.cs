@@ -6,19 +6,19 @@ namespace dondEducar.Controllers
 {
     public abstract class BaseController : Controller
     {
-        private readonly MongoUrl _mongoUrl = new MongoUrl(ConnectionString());
-        public MongoUrl Url
+        protected BaseController()
         {
-            get { return _mongoUrl; }
+            var url = new MongoUrl(ConnectionString());
+            var client = new MongoClient(url);
+            var server = client.GetServer();
+            _mongoDatabase = server.GetDatabase(url.DatabaseName);
         }
 
-        private readonly MongoClient _mongoClient = new MongoClient(ConnectionString());
-        public MongoClient Client
+        private readonly MongoDatabase _mongoDatabase;
+        public MongoDatabase Database
         {
-            get { return _mongoClient; }
+            get { return _mongoDatabase; }
         }
-
-        
 
         private static string ConnectionString()
         {

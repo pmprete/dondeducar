@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MongoDB.Driver.Builders;
+using Newtonsoft.Json;
 using dondEducar.Models;
 
 namespace dondEducar.Controllers
@@ -20,9 +21,7 @@ namespace dondEducar.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your app description page.";
-            var server = Client.GetServer();
-            var database = server.GetDatabase(Url.DatabaseName);
-            var collection = database.GetCollection<Item>("Item");
+            var collection = Database.GetCollection<Item>("Item");
 
             var entity = new Item { Nombre = "Tom" };
             collection.Insert(entity);
@@ -37,13 +36,28 @@ namespace dondEducar.Controllers
             var update = Update<Item>.Set(e => e.Nombre, "Harry");
             collection.Update(query, update);
 
-            collection.Remove(query);
+            //collection.Remove(query);
 
-            entity = new Item { Nombre = "Josh" };
-            collection.Insert(entity);
 
             return View();
         }
+
+        public String GetEscuelas(int? tagId)
+        {
+           
+            var collection = Database.GetCollection<Item>("Item");
+            var cursor = collection.FindAll();
+            var lista = cursor.ToList();
+            
+            var listaSerializada = JsonConvert.SerializeObject(
+                lista,
+                Formatting.Indented,
+                new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
+
+            return listaSerializada;
+            
+        }
+
 
         public ActionResult Contact()
         {
