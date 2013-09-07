@@ -7,6 +7,7 @@ namespace dondEducar.Models
     public class MongoEntity
     {
         [BsonId]
-        public ObjectId Id { get; set; }
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
     }
 }

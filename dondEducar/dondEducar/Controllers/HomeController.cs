@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
 using System.IO;
@@ -226,7 +227,7 @@ namespace dondEducar.Controllers
             var lista = cursor.ToList();
             
             var listaSerializada = JsonConvert.SerializeObject(
-                lista,
+                lista.ToList(),
                 Formatting.Indented,
                 new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
 

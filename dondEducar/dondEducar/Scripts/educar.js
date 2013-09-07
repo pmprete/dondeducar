@@ -137,7 +137,7 @@ EDUCAR.Grids.ColumnasEscuelas = [
     { id: "grid-telefonos", name: "Telefonos", field: "Telefonos" },
     { id: "grid-email", name: "Email", field: "Email" },
     { id: "grid-latitud", name: "Latitud", field: "Latitud" },
-    { id: "grid-longitud", name: "Longitud", field: "Longitud" },
+    { id: "grid-longitud", name: "Longitud", field: "Longitud" }
 ];
 
 
