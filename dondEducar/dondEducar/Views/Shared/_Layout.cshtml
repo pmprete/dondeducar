@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="as-AR">
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/bootstrap")
     @Styles.Render("~/Content/themes/base/css")
 
     @Scripts.Render("~/bundles/jquery")
@@ -28,7 +29,7 @@
                     <nav>
                         <ul id="menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Establecimientos", "Establecimientos", "Home")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                         </ul>
                     </nav>
@@ -51,7 +52,5 @@
             </div>
         </footer>
 
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
     </body>
 </html>

@@ -29,7 +29,9 @@ namespace dondEducar
                         "~/Scripts/jquery.event.drag.js",
                         "~/Scripts/SlickGrid/slick.core.js",
                         "~/Scripts/SlickGrid/slick.grid.js",
-                        "~/Scripts/SlickGrid/slick.dataview.js"));
+                        "~/Scripts/SlickGrid/slick.dataview.js",
+                        "~/Scripts/slick.responsiveness.js",
+                        "~/Scripts/bootstrap-slickgrid.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/educar").Include(
                        "~/Scripts/educar.js"));
@@ -39,7 +41,7 @@ namespace dondEducar
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
                        "~/Content/css/font-awesome.css",
                        "~/Content/css/bootstrap.css",
                        "~/Content/css/bootstrap-responsive.css",

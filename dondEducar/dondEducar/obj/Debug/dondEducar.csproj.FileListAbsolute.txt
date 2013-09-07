@@ -80,10 +80,13 @@ C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\ko\System.
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\ru\System.Spatial.resources.dll
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.csprojResolveAssemblyReference.cache
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.dll
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.pdb
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\MongoDB.Bson.dll
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\MongoDB.Driver.dll
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\MongoDB.Bson.xml
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\MongoDB.Driver.xml
+C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.csprojResolveAssemblyReference.cache
+C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\CsvHelper.dll
+C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\CsvHelper.pdb
+C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\CsvHelper.xml

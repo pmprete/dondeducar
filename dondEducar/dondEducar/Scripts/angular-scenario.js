@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * jQuery JavaScript Library v1.7.2
  * http://jquery.com/
  *
@@ -1509,7 +1509,7 @@ jQuery.support = (function() {
 
 	// Technique from Juriy Zaytsev
 	// http://perfectionkills.com/detecting-event-support-without-browser-sniffing/
-	// We only care about the case where non-standard event systems
+	// We only care About the case where non-standard event systems
 	// are used, namely in IE. Short-circuiting here helps us to
 	// avoid an eval call (in setAttribute) which can cause CSP
 	// to go haywire. See: https://developer.mozilla.org/en/Security/CSP
@@ -6461,7 +6461,7 @@ jQuery.extend({
 			}
 
 			// Resets defaultChecked for any radios and checkboxes
-			// about to be appended to the DOM in IE 6/7 (#8060)
+			// About to be appended to the DOM in IE 6/7 (#8060)
 			var len;
 			if ( !jQuery.support.appendChecked ) {
 				if ( elem[0] && typeof (len = elem.length) === "number" ) {
@@ -6976,7 +6976,7 @@ var r20 = /%20/g,
 	rheaders = /^(.*?):[ \t]*([^\r\n]*)\r?$/mg, // IE leaves an \r character at EOL
 	rinput = /^(?:color|date|datetime|datetime-local|email|hidden|month|number|password|range|search|tel|text|time|url|week)$/i,
 	// #7653, #8125, #8152: local protocol detection
-	rlocalProtocol = /^(?:about|app|app\-storage|.+\-extension|file|res|widget):$/,
+	rlocalProtocol = /^(?:About|app|app\-storage|.+\-extension|file|res|widget):$/,
 	rnoContent = /^(?:GET|HEAD)$/,
 	rprotocol = /^\/\//,
 	rquery = /\?/,
@@ -9903,7 +9903,7 @@ function map(obj, iterator, context) {
  * the length of a string.
  *
  * Note: This function is used to augment the Object type in Angular expressions. See
- * {@link angular.Object} for more information about Angular arrays.
+ * {@link angular.Object} for more information About Angular arrays.
  *
  * @param {Object|Array|string} obj Object, array, or string to inspect.
  * @param {boolean} [ownPropsOnly=false] Count only "own" properties in an object
@@ -9970,7 +9970,7 @@ function isLeafNode (node) {
  * * If  `source` is not an object or array, `source` is returned.
  *
  * Note: this function is used to augment the Object type in Angular expressions. See
- * {@link ng.$filter} for more information about Angular arrays.
+ * {@link ng.$filter} for more information About Angular arrays.
  *
  * @param {*} source The source that will be used to make a copy.
  *                   Can be any type, including primitives, `null`, and `undefined`.
@@ -10709,7 +10709,7 @@ function setupModuleLoader(window) {
  * @ngdoc property
  * @name angular.version
  * @description
- * An object that contains information about the current AngularJS version. This object has the
+ * An object that contains information About the current AngularJS version. This object has the
  * following properties:
  *
  * - `full` – `{string}` – Full version string, such as "0.9.18".
@@ -10995,7 +10995,7 @@ function JQLite(element) {
 
   if (isString(element)) {
     var div = document.createElement('div');
-    // Read about the NoScope elements here:
+    // Read About the NoScope elements here:
     // http://msdn.microsoft.com/en-us/library/ms533897(VS.85).aspx
     div.innerHTML = '<div>&#160;</div>' + element; // IE insanity to make NoScope elements work!
     div.removeChild(div.firstChild); // remove the superfluous div
@@ -11462,7 +11462,7 @@ forEach({
           events[type] = [];
 		
 		  // Refer to jQuery's implementation of mouseenter & mouseleave
-          // Read about mouseenter and mouseleave:
+          // Read About mouseenter and mouseleave:
           // http://www.quirksmode.org/js/events_mouse.html#link8
           var eventmap = { mouseleave : "mouseout", mouseenter : "mouseover"}          
           bindFn(element, eventmap[type], function(event) {
@@ -13159,7 +13159,7 @@ function $CompileProvider($provide) {
    *
    * The sanitization is a security measure aimed at prevent XSS attacks via html links.
    *
-   * Any url about to be assigned to a[href] via data-binding is first normalized and turned into an
+   * Any url About to be assigned to a[href] via data-binding is first normalized and turned into an
    * absolute url. Afterwards the url is matched against the `urlSanitizationWhitelist` regular
    * expression. If a match is found the original url is written into the dom. Otherwise the
    * absolute url is prefixed with `'unsafe:'` string and only then it is written into the DOM.
@@ -14242,7 +14242,7 @@ function $DocumentProvider(){
  * {@link ngMock.$exceptionHandler mock $exceptionHandler} which aids in testing.
  *
  * @param {Error} exception Exception associated with the error.
- * @param {string=} cause optional information about the context in which
+ * @param {string=} cause optional information About the context in which
  *       the error was thrown.
  *
  */
@@ -16301,7 +16301,7 @@ function qFactory(nextTick, exceptionHandler) {
    * @description
    * Creates a promise that is resolved as rejected with the specified `reason`. This api should be
    * used to forward rejection in a chain of promises. If you are dealing with the last promise in
-   * a promise chain, you don't need to worry about it.
+   * a promise chain, you don't need to worry About it.
    *
    * When comparing deferreds/promises to the familiar behavior of try/catch/throw, think of
    * `reject` as the `throw` keyword in JavaScript. This also means that if you "catch" an error via
@@ -18966,7 +18966,7 @@ function $TimeoutProvider() {
  * </pre>
  *
  *
- * For more information about how angular filters work, and how to create your own filters, see
+ * For more information About how angular filters work, and how to create your own filters, see
  * {@link guide/dev_guide.templates.filters Understanding Angular Filters} in the angular Developer
  * Guide.
  */
@@ -19033,7 +19033,7 @@ function $FilterProvider($provide) {
  * Selects a subset of items from `array` and returns it as a new array.
  *
  * Note: This function is used to augment the `Array` type in Angular expressions. See
- * {@link ng.$filter} for more information about Angular arrays.
+ * {@link ng.$filter} for more information About Angular arrays.
  *
  * @param {Array} array The source array.
  * @param {string|Object|function()} expression The predicate to be used for selecting items from
@@ -19654,7 +19654,7 @@ var uppercaseFilter = valueFn(uppercase);
  * value and sign (positive or negative) of `limit`.
  *
  * Note: This function is used to augment the `Array` type in Angular expressions. See
- * {@link ng.$filter} for more information about Angular arrays.
+ * {@link ng.$filter} for more information About Angular arrays.
  *
  * @param {Array} array Source array to be limited.
  * @param {string|Number} limit The length of the returned array. If the `limit` number is
@@ -19738,7 +19738,7 @@ function limitToFilter(){
  * Orders a specified `array` by the `expression` predicate.
  *
  * Note: this function is used to augment the `Array` type in Angular expressions. See
- * {@link ng.$filter} for more informaton about Angular arrays.
+ * {@link ng.$filter} for more informaton About Angular arrays.
  *
  * @param {Array} array The array to sort.
  * @param {function(*)|string|Array.<(function(*)|string)>} expression A predicate to be
@@ -23115,7 +23115,7 @@ var ngRepeatDirective = ngDirective({
               cursor = last.element;
             }
           } else {
-            // new item which we don't know about
+            // new item which we don't know About
             childScope = scope.$new();
           }
 
@@ -24366,7 +24366,7 @@ angular.scenario.setUpAndRun = function(config) {
 
   $runner.on('RunnerEnd', function() {
     appFrame.css('display', 'none');
-    appFrame.find('iframe').attr('src', 'about:blank');
+    appFrame.find('iframe').attr('src', 'About:blank');
   });
 
   $runner.on('RunnerError', function(error) {
@@ -24664,7 +24664,7 @@ _jQuery.fn.bindings = function(windowJquery, bindExp) {
 angular.scenario.Application = function(context) {
   this.context = context;
   context.append(
-    '<h2>Current URL: <a href="about:blank">None</a></h2>' +
+    '<h2>Current URL: <a href="About:blank">None</a></h2>' +
     '<div id="test-frames"></div>'
   );
 };
@@ -24707,8 +24707,8 @@ angular.scenario.Application.prototype.navigateTo = function(url, loadFn, errorF
   var frame = this.getFrame_();
   //TODO(esprehn): Refactor to use rethrow()
   errorFn = errorFn || function(e) { throw e; };
-  if (url === 'about:blank') {
-    errorFn('Sandbox Error: Navigating to about:blank is not allowed.');
+  if (url === 'About:blank') {
+    errorFn('Sandbox Error: Navigating to About:blank is not allowed.');
   } else if (url.charAt(0) === '#') {
     url = frame.attr('src').split('#')[0] + url;
     frame.attr('src', url);

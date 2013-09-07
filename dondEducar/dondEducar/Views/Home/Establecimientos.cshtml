@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Establecimientos";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<div class="widget-content">
+    @using (Html.BeginForm("Importar", "Home", FormMethod.Post, new { id = "importarForm", name = "importarForm", enctype = "multipart/form-data" }))
+    {
+        <div id="archivoExcel" class="input-block-level">
+            @*real file input*@
+            <input type="file" id="fileUpload" name="fileUpload" class="input-xxlarge file" onchange="checkExtension(this.value)" />
+            <button type="submit" class="btn btn-primary">Importar</button>
+            @Html.ValidationSummary()
+        </div>
+    }
+</div>
+
+@* grid *@
+<div id="gridEscuelas" class="grid"></div>
+@* /grid *@
+
+<script type="text/javascript">
+  
+
+    @*valida la extension del archivo que se esta por importar*@
+    function checkExtension(filename) {
+        if ($.inArray(filename.split('.').pop(), ['csv']) != -1) {
+            $("#formSubmit").removeAttr("disabled");
+            $("#mockFileUpload").val(filename);
+            return true;
+        } else {
+            EDUCAR.Modals.error("Solo se pueden importar archivos cuya extensión sea <b>'.csv'</b>.<br />Por favor revise el archivo a importar.");
+            $("#mockFileUpload").val("");
+            $("#fileUpload").val("");
+            $("#formSubmit").attr("disabled", "disabled");
+            return false;
+        }
+    }
+
+    @*on submit file*@
+    $("#importarForm").submit(function (event) {
+        if ($("#fileUpload").val() == "") {
+            EDUCAR.Modals.error("No se seleccionó un archivo.<br />Por favor revise el archivo a importar.");
+            event.preventDefault();
+            return false;
+        }
+
+    });
+    
+    $(document).ready(function () {
+
+        //>>>Ventas
+        $.getJSON("@Url.Action("GetEscuelas")", { tagId: 1 }, function (data) {       
+            $("#gridEscuelas").slickgrid({
+                columns: EDUCAR.Grids.ColumnasEscuelas,
+                data: data,
+                slickGridOptions: EDUCAR.Grids.DefaultSlickGridOptions
+            });//<<<slickgrid            
+        });
+    });//<<<ready
+</script>

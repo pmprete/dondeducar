@@ -133,7 +133,7 @@ var START_TAG_REGEXP = /^<\s*([\w:-]+)((?:\s+[\w:-]+(?:\s*=\s*(?:(?:"[^"]*")|(?:
   NON_ALPHANUMERIC_REGEXP = /([^\#-~| |!])/g; // Match everything outside of normal chars and " (quote character)
 
 
-// Good source of info about elements and attributes
+// Good source of info About elements and attributes
 // http://dev.w3.org/html5/spec/Overview.html#semantics
 // http://simon.html5.org/html-elements
 

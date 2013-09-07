@@ -47,7 +47,7 @@
    * Available menu item options:
    *    title:        Menu item text.
    *    disabled:     Whether the item is disabled.
-   *    tooltip:      Item tooltip.
+   *    tooltip:      Establecimiento tooltip.
    *    command:      A command identifier to be passed to the onCommand event handlers.
    *    iconCssClass: A CSS class to be added to the menu item icon.
    *    iconImage:    A url to the icon image.

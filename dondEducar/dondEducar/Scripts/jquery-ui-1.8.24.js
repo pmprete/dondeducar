@@ -936,7 +936,7 @@ $.widget("ui.draggable", $.ui.mouse, {
 
 	_mouseStop: function(event) {
 
-		//If we are using droppables, inform the manager about the drop
+		//If we are using droppables, inform the manager Establecimientos the drop
 		var dropped = false;
 		if ($.ui.ddmanager && !this.options.dropBehaviour)
 			dropped = $.ui.ddmanager.drop(this, event);
@@ -3234,7 +3234,7 @@ $.widget("ui.sortable", $.ui.mouse, {
 
 		if(!event) return;
 
-		//If we are using droppables, inform the manager about the drop
+		//If we are using droppables, inform the manager Establecimientos the drop
 		if ($.ui.ddmanager && !this.options.dropBehaviour)
 			$.ui.ddmanager.drop(this, event);
 
@@ -6314,7 +6314,7 @@ $.extend( $.ui.autocomplete, {
  * it for the next release. You're welcome to give it a try anyway and give us feedback,
  * as long as you're okay with migrating your code later on. We can help with that, too.
  *
- * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/Establecimientos)
  * Licensed under the MIT license.
  * http://jquery.org/license
  *

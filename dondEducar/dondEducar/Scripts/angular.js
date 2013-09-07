@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @license AngularJS v1.0.7
  * (c) 2010-2012 Google, Inc. http://angularjs.org
  * License: MIT
@@ -497,7 +497,7 @@ function map(obj, iterator, context) {
  * the length of a string.
  *
  * Note: This function is used to augment the Object type in Angular expressions. See
- * {@link angular.Object} for more information about Angular arrays.
+ * {@link angular.Object} for more information About Angular arrays.
  *
  * @param {Object|Array|string} obj Object, array, or string to inspect.
  * @param {boolean} [ownPropsOnly=false] Count only "own" properties in an object
@@ -564,7 +564,7 @@ function isLeafNode (node) {
  * * If  `source` is not an object or array, `source` is returned.
  *
  * Note: this function is used to augment the Object type in Angular expressions. See
- * {@link ng.$filter} for more information about Angular arrays.
+ * {@link ng.$filter} for more information About Angular arrays.
  *
  * @param {*} source The source that will be used to make a copy.
  *                   Can be any type, including primitives, `null`, and `undefined`.
@@ -1303,7 +1303,7 @@ function setupModuleLoader(window) {
  * @ngdoc property
  * @name angular.version
  * @description
- * An object that contains information about the current AngularJS version. This object has the
+ * An object that contains information About the current AngularJS version. This object has the
  * following properties:
  *
  * - `full` – `{string}` – Full version string, such as "0.9.18".
@@ -1589,7 +1589,7 @@ function JQLite(element) {
 
   if (isString(element)) {
     var div = document.createElement('div');
-    // Read about the NoScope elements here:
+    // Read About the NoScope elements here:
     // http://msdn.microsoft.com/en-us/library/ms533897(VS.85).aspx
     div.innerHTML = '<div>&#160;</div>' + element; // IE insanity to make NoScope elements work!
     div.removeChild(div.firstChild); // remove the superfluous div
@@ -2056,7 +2056,7 @@ forEach({
           events[type] = [];
 		
 		  // Refer to jQuery's implementation of mouseenter & mouseleave
-          // Read about mouseenter and mouseleave:
+          // Read About mouseenter and mouseleave:
           // http://www.quirksmode.org/js/events_mouse.html#link8
           var eventmap = { mouseleave : "mouseout", mouseenter : "mouseover"}          
           bindFn(element, eventmap[type], function(event) {
@@ -3753,7 +3753,7 @@ function $CompileProvider($provide) {
    *
    * The sanitization is a security measure aimed at prevent XSS attacks via html links.
    *
-   * Any url about to be assigned to a[href] via data-binding is first normalized and turned into an
+   * Any url About to be assigned to a[href] via data-binding is first normalized and turned into an
    * absolute url. Afterwards the url is matched against the `urlSanitizationWhitelist` regular
    * expression. If a match is found the original url is written into the dom. Otherwise the
    * absolute url is prefixed with `'unsafe:'` string and only then it is written into the DOM.
@@ -4836,7 +4836,7 @@ function $DocumentProvider(){
  * {@link ngMock.$exceptionHandler mock $exceptionHandler} which aids in testing.
  *
  * @param {Error} exception Exception associated with the error.
- * @param {string=} cause optional information about the context in which
+ * @param {string=} cause optional information About the context in which
  *       the error was thrown.
  *
  */
@@ -6895,7 +6895,7 @@ function qFactory(nextTick, exceptionHandler) {
    * @description
    * Creates a promise that is resolved as rejected with the specified `reason`. This api should be
    * used to forward rejection in a chain of promises. If you are dealing with the last promise in
-   * a promise chain, you don't need to worry about it.
+   * a promise chain, you don't need to worry About it.
    *
    * When comparing deferreds/promises to the familiar behavior of try/catch/throw, think of
    * `reject` as the `throw` keyword in JavaScript. This also means that if you "catch" an error via
@@ -9560,7 +9560,7 @@ function $TimeoutProvider() {
  * </pre>
  *
  *
- * For more information about how angular filters work, and how to create your own filters, see
+ * For more information About how angular filters work, and how to create your own filters, see
  * {@link guide/dev_guide.templates.filters Understanding Angular Filters} in the angular Developer
  * Guide.
  */
@@ -9627,7 +9627,7 @@ function $FilterProvider($provide) {
  * Selects a subset of items from `array` and returns it as a new array.
  *
  * Note: This function is used to augment the `Array` type in Angular expressions. See
- * {@link ng.$filter} for more information about Angular arrays.
+ * {@link ng.$filter} for more information About Angular arrays.
  *
  * @param {Array} array The source array.
  * @param {string|Object|function()} expression The predicate to be used for selecting items from
@@ -10248,7 +10248,7 @@ var uppercaseFilter = valueFn(uppercase);
  * value and sign (positive or negative) of `limit`.
  *
  * Note: This function is used to augment the `Array` type in Angular expressions. See
- * {@link ng.$filter} for more information about Angular arrays.
+ * {@link ng.$filter} for more information About Angular arrays.
  *
  * @param {Array} array Source array to be limited.
  * @param {string|Number} limit The length of the returned array. If the `limit` number is
@@ -10332,7 +10332,7 @@ function limitToFilter(){
  * Orders a specified `array` by the `expression` predicate.
  *
  * Note: this function is used to augment the `Array` type in Angular expressions. See
- * {@link ng.$filter} for more informaton about Angular arrays.
+ * {@link ng.$filter} for more informaton About Angular arrays.
  *
  * @param {Array} array The array to sort.
  * @param {function(*)|string|Array.<(function(*)|string)>} expression A predicate to be
@@ -13709,7 +13709,7 @@ var ngRepeatDirective = ngDirective({
               cursor = last.element;
             }
           } else {
-            // new item which we don't know about
+            // new item which we don't know About
             childScope = scope.$new();
           }
 
