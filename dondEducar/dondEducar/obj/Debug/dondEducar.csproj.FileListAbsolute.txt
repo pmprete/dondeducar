@@ -7,7 +7,6 @@ C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\DotNetOpen
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\DotNetOpenAuth.OAuth.dll
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\DotNetOpenAuth.OpenId.dll
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
-C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\EntityFramework.dll
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\Microsoft.Data.Edm.dll
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\Microsoft.Data.OData.dll
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\Microsoft.Web.Infrastructure.dll
@@ -29,7 +28,6 @@ C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\System.Web
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\WebGrease.dll
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\WebMatrix.Data.dll
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\WebMatrix.WebData.dll
-C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\EntityFramework.xml
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\Newtonsoft.Json.xml
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\System.Net.Http.Formatting.xml
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\System.Web.Helpers.xml
