@@ -33,6 +33,9 @@ namespace dondEducar
                         //"~/Scripts/bootstrap-slickgrid.js"
                         ));
 
+            bundles.Add(new ScriptBundle("~/bundles/underscore").Include(
+                      "~/Scripts/underscore-min.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/educar").Include(
                        "~/Scripts/educar.js"));
 
