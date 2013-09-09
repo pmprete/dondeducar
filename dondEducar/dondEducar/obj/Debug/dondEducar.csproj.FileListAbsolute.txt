@@ -84,7 +84,6 @@ C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\MongoDB.Bs
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\MongoDB.Driver.dll
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\MongoDB.Bson.xml
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\MongoDB.Driver.xml
-C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.csprojResolveAssemblyReference.cache
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\CsvHelper.dll
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\CsvHelper.pdb
 C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\CsvHelper.xml
