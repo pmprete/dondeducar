@@ -8,9 +8,7 @@ namespace dondEducar
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
-                        "~/Scripts/angular.min.js"));
-
+           
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -29,8 +27,7 @@ namespace dondEducar
                         "~/Scripts/jquery.event.drag.js",
                         "~/Scripts/SlickGrid/slick.core.js",
                         "~/Scripts/SlickGrid/slick.grid.js",
-                        "~/Scripts/SlickGrid/slick.dataview.js"
-                        //"~/Scripts/bootstrap-slickgrid.js"
+                        "~/Scripts/SlickGrid/slick.dataview.js"                        
                         ));
 
             bundles.Add(new ScriptBundle("~/bundles/underscore").Include(
@@ -39,17 +36,12 @@ namespace dondEducar
             bundles.Add(new ScriptBundle("~/bundles/educar").Include(
                        "~/Scripts/educar.js"));
 
-            // Use the development version of Modernizr to develop with and learn from. Then, when you're
-            // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
                        "~/Content/bootstrap.css",
                        "~/Content/bootstrap-theme.css",
                        "~/Content/slick.grid.css"));
-
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
