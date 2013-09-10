@@ -45,10 +45,8 @@ namespace dondEducar
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
-                       "~/Content/bootstrap/bootstrap.css",
-                       "~/Content/bootstrap/bootstrap-theme.css",
-                       "~/Content/css/bootstrap-responsive.css",
-                      // "~/Content/css/bootstrap-slickgrid.css",
+                       "~/Content/bootstrap.css",
+                       "~/Content/bootstrap-theme.css",
                        "~/Content/slick.grid.css"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
