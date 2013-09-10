@@ -121,17 +121,18 @@ EDUCAR.Grids = {
         }
     },
 
-    DefaultSlickGridOptions: {
-        enableCellNavigation: true,
-        enableColumnReorder: false,
-        forceFitColumns: true,
-        rowHeight: 35
+    SlickGridOptions: {
+        editable: false,
+        enableAddRow: false,
+        enableCellNavigation: false,
+        autoHeight: true,
+        forceFitColumns: true
     }
 };
 
 EDUCAR.Grids.ColumnasEscuelas = [
-    { id: "grid-codigo", name: "Numero", field: "Codigo" },
-    { id: "grid-nombre", name: "Nombre", field: "Nombre" },
+    { id: "grid-codigo", name: "Numero", field: "Codigo", sortable: true },
+    { id: "grid-nombre", name: "Nombre", field: "Nombre", sortable: true },
     { id: "grid-imagen", name: "Imagen", field: "Imagen" },
     { id: "grid-direccion", name: "Direccion", field: "Direccion" },
     { id: "grid-telefonos", name: "Telefonos", field: "Telefonos" },

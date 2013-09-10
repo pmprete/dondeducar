@@ -22,34 +22,40 @@ namespace dondEducar.Controllers
             return View();
         }
 
-        public ActionResult Establecimientos()
+        public ActionResult Establecimientos(string valorDelTag)
         {
-            ViewBag.Message = "Your app description page.";
-            //var collection = Database.GetCollection<Establecimiento>("Establecimiento");
-
-            //var entity = new Establecimiento { Nombre = "Tom" };
-            //collection.Insert(entity);
-
-            //var id = entity.Id;
-            //var query = Query<Establecimiento>.EQ(e => e.Id, id);
-            //entity = collection.FindOne(query);
-
-            //entity.Nombre = "Dick";
-            //collection.Save(entity);
-
-            //var update = Update<Establecimiento>.Set(e => e.Nombre, "Harry");
-            //collection.Update(query, update);
-
-            //collection.Remove(query);
+            
+            return View("Establecimientos", (object) valorDelTag);
+        }
 
 
-            return View();
+        public String GetEscuelas(string valorDelTag)
+        {
+            var establecimientos = Database.GetCollection<Establecimiento>("Establecimiento");
+            var query = Query<Establecimiento>.Where(e=> e.Tags.Any(t=> t.Valor == valorDelTag));
+            var establecimientosConTag = establecimientos.Find(query);
+            var listaDeEstablecimientos = establecimientosConTag.ToArray();
+
+
+            var listaSerializada = JsonConvert.SerializeObject(
+                listaDeEstablecimientos,
+                Formatting.Indented,
+                new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
+
+            return listaSerializada;
+
+        }
+
+        public ActionResult Importar()
+        {
+
+            ViewBag.Message = "Seleccione el archivo csv a importar.";
+            return View("Importar");
         }
 
         [HttpPost]
         public ActionResult Importar(FormCollection formCollection)
         {
-
             InicializarBaseDeDatos();
 
             HttpPostedFileBase file = null;
@@ -94,9 +100,9 @@ namespace dondEducar.Controllers
                 }
             }
 
-            var establecimientos = Database.GetCollection<Establecimiento>("Establecimiento");
-            var cursor = establecimientos.FindAll();
-            return View("Establecimientos");
+            ViewBag.Message = "Importacion Finalizada";
+
+            return View("Importar");
         }
 
 
@@ -299,21 +305,6 @@ namespace dondEducar.Controllers
         }
 
 
-        public String GetEscuelas(int? tagId)
-        {
-           
-            var collection = Database.GetCollection<Establecimiento>("Establecimiento");
-            var cursor = collection.FindAll();
-            var lista = cursor.ToList();
-            
-            var listaSerializada = JsonConvert.SerializeObject(
-                lista.ToList(),
-                Formatting.Indented,
-                new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
-
-            return listaSerializada;
-            
-        }
 
 
         public ActionResult Contact()

@@ -24,9 +24,8 @@ namespace dondEducar
 
             bundles.Add(new ScriptBundle("~/bundles/slickgrid").Include(
                         "~/Scripts/jquery.event.drag.js",
-                        "~/Scripts/SlickGrid/slick.core.js",
-                        "~/Scripts/SlickGrid/slick.grid.js",
-                        "~/Scripts/SlickGrid/slick.dataview.js"                        
+                       "~/Scripts/SlickGrid/slick.*",
+                       "~/Scripts/SlickGrid/Controls/slick.*"    
                         ));
 
             bundles.Add(new ScriptBundle("~/bundles/underscore").Include(
@@ -45,18 +44,7 @@ namespace dondEducar
                        "~/Content/slick.grid.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
-                        "~/Content/themes/base/jquery.ui.core.css",
-                        "~/Content/themes/base/jquery.ui.resizable.css",
-                        "~/Content/themes/base/jquery.ui.selectable.css",
-                        "~/Content/themes/base/jquery.ui.accordion.css",
-                        "~/Content/themes/base/jquery.ui.autocomplete.css",
-                        "~/Content/themes/base/jquery.ui.button.css",
-                        "~/Content/themes/base/jquery.ui.dialog.css",
-                        "~/Content/themes/base/jquery.ui.slider.css",
-                        "~/Content/themes/base/jquery.ui.tabs.css",
-                        "~/Content/themes/base/jquery.ui.datepicker.css",
-                        "~/Content/themes/base/jquery.ui.progressbar.css",
-                        "~/Content/themes/base/jquery.ui.theme.css"));
+                        "~/Content/themes/base/jquery.ui.*"));
         }
     }
 }
