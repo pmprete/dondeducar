@@ -20,8 +20,7 @@ namespace dondEducar
                         "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                       "~/Scripts/bootstrap.js",
-                       "~/Scripts/bootstrap.growl.js"));
+                       "~/Scripts/bootstrap.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/slickgrid").Include(
                         "~/Scripts/jquery.event.drag.js",
@@ -40,7 +39,9 @@ namespace dondEducar
 
             bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
                        "~/Content/bootstrap.css",
-                       "~/Content/bootstrap-theme.css",
+                       "~/Content/bootstrap-theme.css"));
+
+            bundles.Add(new StyleBundle("~/Content/SlickGrid").Include(
                        "~/Content/slick.grid.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
