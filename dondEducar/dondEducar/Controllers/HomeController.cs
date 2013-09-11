@@ -304,14 +304,5 @@ namespace dondEducar.Controllers
             tags.Insert(artisitco);
         }
 
-
-
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }
