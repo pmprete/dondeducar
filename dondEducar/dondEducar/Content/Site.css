@@ -9,11 +9,10 @@
    techniques you learn from it elsewhere. */
 
 
-
 html, body {
-	background: url(images/bg.gif) left top repeat-y #F06;
-	background-attachment: fixed;
-	margin: 0;
+	/*background: url(images/bg.gif) left top repeat-y #F06;*/
+	/*background-attachment: fixed;*/
+	height: 100%;
 	padding: 0;
 	font-family: "Trebuchet MS", Tahoma, Lucida Sans, Arial, Verdana, Helvetica, sans-serif;
 }
@@ -26,30 +25,8 @@ header h1, header h2, .sidebar h3 {
 	display: none;
 }
 
-.wrapper {
+.content-wrapper {
 	display: block;
-}
-
-.intro {
-	display: block;
-}
-
-@media screen {
-	header, div.summary {
-		position: fixed;
-	}
-		
-	* html header, * html div.summary {
-		position: absolute;
-	}
-}
-
-header {
-	left: 0;
-	top: 0;
-	width: 200px;
-	height: 320px;
-	background: url(images/logo.gif) left top no-repeat;
 }
 
 div.summary {
@@ -71,14 +48,14 @@ div.summary a:hover {
 	color: #000;
 }
 
-div.preamble, .supporting {
+div.main {
 	margin-left: 463px;
 	padding: 10px;
 	padding-left: 20px;
-	padding-bottom: 0;
+	padding-top: 0;
 }
 
-div.preamble h3, .supporting h3 {
+div.main h3 {
 	display: block;
 	background: url(images/hbg.gif) left top repeat #000;
 	margin: 0;
@@ -90,33 +67,44 @@ div.preamble h3, .supporting h3 {
 	text-transform: lowercase;
 }
 
-div.preamble p, .supporting p {
+div.main p {
 	font-size: 14px;
 	color: #000;
 	line-height: 1.5em;
 }
 
-div.preamble a, .supporting a {
+div.main a{
 	color: #000;
 }
 
-div.preamble a:hover, .supporting a:hover {
+div.main a:hover{
 	color: #FFF;
 }
 
-div.preamble abbr, div.preamble abbr, .supporting abbr, .supporting abbr {
+div.main abbr {
 	border-bottom: 1px dotted #000;
 }
 
 footer {
 	display: block;
-	height: 20px;
 	background: url(images/hbg.gif) left top repeat #000;
 	padding: 3px;
 	font-size: 12px;
 	line-height: 20px;
 	text-align: center;
 	margin-bottom: 10px;
+    overflow: hidden
+}
+
+.body-wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -80px; /* the bottom margin is the negative value of the footer's height */
+}
+
+footer, .push {
+	height: 80px; /* '.push' must be the same height as 'footer' */
 }
 
 footer a {
@@ -128,12 +116,34 @@ footer a:hover {
 	color: #000;
 }
 
+.intro {
+	display: block;
+}
+
+.logo {
+    padding-top: 60px;
+	left: 0;
+	top: 0;
+	width: 200px;
+	height: 320px;
+	background: url(images/logo.gif) left top no-repeat;
+}
+
 .sidebar {
-	position: absolute;
-	left: 200px;
 	top: 0px;
 	width: 263px;
 	font-family: Baskerville, Georgia, Garamond, Times New Roman, serif;
+    /*float: left;*/
+    display: inline-block;
+
+}
+
+.sidebar.selected {
+    background-color: #F06;
+}
+
+.sidebar.options {
+    background-color:  #FFF;
 }
 
 .sidebar ul {
@@ -224,4 +234,8 @@ footer a:hover {
 
 .sidebar div.zen-resources h3 {
 	background: url(images/ll_resources.gif) left top no-repeat;
+}
+
+.slick-pager {
+    display: inline-block
 }

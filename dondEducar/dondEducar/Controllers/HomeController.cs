@@ -17,20 +17,19 @@ namespace dondEducar.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
             return View();
         }
 
         public ActionResult Establecimientos(string valorDelTag)
         {
-            
+            ViewBag.Title = valorDelTag;
             return View("Establecimientos", (object) valorDelTag);
         }
 
 
         public String GetEscuelas(string valorDelTag)
         {
+            valorDelTag = "";
             var establecimientos = Database.GetCollection<Establecimiento>("Establecimiento");
             var query = Query<Establecimiento>.Where(e=> e.Tags.Any(t=> t.Valor == valorDelTag));
             var establecimientosConTag = establecimientos.Find(query);

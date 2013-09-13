@@ -5,40 +5,36 @@
     @Styles.Render("~/Content/SlickGrid")
     @Styles.Render("~/Content/css")
     
-
-
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryui")
-    @Scripts.Render("~/bundles/slickgrid")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/slickgrid")
     @Scripts.Render("~/bundles/underscore")
     @Scripts.Render("~/bundles/educar")
     <head>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <title>@ViewBag.Title - dondEducar.com.ar</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
     </head>
     <body>
-        <header>
-            <div class="content-wrapper">
+        <div class="body-wrapper">
+            <header>             
+            </header>
+            <div id="body" class="content-wrapper">
+                @* modal *@
+                <div id="educarModal" class="modal hide fade"></div>
+                @RenderBody()
             </div>
-        </header>
-        <div id="body" class="content-wrapper">
-            @* modal *@
-            <div id="educarModal" class="modal hide fade"></div>
-            @RenderBody()
+            <div class="push"></div>
         </div>
         <footer>
-            <div class="content-wrapper">
-			<a class="zen-validate-html" title="Check the validity of this site’s HTML" href="http://validator.w3.org/check/referer">HTML</a>
-			<a class="zen-validate-css" title="Check the validity of this site’s CSS" href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
-			<a class="zen-license" title="View the Creative Commons license of this site: Attribution-NonCommercial-ShareAlike." href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC</a>
-			<a class="zen-accessibility" title="Read about the accessibility of this site" href="http://mezzoblue.com/zengarden/faq/#aaa">A11y</a>
-			<a class="zen-github" title="Fork this site on Github" href="https://github.com/mezzoblue/csszengarden.com">GH</a>
+            <a class="zen-validate-html" title="Check the validity of this site’s HTML" href="http://validator.w3.org/check/referer">HTML</a>
+            <a class="zen-validate-css" title="Check the validity of this site’s CSS" href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+            <a class="zen-license" title="View the Creative Commons license of this site: Attribution-NonCommercial-ShareAlike." href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC</a>
+            <a class="zen-accessibility" title="Read about the accessibility of this site" href="http://mezzoblue.com/zengarden/faq/#aaa">A11y</a>
+            <a class="zen-github" title="Fork this site on Github" href="https://github.com/mezzoblue/csszengarden.com">GH</a>
             <div class="float-left">
                 <p>&copy; @DateTime.Now.Year - Bs Apps</p>
-            </div>
             </div>
         </footer>
 
