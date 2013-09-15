@@ -221,6 +221,8 @@
     <Content Include="Content\images\logo.gif" />
     <Content Include="Content\images\sort-asc.gif" />
     <Content Include="Content\images\sort-desc.gif" />
+    <Content Include="Content\m-buttons.css" />
+    <Content Include="Content\m-buttons.min.css" />
     <Content Include="Content\slick-default-theme.css" />
     <Content Include="Content\slick.columnpicker.css" />
     <Content Include="Content\slick.grid.css" />

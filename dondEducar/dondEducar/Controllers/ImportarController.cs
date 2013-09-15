@@ -107,16 +107,16 @@ namespace dondEducar.Controllers
             var query = Query<Tag>.EQ(e => e.Valor, "Inicial");
             var inicial = tags.FindOne(query);
 
-            query = Query<Tag>.EQ(e => e.Valor, "Primaria");
+            query = Query<Tag>.EQ(e => e.Valor, "Primario");
             var primario = tags.FindOne(query);
 
-            query = Query<Tag>.EQ(e => e.Valor, "Secundaria");
+            query = Query<Tag>.EQ(e => e.Valor, "Secundario");
             var medio = tags.FindOne(query);
 
             query = Query<Tag>.EQ(e => e.Valor, "Superior");
             var superior = tags.FindOne(query);
 
-            query = Query<Tag>.EQ(e => e.Valor, "Otras");
+            query = Query<Tag>.EQ(e => e.Valor, "Otros");
             var otras = tags.FindOne(query);
 
             query = Query<Tag>.EQ(e => e.Valor, "Tecnico");
@@ -260,16 +260,16 @@ namespace dondEducar.Controllers
             var inicial = new Tag { Valor = "Inicial", Vista = "Inicial" };
             tags.Insert(inicial);
             categoriaNivel.Tags.Add(inicial);
-            var primario = new Tag { Valor = "Primaria", Vista = "Primaria" };
+            var primario = new Tag { Valor = "Primario", Vista = "Primario" };
             tags.Insert(primario);
             categoriaNivel.Tags.Add(primario);
-            var medio = new Tag { Valor = "Secundaria", Vista = "Secundaria" };
+            var medio = new Tag { Valor = "Secundario", Vista = "Secundario" };
             tags.Insert(medio);
             categoriaNivel.Tags.Add(medio);
             var superior = new Tag { Valor = "Superior", Vista = "Superior" };
             tags.Insert(superior);
             categoriaNivel.Tags.Add(superior);
-            var otras = new Tag { Valor = "Otras", Vista = "Otras" };
+            var otras = new Tag { Valor = "Otros", Vista = "Otros" };
             tags.Insert(otras);
             categoriaNivel.Tags.Add(otras);
             categoria.Insert(categoriaNivel);

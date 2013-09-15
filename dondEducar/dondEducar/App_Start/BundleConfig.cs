@@ -8,6 +8,25 @@ namespace dondEducar
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
         public static void RegisterBundles(BundleCollection bundles)
         {
+
+            //***************************** CSS *************************************
+
+            bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
+                        "~/Content/themes/base/jquery.ui.*"));
+            
+            bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
+                       "~/Content/bootstrap.css",
+                       "~/Content/bootstrap-theme.css"));
+
+            bundles.Add(new StyleBundle("~/Content/slickgrid").Include(
+                       "~/Content/slick.grid.css"));
+
+            bundles.Add(new StyleBundle("~/Content/metro").Include(
+                      "~/Content/m-buttons.css"));
+
+            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+
+            
             //****************************** JS *************************************
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
@@ -31,19 +50,7 @@ namespace dondEducar
             bundles.Add(new ScriptBundle("~/bundles/educar").Include(
                        "~/Scripts/educar.js"));
 
-            //***************************** CSS *************************************
-
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
-
-            bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
-                       "~/Content/bootstrap.css",
-                       "~/Content/bootstrap-theme.css"));
-
-            bundles.Add(new StyleBundle("~/Content/SlickGrid").Include(
-                       "~/Content/slick.grid.css"));
-
-            bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
-                        "~/Content/themes/base/jquery.ui.*"));
+           
         }
     }
 }

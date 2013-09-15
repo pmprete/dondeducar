@@ -29,6 +29,24 @@ header h1, header h2, .sidebar h3 {
 	display: block;
 }
 
+.center
+{
+    margin-left:auto;
+    margin-right:auto;
+    width: 70%;
+    text-align: center;
+}
+
+.big {
+    height: 120px;
+    width: 140px;
+    font-size: 18px;
+    line-height: 78px;
+    margin: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
 div.summary {
 	left: 0;
 	top: 250px;

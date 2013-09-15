@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Web.Mvc;
 
 using MongoDB.Driver.Builders;
@@ -14,15 +12,7 @@ namespace dondEducar.Controllers
     {
         public ActionResult Index()
         {
-            var categorias = Database.GetCollection<Categoria>("Categoria");
-            var query = Query<Categoria>.EQ(x => x.Nombre, "NivelEducativo");
-            var categoriaNivelEducativo = categorias.FindOne(query);
-
-            var indexViewModel = new IndexViewModel();
-            if (categoriaNivelEducativo != null)
-                indexViewModel.NivelesEducativos = categoriaNivelEducativo.Tags;
-                                     
-            return View(indexViewModel);
+           return View("Index");
         }
 
         public ActionResult Establecimientos(string nivelEducativo)
