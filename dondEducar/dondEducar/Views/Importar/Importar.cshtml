@@ -1,20 +1,18 @@
-﻿@{
-    ViewBag.Title = "Importar";
-}
-
+﻿
 <hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>@ViewBag.Message</h2>
+    <h1>Importar</h1>
 </hgroup>
 
+<a href='@Url.Action("LimpiarBase")'class="btn btn-primary">Limpiar la Base</a>
+<br />
 
 <div class="widget-content">
-    @using (Html.BeginForm("Importar", "Home", FormMethod.Post, new { id = "importarForm", name = "importarForm", enctype = "multipart/form-data" }))
+    @using (Html.BeginForm("Importar", "Importar", FormMethod.Post, new { id = "importarForm", name = "importarForm", enctype = "multipart/form-data" }))
     {
         <div id="archivoExcel" class="input-block-level">
             @*real file input*@
             <input type="file" id="fileUpload" name="fileUpload" class="input-xxlarge file" onchange="checkExtension(this.value)" />
-            <button type="submit" class="btn btn-primary">Importar</button>
+            <button type="submit" class="btn btn-primary" id="formSubmit">Importar</button>
             @Html.ValidationSummary()
         </div>
     }
@@ -28,11 +26,9 @@
     function checkExtension(filename) {
         if ($.inArray(filename.split('.').pop(), ['csv']) != -1) {
             $("#formSubmit").removeAttr("disabled");
-            $("#mockFileUpload").val(filename);
             return true;
         } else {
             EDUCAR.Modals.error("Solo se pueden importar archivos cuya extensión sea <b>'.csv'</b>.<br />Por favor revise el archivo a importar.");
-            $("#mockFileUpload").val("");
             $("#fileUpload").val("");
             $("#formSubmit").attr("disabled", "disabled");
             return false;

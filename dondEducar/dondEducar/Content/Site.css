@@ -32,7 +32,7 @@ header h1, header h2, .sidebar h3 {
 div.summary {
 	left: 0;
 	top: 250px;
-	width: 185px;
+	/*width: 185px;*/
 	color: #FFE6F0;
 	font-size: 12px;
 	padding: 5px;
@@ -49,10 +49,10 @@ div.summary a:hover {
 }
 
 div.main {
-	margin-left: 463px;
+	/*margin-left: 400px;
 	padding: 10px;
 	padding-left: 20px;
-	padding-top: 0;
+	padding-top: 0;*/
 }
 
 div.main h3 {
@@ -116,30 +116,16 @@ footer a:hover {
 	color: #000;
 }
 
-.intro {
-	display: block;
-}
-
-.logo {
-    padding-top: 60px;
-	left: 0;
-	top: 0;
-	width: 200px;
-	height: 320px;
-	background: url(images/logo.gif) left top no-repeat;
-}
 
 .sidebar {
 	top: 0px;
-	width: 263px;
+	height: 100%;
 	font-family: Baskerville, Georgia, Garamond, Times New Roman, serif;
-    /*float: left;*/
-    display: inline-block;
-
 }
 
 .sidebar.selected {
     background-color: #F06;
+    color: #FFF;
 }
 
 .sidebar.options {
@@ -167,10 +153,18 @@ footer a:hover {
 	padding-right: 20px;
 	font-weight: bold;
 	font-size: 12px;
-	color: #F06;
 	text-transform: uppercase;
 	text-decoration: none;
 }
+
+.sidebar.selected ul li a {
+    color: #FFF;
+}
+
+.sidebar.options ul li a {
+    color: #F06;
+}
+
 
 .sidebar ul li a:hover {
 	background-color: #000;
@@ -205,12 +199,12 @@ footer a:hover {
 	text-decoration: underline;
 }
 
-.sidebar div.design-selection, .sidebar div.design-archives, .sidebar div.zen-resources {
+.sidebar div.design-selection {
 	display: block;
 	margin-top: 10px;
 }
 
-.sidebar div.design-selection h3, .sidebar div.design-archives h3, .sidebar div.zen-resources h3 {
+.sidebar div.design-selection h3 {
 	display: block;
 	height: 35px;
 	width: 100%;
@@ -218,23 +212,11 @@ footer a:hover {
 	padding: 0;
 }
 
-.sidebar div.design-selection h3, .sidebar div.design-archives h3, .sidebar div.zen-resources h3 {
-	text-indent: 100%;
+.sidebar div.design-selection h3 {
 	white-space: nowrap;
 	overflow: hidden;
 }
 
-.sidebar div.design-selection h3 {	
-	background: url(images/ll_selectadesign.gif) left top no-repeat;
-}
-
-.sidebar div.design-archives h3 {
-	background: url(images/ll_archives.gif) left top no-repeat;
-}
-
-.sidebar div.zen-resources h3 {
-	background: url(images/ll_resources.gif) left top no-repeat;
-}
 
 .slick-pager {
     display: inline-block

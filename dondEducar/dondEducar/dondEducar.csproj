@@ -191,6 +191,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImportarController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -199,6 +200,8 @@
     <Compile Include="Models\Establecimiento.cs" />
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\EstablecimientoViewModel.cs" />
+    <Compile Include="ViewModel\IndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -208,6 +211,8 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\images\bg.gif" />
     <Content Include="Content\images\down.gif" />
+    <Content Include="Content\images\flor-derecha.png" />
+    <Content Include="Content\images\flor-izquierda.png" />
     <Content Include="Content\images\hbg.gif" />
     <Content Include="Content\images\header-columns-bg.gif" />
     <Content Include="Content\images\ll_archives.gif" />
@@ -360,7 +365,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Home\Importar.cshtml" />
+    <Content Include="Views\Importar\Importar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

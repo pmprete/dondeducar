@@ -1,121 +1,107 @@
-﻿@model string
+﻿@model  dondEducar.ViewModel.EstablecimientoViewModel
 
-<section id="zen-intro" class="intro">
-		
-    <aside role="complementary" class="sidebar selected">
-        <div class="content-wrapper">
-            <div class="logo" role="banner">
-		    </div>
-            <div id="selection" class="design-selection">
-                <h3 class="select">Select a Design:</h3>
+<div class="row">
+<div id="zen-intro" class="col-xs-6 col-md-4">
+
+    <aside role="complementary" class="sidebar selected col-xs-6">
+        <div id="categoria-seleccionada" class="design-selection">
+            <h3 class="select"> Nivel Educativo </h3>
+            <nav role="navigation">
+                <ul>
+                    <li>
+                        <a href="#"> @Model.NivelEducaivo </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="design-selection">
+            <h3 class="select hidden">Filtros</h3>
+        </div>
+          @foreach(var categoria in Model.Categorias)
+        {
+            <div id="@categoria.Nombre-Filtrada" class="design-selection categoriaFiltrada hidden">
+                <h3 class="select">@categoria.Vista</h3>
                 <nav role="navigation">
                     <ul>
-                        <li>
-                            <a class="design-name" href="?cssfile=/215/215.css">Model </a> by						<a class="designer-name" href="http://meltmedia.com/">Model</a>
-                        </li>
+                        @foreach(var tag in categoria.Tags)
+                        {
+                            <li class="tag hidden">
+                                <a id="@tag.Valor-Filtrado"  href="#" onclick="DesSeleccionarTag(this)">@tag.Vista</a>
+                            </li>
+                        }
                     </ul>
                 </nav>
             </div>
-        </div>
+        }
     </aside>
 
-    <aside role="complementary" class="sidebar options">
-	    <div class="content-wrapper">
-		    <div id="design-selection" class="design-selection">
-			    <h3 class="select">Select a Design:</h3>
-			    <nav role="navigation">
-				    <ul>
-				    <li>
-					    <a class="design-name" href="?cssfile=/215/215.css">A Robot Named Jimmy</a> by						<a class="designer-name" href="http://meltmedia.com/">meltmedia</a>
-				    </li>					<li>
-					    <a class="design-name" href="?cssfile=/214/214.css">Verde Moderna</a> by						<a class="designer-name" href="http://www.mezzoblue.com/">Dave Shea</a>
-				    </li>					<li>
-					    <a class="design-name" href="?cssfile=/213/213.css">Under the Sea!</a> by						<a class="designer-name" href="http://www.ericstoltz.com/">Eric Stoltz</a>
-				    </li>					<li>
-					    <a class="design-name" href="?cssfile=/212/212.css">Make ’em Proud</a> by						<a class="designer-name" href="http://skybased.com/">Michael McAghon and Scotty Reifsnyder</a>
-				    </li>					<li>
-					    <a class="design-name" href="?cssfile=/211/211.css">Orchid Beauty</a> by						<a class="designer-name" href="#">Kevin Addison</a>
-				    </li>					<li>
-					    <a class="design-name" href="?cssfile=/210/210.css">Oceanscape</a> by						<a class="designer-name" href="http://www.pixel-house.com.au/">Justin Gray</a>
-				    </li>					<li>
-					    <a class="design-name" href="?cssfile=/209/209.css">CSS Co., Ltd.</a> by						<a class="designer-name" href="http://www.benklemm.de/">Benjamin Klemm</a>
-				    </li>					<li>
-					    <a class="design-name" href="?cssfile=/208/208.css">Sakura</a> by						<a class="designer-name" href="#">Tatsuya Uchida</a>
-				    </li>					</ul>
-			    </nav>
-		    </div>
-
-		    <div id="design-archives" class="design-archives">
-			    <h3 class="archives">Archives:</h3>
-			    <nav role="navigation">
-				    <ul>
-					    <li class="next">
-						    <a href="?cssfile=181/181.css&amp;page=1">
-							    Next Designs <span class="indicator">›</span>
-						    </a>
-					    </li>
-					    <li class="viewall">
-						    <a title="View every submission to the Zen Garden." href="http://www.mezzoblue.com/zengarden/alldesigns/">
-							    View All Designs							</a>
-					    </li>
-				    </ul>
-			    </nav>
-		    </div>
-
-		    <div id="zen-resources" class="zen-resources">
-			    <h3 class="resources">Resources:</h3>
-			    <ul>
-				    <li class="view-css">
-					    <a title="View the source CSS file of the currently-viewed design." href="181/181.css">
-						    View This Design’s <abbr title="Cascading Style Sheets">CSS</abbr>						</a>
-				    </li>
-				    <li class="css-resources">
-					    <a title="Links to great sites with information on using CSS." href="http://www.mezzoblue.com/zengarden/resources/">
-						    <abbr title="Cascading Style Sheets">CSS</abbr> Resources						</a>
-				    </li>
-				    <li class="zen-faq">
-					    <a title="A list of Frequently Asked Questions about the Zen Garden." href="http://www.mezzoblue.com/zengarden/faq/">
-						    <abbr title="Frequently Asked Questions">FAQ</abbr>						</a>
-				    </li>
-				    <li class="zen-submit">
-					    <a title="Send in your own CSS file." href="http://www.mezzoblue.com/zengarden/submit/">
-						    Submit a Design						</a>
-				    </li>
-				    <li class="zen-translations">
-					    <a title="View translated versions of this page." href="http://www.mezzoblue.com/zengarden/translations/">
-						    Translations						</a>
-				    </li>
-			    </ul>
-		    </div>
-	    </div>
+    <aside role="complementary" class="sidebar options col-xs-6">
+        @foreach(var categoria in Model.Categorias)
+        {
+            <div id="@categoria.Nombre" class="design-selection categoria">
+                <h3 class="select">@categoria.Vista</h3>
+                <nav role="navigation">
+                    <ul>
+                        @foreach(var tag in categoria.Tags)
+                        {
+                            <li class="tag">
+                                <a id="@tag.Valor" href="#" onclick="SeleccionarTag(this)">@tag.Vista</a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+        }
     </aside>
- </section>
+ </div>
    
-	<div role="main" id="zen-supporting" class="main">
-		<div role="article" id="zen-explanation" class="explanation">
-			<h3>So What is This About?</h3>
-			    @* grid *@
-                <div id="gridEscuelas"></div>
-                <div id="pager"></div> 
-                @* /grid *@
-		</div>
-	</div>
-
-
+<div role="main" id="zen-supporting" class="main col-xs-12 col-md-8">
+    <div role="article" id="zen-explanation" class="explanation">
+        <h3>So What is This About?</h3>
+        @* grid *@
+        <div id="gridEscuelas"></div>
+        <div id="pager"></div> 
+        @* /grid *@
+    </div>
+</div>
+</div>
 
 <script type="text/javascript">
-  $(document).ready(function () {
-      $.getJSON("@Url.Action("GetEscuelas")", { valorDelTag: '@Model' }, function (data) {
+    
+    function SeleccionarTag(anchor) {
+        var anchorId = $(anchor).attr('id');
+        var categoria = $(anchor).closest('.categoria');
+        var categoriaId = categoria.attr('id');
+        $(categoria).addClass('hidden');
 
-          var dataView = new Slick.Data.DataView();
-          dataView.setPagingOptions({
-              pageSize: 25,
-          });
-          
-          var grid = new Slick.Grid("#gridEscuelas", data, EDUCAR.Grids.ColumnasEscuelas, EDUCAR.Grids.SlickGridOptions);
-        
-          var pager = new Slick.Controls.Pager(dataView, grid, $("#pager"));
+        var categoriaFiltrada = $('#' + categoriaId + '-Filtrada');
+        categoriaFiltrada.removeClass('hidden');
+        var tag = $('#' + anchorId + '-Filtrado').closest('.tag');
+        tag.removeClass('hidden');
+    };
 
+    function DesSeleccionarTag(anchorFiltrado) {
+        var tag = $(anchorFiltrado).closest('.tag');
+        tag.addClass('hidden');
+        var categoriaFiltrada = $(anchorFiltrado).closest('.categoriaFiltrada');
+        var categoriaFiltradaId = categoriaFiltrada.attr('id');
+        categoriaFiltrada.addClass('hidden');
+
+        var categoria = $('#' + categoriaFiltradaId.replace('-Filtrada', ''));
+        $(categoria).removeClass('hidden');
+    };
+
+    $(document).ready(function () {
+
+        var data = @Html.Raw(Model.JsonEstablecimientos);
+        var dataView = new Slick.Data.DataView();
+        dataView.setPagingOptions({
+            pageSize: 25,
         });
+
+        var grid = new Slick.Grid("#gridEscuelas", data, EDUCAR.Grids.ColumnasEscuelas, EDUCAR.Grids.SlickGridOptions);
+
+        var pager = new Slick.Controls.Pager(dataView, grid, $("#pager"));
+      
     });
 </script>

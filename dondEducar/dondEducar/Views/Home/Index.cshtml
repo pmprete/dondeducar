@@ -1,43 +1,12 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿@model dondEducar.ViewModel.IndexViewModel
 
-<ol class="round">
-    <li class="one">
-        <a href='@Url.Action("Establecimientos", new {valorDelTag="Inicial"})'>Inicial</a>
-    </li>
+<ul class="menu">
+    @foreach(var nivel in Model.NivelesEducativos)
+    {
+        <li class="">
+            <a href='@Url.Action("Establecimientos", new {nivelEducativo = nivel.Valor})'>@nivel.Vista</a>
+        </li>
+    }
+</ul>
 
-    <li class="two">
-        <a href='@Url.Action("Establecimientos", new {valorDelTag="Primario"})'>Primaria</a>
-    </li>
-
-    <li class="three">
-        <a href='@Url.Action("Establecimientos", new {valorDelTag="Secundario"})'>Secundario</a>
-    </li>
-    <li class="four">
-        <a href='@Url.Action("Establecimientos", new {valorDelTag="Superior"})'>Superior</a>
-    </li>
-</ol>
-
-
-    <aside role="complementary" class="sidebar">
-		<div class="content-wrapper">
-
-			<div id="design-selection" class="design-selection">
-				<h3 class="select">Select a Design:</h3>
-				<nav role="navigation">
-					<ul>
-					<li>
-						<a href='@Url.Action("Establecimientos", new {valorDelTag="Inicial"})'>Inicial</a> <p>3 a 5 años </p>
-					</li>					<li>
-						<a href='@Url.Action("Establecimientos", new {valorDelTag="Primario"})'>Primaria</a> <p>6 a 11 años </p>
-					</li>					<li>
-						<a href='@Url.Action("Establecimientos", new {valorDelTag="Secundario"})'>Secundario</a> <p>12 a 17 años </p>
-					</li>					<li>
-						<a href='@Url.Action("Establecimientos", new {valorDelTag="Superior"})'>Superior</a> <p>18 años en adelante </p>
-					</li>					</ul>
-				</nav>
-			</div>
-
-		</div>
-	</aside>
+<a href='@Url.Action("Importar","Importar")' class="btn btn-primary">Importar Datos</a>
