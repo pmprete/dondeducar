@@ -67,6 +67,8 @@
 </div>
 
 <script type="text/javascript">
+       
+    var columnId = 8;
     
     function SeleccionarTag(anchor) {
         var anchorId = $(anchor).attr('id');
@@ -78,6 +80,10 @@
         categoriaFiltrada.removeClass('hidden');
         var tag = $('#' + anchorId + '-Filtrado').closest('.tag');
         tag.removeClass('hidden');
+        
+        EDUCAR.Grids.ColumnFilters[columnId] = anchorId;
+
+        EDUCAR.Grids.DataView.refresh();
     };
 
     function DesSeleccionarTag(anchorFiltrado) {
@@ -89,19 +95,43 @@
 
         var categoria = $('#' + categoriaFiltradaId.replace('-Filtrada', ''));
         $(categoria).removeClass('hidden');
+
+        EDUCAR.Grids.ColumnFilters[columnId] = "";
+
+        EDUCAR.Grids.DataView.refresh();
     };
+    
+    
+    function filter(item) {
+        for (var columnId in EDUCAR.Grids.ColumnFilters) {
+            if (columnId !== undefined && EDUCAR.Grids.ColumnFilters[columnId] !== "") {
+                var c = grid.getColumns()[grid.getColumnIndex(columnId)];
+                if (item[c.field] != EDUCAR.Grids.ColumnFilters[columnId]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 
     $(document).ready(function () {
 
-        var data = @Html.Raw(Model.JsonEstablecimientos);
-        var dataView = new Slick.Data.DataView();
-        dataView.setPagingOptions({
+        EDUCAR.Grids.Data = @Html.Raw(Model.JsonEstablecimientos);
+        
+        EDUCAR.Grids.DataView = new Slick.Data.DataView();
+        
+        EDUCAR.Grids.DataView.setPagingOptions({
             pageSize: 25,
         });
 
-        var grid = new Slick.Grid("#gridEscuelas", data, EDUCAR.Grids.ColumnasEscuelas, EDUCAR.Grids.SlickGridOptions);
+        var grid = new Slick.Grid("#gridEscuelas", EDUCAR.Grids.Data, EDUCAR.Grids.ColumnasEscuelas, EDUCAR.Grids.SlickGridOptions);
+        grid.init();
+        EDUCAR.Grids.DataView.beginUpdate();
+        EDUCAR.Grids.DataView.setItems(EDUCAR.Grids.Data);
+        EDUCAR.Grids.DataView.setFilter(filter);
+        EDUCAR.Grids.DataView.endUpdate();
 
-        var pager = new Slick.Controls.Pager(dataView, grid, $("#pager"));
+        var pager = new Slick.Controls.Pager(EDUCAR.Grids.DataView, grid, $("#pager"));
       
     });
 </script>

@@ -210,9 +210,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\images\bg.gif" />
+    <Content Include="Content\images\botonInicial.png" />
+    <Content Include="Content\images\botonOtros.png" />
+    <Content Include="Content\images\botonPrimario.png" />
+    <Content Include="Content\images\botonSecundario.png" />
+    <Content Include="Content\images\botonSuperior.png" />
     <Content Include="Content\images\down.gif" />
-    <Content Include="Content\images\flor-derecha.png" />
-    <Content Include="Content\images\flor-izquierda.png" />
     <Content Include="Content\images\hbg.gif" />
     <Content Include="Content\images\header-columns-bg.gif" />
     <Content Include="Content\images\ll_archives.gif" />

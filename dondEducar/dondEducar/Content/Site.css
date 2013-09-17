@@ -37,7 +37,7 @@ header h1, header h2, .sidebar h3 {
     text-align: center;
 }
 
-.big {
+/*.big {
     height: 120px;
     width: 140px;
     font-size: 18px;
@@ -45,7 +45,7 @@ header h1, header h2, .sidebar h3 {
     margin: 15px;
     text-align: center;
     vertical-align: middle;
-}
+}*/
 
 div.summary {
 	left: 0;
@@ -238,4 +238,14 @@ footer a:hover {
 
 .slick-pager {
     display: inline-block
+}
+
+.blocks {
+    -moz-column-count: 3;
+    -moz-column-gap: 0;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 0;
+    column-count: 3;
+    column-gap: 0;
+    width: 1200px;
 }

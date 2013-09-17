@@ -2,18 +2,22 @@
 <h2>dondEducar.com</h2>
 
 <br />
-<div class="center">
-    <a  class="m-btn big blue rnd" href='@Url.Action("Establecimientos", new {nivelEducativo = "Inicial"})'>Inicial</a>    
-    
-    <a  class="m-btn big red rnd" href='@Url.Action("Establecimientos", new {nivelEducativo = "Primario"})'>Primario</a>    
-    
-    <a  class="m-btn big purple rnd" href='@Url.Action("Establecimientos", new {nivelEducativo = "Secunadrio"})'>Secundario</a>    
-</div>
-
-<div class="center">
-    <a  class="m-btn big black rnd" href='@Url.Action("Establecimientos", new {nivelEducativo = "Superior"})'>Superior</a>    
-    
-    <a  class="m-btn big green rnd" href='@Url.Action("Establecimientos", new { nivelEducativo = "Otros" })'>Otros</a>    
+<div class="blocks">
+    <a href='@Url.Action("Establecimientos", new {nivelEducativo = "Inicial"})'>   
+        <img style="width: 400px; height: 300px;" src='@Url.Content("Content/images/botonInicial.png")' alt="Nivel Inicial" >
+    </a>
+    <a href='@Url.Action("Establecimientos", new {nivelEducativo = "Secundario"})'>    
+        <img style="width: 400px; height: 300px;" src='@Url.Content("Content/images/botonSecundario.png")' alt="Nivel Secundario">
+    </a>
+    <a href='@Url.Action("Establecimientos", new {nivelEducativo = "Primario"})'>
+        <img style="width: 400px; height: 600px;" src='@Url.Content("Content/images/botonPrimario.png")' alt="Nivel Primario">
+    </a>
+    <a href='@Url.Action("Establecimientos", new {nivelEducativo = "Otros"})'>
+        <img style="width: 400px; height: 300px;" src='@Url.Content("Content/images/botonOtros.png")' alt="Otros tipos de Establecimientos">
+    </a>
+    <a href='@Url.Action("Establecimientos", new {nivelEducativo = "Superior"})'>
+        <img style="width: 400px; height: 300px;" src='@Url.Content("Content/images/botonSuperior.png")' alt="Nivel Superior">
+    </a>
 </div>
 
 <br />
