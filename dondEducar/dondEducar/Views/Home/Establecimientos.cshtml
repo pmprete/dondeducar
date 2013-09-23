@@ -59,7 +59,8 @@
     <div role="article" id="zen-explanation" class="explanation">
         <h3>So What is This About?</h3>
         @* grid *@
-        <div id="gridEscuelas"></div>
+        <div id="grid" class="establecimientos">
+        </div>
         <div id="pager"></div> 
         @* /grid *@
     </div>
@@ -80,10 +81,6 @@
         categoriaFiltrada.removeClass('hidden');
         var tag = $('#' + anchorId + '-Filtrado').closest('.tag');
         tag.removeClass('hidden');
-        
-        EDUCAR.Grids.ColumnFilters[columnId] = anchorId;
-
-        EDUCAR.Grids.DataView.refresh();
     };
 
     function DesSeleccionarTag(anchorFiltrado) {
@@ -95,43 +92,56 @@
 
         var categoria = $('#' + categoriaFiltradaId.replace('-Filtrada', ''));
         $(categoria).removeClass('hidden');
-
-        EDUCAR.Grids.ColumnFilters[columnId] = "";
-
-        EDUCAR.Grids.DataView.refresh();
     };
     
-    
-    function filter(item) {
-        for (var columnId in EDUCAR.Grids.ColumnFilters) {
-            if (columnId !== undefined && EDUCAR.Grids.ColumnFilters[columnId] !== "") {
-                var c = grid.getColumns()[grid.getColumnIndex(columnId)];
-                if (item[c.field] != EDUCAR.Grids.ColumnFilters[columnId]) {
-                    return false;
-                }
-            }
+    function CambioDePagina(numeroDePagina) {
+        if (EDUCAR.Grids.PaginaActual == numeroDePagina) {
+            return;
         }
-        return true;
-    }
+        var tope = 0;
+        if (EDUCAR.Grids.TotalDePaginas == numeroDePagina) {
+            tope = EDUCAR.Grids.TotalDeFilas % EDUCAR.Grids.TamañoDePagina;
+        } else {
+            tope = EDUCAR.Grids.TamañoDePagina;
+        }
+        var grid = '<ul>';
+        for (var i = 0; i < tope; i++) {
+            var indice = (EDUCAR.Grids.TamañoDePagina * (numeroDePagina - 1)) + i;
+            var establecimiento = EDUCAR.Grids.Data[indice];
+            var li = '<li>';
+            li += '<div class="mini-imagen-establecimiento"><div>';
+            li += '<div class="nombre">' + establecimiento.Nombre + '<div>';
+            li += '<div class="codigo">' + establecimiento.Codigo + '<div>';
+            var tags = '';
+            for (i = 0; i < establecimiento.Tags.length; i++) {
+                tags += ' | ' + establecimiento.Tags[i];
+            }
+            li += '<div class="tags">'+ tags +'<div>';
+            li += '</li>';
+            grid += li;
+        }
+        grid += '</ul>';
+        $("#grid").html(grid);
+        
+        var paginaAnterior = EDUCAR.Grids.PaginaActual;
+        EDUCAR.Grids.PaginaActual = numeroDePagina;
+        $("#pagina-" + paginaAnterior).removeClass("selected");
+        $("#pagina-" + numeroDePagina).addClass("selected");
+
+    };
 
     $(document).ready(function () {
 
         EDUCAR.Grids.Data = @Html.Raw(Model.JsonEstablecimientos);
-        
-        EDUCAR.Grids.DataView = new Slick.Data.DataView();
-        
-        EDUCAR.Grids.DataView.setPagingOptions({
-            pageSize: 25,
-        });
+        EDUCAR.Grids.TotalDeFilas = EDUCAR.Grids.Data.length;
+        EDUCAR.Grids.TotalDePaginas = EDUCAR.Grids.TotalDeFilas / EDUCAR.Grids.TamañoDePagina;
 
-        var grid = new Slick.Grid("#gridEscuelas", EDUCAR.Grids.Data, EDUCAR.Grids.ColumnasEscuelas, EDUCAR.Grids.SlickGridOptions);
-        grid.init();
-        EDUCAR.Grids.DataView.beginUpdate();
-        EDUCAR.Grids.DataView.setItems(EDUCAR.Grids.Data);
-        EDUCAR.Grids.DataView.setFilter(filter);
-        EDUCAR.Grids.DataView.endUpdate();
+        var paginas = '';
+        for (i = 1; i <= EDUCAR.Grids.TotalDePaginas; i++) {
+            paginas += '<a id="pagina-'+ i +'" href="#" onClick="CambioDePagina(' + i + ')">'+ i +'<a>';
+        }
+        $("#pager").html(paginas);
 
-        var pager = new Slick.Controls.Pager(EDUCAR.Grids.DataView, grid, $("#pager"));
-      
+        CambioDePagina(1);
     });
 </script>
