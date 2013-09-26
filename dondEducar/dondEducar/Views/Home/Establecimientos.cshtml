@@ -105,18 +105,21 @@
             tope = EDUCAR.Grids.TamañoDePagina;
         }
         var grid = '<ul>';
-        for (var i = 0; i < tope; i++) {
-            var indice = (EDUCAR.Grids.TamañoDePagina * (numeroDePagina - 1)) + i;
+        for (var iLi = 0; iLi < tope; iLi++) {
+            var indice = (EDUCAR.Grids.TamañoDePagina * (numeroDePagina - 1)) + iLi;
             var establecimiento = EDUCAR.Grids.Data[indice];
             var li = '<li>';
-            li += '<div class="mini-imagen-establecimiento"><div>';
-            li += '<div class="nombre">' + establecimiento.Nombre + '<div>';
-            li += '<div class="codigo">' + establecimiento.Codigo + '<div>';
+            li += '<div class="mini-imagen">Imagen<div>';
+            li += '<div class="direccion">' + establecimiento.Direccion + '<div>';
+            var div = '<div class="contenido">';
+            div += '<div class="nombre">'+ establecimiento.Nombre +'<div>';
             var tags = '';
-            for (i = 0; i < establecimiento.Tags.length; i++) {
-                tags += ' | ' + establecimiento.Tags[i];
+            for (var iTag = 0; iTag < establecimiento.Tags.length; iTag++) {
+                tags += ' | ' + establecimiento.Tags[iTag].Vista;
             }
-            li += '<div class="tags">'+ tags +'<div>';
+            div += '<span class="tags">'+ tags +'<div>';
+            div += '</div>';
+            li += div;
             li += '</li>';
             grid += li;
         }
@@ -137,8 +140,8 @@
         EDUCAR.Grids.TotalDePaginas = EDUCAR.Grids.TotalDeFilas / EDUCAR.Grids.TamañoDePagina;
 
         var paginas = '';
-        for (i = 1; i <= EDUCAR.Grids.TotalDePaginas; i++) {
-            paginas += '<a id="pagina-'+ i +'" href="#" onClick="CambioDePagina(' + i + ')">'+ i +'<a>';
+        for (var iPag = 1; iPag <= EDUCAR.Grids.TotalDePaginas; iPag++) {
+            paginas += '<a id="pagina-'+ iPag +'" href="#" onClick="CambioDePagina(' + iPag + ')">'+ iPag +'<a>';
         }
         $("#pager").html(paginas);
 

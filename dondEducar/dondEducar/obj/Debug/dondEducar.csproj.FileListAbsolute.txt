@@ -179,3 +179,4 @@ C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\zh-Hant\Sy
 C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.csprojResolveAssemblyReference.cache
 C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.dll
 C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.pdb
+C:\Users\Pedrow\Documents\GitHub\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.csprojResolveAssemblyReference.cache
