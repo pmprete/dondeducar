@@ -215,23 +215,13 @@
     <Content Include="Content\images\botonPrimario.png" />
     <Content Include="Content\images\botonSecundario.png" />
     <Content Include="Content\images\botonSuperior.png" />
-    <Content Include="Content\images\down.gif" />
     <Content Include="Content\images\hbg.gif" />
-    <Content Include="Content\images\header-columns-bg.gif" />
     <Content Include="Content\images\ll_archives.gif" />
     <Content Include="Content\images\ll_resources.gif" />
     <Content Include="Content\images\ll_selectadesign.gif" />
     <Content Include="Content\images\logo.gif" />
-    <Content Include="Content\images\sort-asc.gif" />
-    <Content Include="Content\images\sort-desc.gif" />
     <Content Include="Content\m-buttons.css" />
     <Content Include="Content\m-buttons.min.css" />
-    <Content Include="Content\slick-default-theme.css" />
-    <Content Include="Content\slick.columnpicker.css" />
-    <Content Include="Content\slick.grid.css" />
-    <Content Include="Content\slick.headerbuttons.css" />
-    <Content Include="Content\slick.headermenu.css" />
-    <Content Include="Content\slick.pager.css" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -313,8 +303,6 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.10.3.js" />
     <Content Include="Scripts\jquery-ui-1.10.3.min.js" />
-    <Content Include="Scripts\jquery.event.drag.js" />
-    <Content Include="Scripts\jquery.event.drag.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -337,7 +325,6 @@
     <Content Include="Scripts\SlickGrid\slick.dataview.js" />
     <Content Include="Scripts\SlickGrid\slick.editors.js" />
     <Content Include="Scripts\SlickGrid\slick.formatters.js" />
-    <Content Include="Scripts\SlickGrid\slick.grid.js" />
     <Content Include="Scripts\SlickGrid\slick.groupitemmetadataprovider.js" />
     <Content Include="Scripts\SlickGrid\slick.remotemodel.js" />
     <Content Include="Scripts\underscore-min.js" />
@@ -371,6 +358,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Importar\Importar.cshtml" />
+    <Content Include="Views\Home\Index2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,5 +1,9 @@
 ﻿@model  dondEducar.ViewModel.EstablecimientoViewModel
 
+<script src="http://servicios.usig.buenosaires.gov.ar/usig-js/3.0/usig.core.min.js" type="text/javascript"></script>
+<script src="http://servicios.usig.buenosaires.gov.ar/usig-js/3.0/usig.FotosParcela.min.js" type="text/javascript"></script>
+<script src="http://servicios.usig.buenosaires.gov.ar/usig-js/3.0/usig.GeoCoder.min.js" type="text/javascript"></script>
+
 <div class="row">
 <div id="zen-intro" class="col-xs-6 col-md-4">
 
@@ -55,21 +59,22 @@
     </aside>
  </div>
    
-<div role="main" id="zen-supporting" class="main col-xs-12 col-md-8">
-    <div role="article" id="zen-explanation" class="explanation">
-        <h3>So What is This About?</h3>
-        @* grid *@
-        <div id="grid" class="establecimientos">
+    <div role="main" id="zen-supporting" class="main col-xs-12 col-md-8">
+        <div role="article" id="zen-explanation" class="explanation">
+            <h3>So What is This About?</h3>
+            @* grid *@
+            <div id="grid" class="establecimientos">
+            </div>
+            <div id="pager" class="paginas"></div> 
+            @* /grid *@
         </div>
-        <div id="pager"></div> 
-        @* /grid *@
     </div>
-</div>
 </div>
 
 <script type="text/javascript">
        
     var columnId = 8;
+    var geoCoder = null;
     
     function SeleccionarTag(anchor) {
         var anchorId = $(anchor).attr('id');
@@ -94,6 +99,25 @@
         $(categoria).removeClass('hidden');
     };
     
+    function onLoadFotos() {	
+        /*fotosParcela.setFechaFoto($('.fecha-foto'));
+        if (fotosParcela.numFotos() > 1) {
+            $('div.foto-recorrido').show();
+        } else {
+            $('div.foto-recorrido').hide();
+        }			
+        */
+    }
+
+    function onReverseGeoCoding(data, divImagen) {
+        var fotosParcela = new usig.FotosParcela(data.parcela.smp, {maxHeight : 190, maxWidth : 170, onLoad: onLoadFotos(this)});
+        fotosParcela.cargarFoto(divImagen);
+    }
+
+    function onReverseGeoCodingError(e) {
+        usig.debug('Se produjo un error con el geocoder inverso.');
+    };
+
     function CambioDePagina(numeroDePagina) {
         if (EDUCAR.Grids.PaginaActual == numeroDePagina) {
             return;
@@ -104,27 +128,48 @@
         } else {
             tope = EDUCAR.Grids.TamañoDePagina;
         }
-        var grid = '<ul>';
+        var ul = document.createElement("ul");
         for (var iLi = 0; iLi < tope; iLi++) {
             var indice = (EDUCAR.Grids.TamañoDePagina * (numeroDePagina - 1)) + iLi;
             var establecimiento = EDUCAR.Grids.Data[indice];
-            var li = '<li>';
-            li += '<div class="mini-imagen">Imagen<div>';
-            li += '<div class="direccion">' + establecimiento.Direccion + '<div>';
-            var div = '<div class="contenido">';
-            div += '<div class="nombre">'+ establecimiento.Nombre +'<div>';
+            var li = document.createElement("li");
+            
+            var divImagen = document.createElement("div");
+            divImagen.id = establecimiento.Codigo;
+            divImagen.className = "mini-imagen";
+            divImagen.innerHTML = "Imagen";
+            geoCoder.reverseGeoCoding(establecimiento.Longitud, establecimiento.Latitud, onReverseGeoCoding(this,divImagen), onReverseGeoCodingError);
+            
+            var divDireccion = document.createElement("div");
+            divDireccion.className = "direccion";
+            divDireccion.innerHTML = establecimiento.Direccion;
+            
+            
+            var divContenido = document.createElement("div");
+            
+            divContenido.className = "contenido";
+            var divNombre = document.createElement("div");
+            divNombre.className = "nombre";
+            divNombre.innerHTML = establecimiento.Nombre ;
+            divContenido.appendChild(divNombre);
+            
             var tags = '';
             for (var iTag = 0; iTag < establecimiento.Tags.length; iTag++) {
                 tags += ' | ' + establecimiento.Tags[iTag].Vista;
             }
-            div += '<span class="tags">'+ tags +'<div>';
-            div += '</div>';
-            li += div;
-            li += '</li>';
-            grid += li;
+            var spanTags = document.createElement("span");
+            spanTags.className = "tags";
+            spanTags.innerHTML = tags;
+            divContenido.appendChild(spanTags);
+            
+            li.appendChild(divImagen);
+            li.appendChild(divContenido);
+            li.appendChild(divDireccion);
+         
+            ul.appendChild(li);
         }
-        grid += '</ul>';
-        $("#grid").html(grid);
+
+        $("#grid").append(ul);
         
         var paginaAnterior = EDUCAR.Grids.PaginaActual;
         EDUCAR.Grids.PaginaActual = numeroDePagina;
@@ -134,7 +179,7 @@
     };
 
     $(document).ready(function () {
-
+        geoCoder = new usig.GeoCoder();
         EDUCAR.Grids.Data = @Html.Raw(Model.JsonEstablecimientos);
         EDUCAR.Grids.TotalDeFilas = EDUCAR.Grids.Data.length;
         EDUCAR.Grids.TotalDePaginas = EDUCAR.Grids.TotalDeFilas / EDUCAR.Grids.TamañoDePagina;

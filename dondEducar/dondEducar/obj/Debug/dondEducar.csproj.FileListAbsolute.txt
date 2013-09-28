@@ -97,7 +97,6 @@ C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\DotNetOpen
 C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\DotNetOpenAuth.OAuth.dll
 C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\DotNetOpenAuth.OpenId.dll
 C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
-C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\EntityFramework.dll
 C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\Microsoft.Data.Edm.dll
 C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\Microsoft.Data.OData.dll
 C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\Microsoft.Web.Infrastructure.dll
@@ -125,7 +124,6 @@ C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\CsvHelper.
 C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\CsvHelper.xml
 C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\MongoDB.Bson.xml
 C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\MongoDB.Driver.xml
-C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\EntityFramework.xml
 C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\Newtonsoft.Json.xml
 C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\System.Net.Http.Formatting.xml
 C:\Users\Pueblo\Documents\GitHub\dondeducar\dondEducar\dondEducar\bin\System.Web.Helpers.xml

@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace dondEducar
 {
@@ -18,9 +17,6 @@ namespace dondEducar
                        "~/Content/bootstrap.css",
                        "~/Content/bootstrap-theme.css"));
 
-            bundles.Add(new StyleBundle("~/Content/slickgrid").Include(
-                       "~/Content/slick.grid.css"));
-
             bundles.Add(new StyleBundle("~/Content/metro").Include(
                       "~/Content/m-buttons.css"));
 
@@ -37,13 +33,7 @@ namespace dondEducar
     
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                        "~/Scripts/bootstrap.min.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/slickgrid").Include(
-                        "~/Scripts/jquery.event.drag.js",
-                       "~/Scripts/SlickGrid/slick.*",
-                       "~/Scripts/SlickGrid/Controls/slick.*"    
-                        ));
-
+            
             bundles.Add(new ScriptBundle("~/bundles/underscore").Include(
                       "~/Scripts/underscore-min.js"));
 
