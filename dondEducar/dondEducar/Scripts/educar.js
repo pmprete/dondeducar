@@ -142,9 +142,14 @@ EDUCAR.Grids.ColumnasEscuelas = [
     { id: "grid-tags", name: "Tags", field: "Tags" }
 ];
 
+EDUCAR.Grids = {};
 EDUCAR.Grids.Data = [];
 EDUCAR.Grids.DataView = {};
 EDUCAR.Grids.ColumnFilters = {};
+EDUCAR.Grids.TamañoDePagina = 25;
+EDUCAR.Grids.PaginaActual = 0;
+EDUCAR.Grids.TotalDeFilas = 0;
+EDUCAR.Grids.TotalDePaginas = 1;
 
 
 EDUCAR.Modals = {

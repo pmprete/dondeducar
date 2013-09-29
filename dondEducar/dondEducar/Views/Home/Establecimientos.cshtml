@@ -108,10 +108,10 @@
         }			
         */
     }
-
-    function onReverseGeoCoding(data, divImagen) {
-        var fotosParcela = new usig.FotosParcela(data.parcela.smp, {maxHeight : 190, maxWidth : 170, onLoad: onLoadFotos(this)});
-        fotosParcela.cargarFoto(divImagen);
+    
+    function onReverseGeoCoding(data) {
+        var fotosParcela = new usig.FotosParcela(data.parcela, {maxHeight : 170, maxWidth : 170, onLoad: onLoadFotos});
+        fotosParcela.cargarFoto($("#" + establecimiento.Longitud + establecimiento.Latitud));
     }
 
     function onReverseGeoCodingError(e) {
@@ -135,15 +135,10 @@
             var li = document.createElement("li");
             
             var divImagen = document.createElement("div");
-            divImagen.id = establecimiento.Codigo;
+            divImagen.id = establecimiento.Longitud + establecimiento.Latitud;
             divImagen.className = "mini-imagen";
-            divImagen.innerHTML = "Imagen";
-            geoCoder.reverseGeoCoding(establecimiento.Longitud, establecimiento.Latitud, onReverseGeoCoding(this,divImagen), onReverseGeoCodingError);
             
-            var divDireccion = document.createElement("div");
-            divDireccion.className = "direccion";
-            divDireccion.innerHTML = establecimiento.Direccion;
-            
+            geoCoder.reverseGeoCoding(establecimiento.Longitud, establecimiento.Latitud, onReverseGeoCoding, onReverseGeoCodingError);
             
             var divContenido = document.createElement("div");
             
@@ -161,6 +156,10 @@
             spanTags.className = "tags";
             spanTags.innerHTML = tags;
             divContenido.appendChild(spanTags);
+            
+            var divDireccion = document.createElement("div");
+            divDireccion.className = "direccion";
+            divDireccion.innerHTML = establecimiento.Direccion;
             
             li.appendChild(divImagen);
             li.appendChild(divContenido);
