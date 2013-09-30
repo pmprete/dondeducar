@@ -15,11 +15,15 @@ namespace dondEducar.Models
         public string Email { get; set; }
         public double Latitud { get; set; }
         public double Longitud { get; set; }
-        public List<Tag> Tags { get; set; }
+        public List<Tag> TipoDeEstablecimiento { get; set; }
+        public Tag Titulo { get; set; }
+        public List<Tag> NivelEducativo { get; set; }
+        public Tag Gestion { get; set; }
 
         public Establecimiento()
         {
-            Tags = new List<Tag>();
+            TipoDeEstablecimiento = new List<Tag>();
+            NivelEducativo = new List<Tag>();
         }
     }
 }

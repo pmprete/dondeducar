@@ -145,17 +145,44 @@
             divContenido.className = "contenido";
             var divNombre = document.createElement("div");
             divNombre.className = "nombre";
-            divNombre.innerHTML = establecimiento.Nombre ;
+            divNombre.innerHTML = establecimiento.Nombre;
             divContenido.appendChild(divNombre);
+         
+            var spanGestion = document.createElement("span");
+            spanGestion.className = "gestion";
+            spanGestion.innerHTML = establecimiento.Gestion.Vista;
+            divContenido.appendChild(spanGestion);
             
-            var tags = '';
-            for (var iTag = 0; iTag < establecimiento.Tags.length; iTag++) {
-                tags += ' | ' + establecimiento.Tags[iTag].Vista;
+            if(establecimiento.Titulo != null) {
+                var spanTitulo = document.createElement("span");
+                spanTitulo.className = "titulo";
+                spanTitulo.innerHTML = establecimiento.Titulo.Vista;
+                divContenido.appendChild(spanTitulo);
             }
-            var spanTags = document.createElement("span");
-            spanTags.className = "tags";
-            spanTags.innerHTML = tags;
-            divContenido.appendChild(spanTags);
+
+            var nivelEducativo = '';
+            for (var iNivel = 0; iNivel < establecimiento.NivelEducativo.length; iNivel++) {
+                if(iNivel > 0) {
+                    nivelEducativo += ' | ';
+                }
+                nivelEducativo += establecimiento.NivelEducativo[iNivel].Vista;
+            }
+            var spanNivel = document.createElement("span");
+            spanNivel.className = "nivel-educativo";
+            spanNivel.innerHTML = nivelEducativo;
+            divContenido.appendChild(spanNivel);
+            
+            var tipoDeEstablecimiento = '';
+            for (var iTipoEstablecimiento = 0; iTipoEstablecimiento < establecimiento.TipoDeEstablecimiento.length; iTipoEstablecimiento++) {
+                if(iTipoEstablecimiento > 0) {
+                    nivelEducativo += ' | ';
+                }
+                tipoDeEstablecimiento += establecimiento.TipoDeEstablecimiento[iTipoEstablecimiento].Vista;
+            }
+            var spanTipoDeEstablecimiento = document.createElement("span");
+            spanTipoDeEstablecimiento.className = "tipo-establecimiento";
+            spanTipoDeEstablecimiento.innerHTML = tipoDeEstablecimiento;
+            divContenido.appendChild(spanTipoDeEstablecimiento);
             
             var divDireccion = document.createElement("div");
             divDireccion.className = "direccion";

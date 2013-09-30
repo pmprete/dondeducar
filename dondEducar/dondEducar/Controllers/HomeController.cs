@@ -25,7 +25,7 @@ namespace dondEducar.Controllers
             var listaCategorias = categoriasParaMostrar.ToList();
             
             var establecimientos = Database.GetCollection<Establecimiento>("Establecimiento");
-            query = Query<Establecimiento>.Where(e => e.Tags.Any(t => t.Valor == nivelEducativo));
+            query = Query<Establecimiento>.Where(e => e.NivelEducativo.Any(t => t.Valor == nivelEducativo));
             var establecimientosConTag = establecimientos.Find(query);
             var listaDeEstablecimientos = establecimientosConTag.ToArray();
 

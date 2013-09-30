@@ -78,7 +78,7 @@ namespace dondEducar.Controllers
             var publica = tags.FindOne(query);
 
             var establecimientos = Database.GetCollection<Establecimiento>("Establecimiento");
-            query = Query<Establecimiento>.Where(x => x.Tags.Contains(publica));
+            query = Query<Establecimiento>.Where(x => x.Gestion.Equals(publica));
             establecimientos.Remove(query);
 
             ParsearCsvEscuelas(file, publica);
@@ -92,14 +92,14 @@ namespace dondEducar.Controllers
 
             var privada = tags.FindOne(query);
             var establecimientos = Database.GetCollection<Establecimiento>("Establecimiento");
-            query = Query<Establecimiento>.Where(x => x.Tags.Contains(privada));
+            query = Query<Establecimiento>.Where(x => x.Gestion.Equals(privada));
             establecimientos.Remove(query);
 
             ParsearCsvEscuelas(file, privada);
 
         }
 
-        private void ParsearCsvEscuelas(HttpPostedFileBase file, Tag couta)
+        private void ParsearCsvEscuelas(HttpPostedFileBase file, Tag gestion)
         {
 
             var tags = Database.GetCollection<Tag>("Tag");
@@ -160,10 +160,10 @@ namespace dondEducar.Controllers
                     //csvReader.GetField(10); GeoJson
 
                     //Añado los Tags Correspondientes
-                    escuela.Tags.Add(couta);
+                    escuela.Gestion = gestion;
 
                     if (csvReader.GetField<string>(7).Trim() == "Educ. Tecnica")
-                        escuela.Tags.Add(tecnico);
+                        escuela.Titulo = tecnico;
 
                     //Itero sobre la lista de nivelesTipos separada por "-"
                     var nivelesTipos = csvReader.GetField(6).Split('-');
@@ -174,7 +174,7 @@ namespace dondEducar.Controllers
                         {
                             if (nivelTipoTrim == "Otras")
                             {
-                                escuela.Tags.Add(otras);
+                                escuela.NivelEducativo.Add(otras);
                             }
                             else
                             {
@@ -183,16 +183,28 @@ namespace dondEducar.Controllers
                                 switch (nivel)
                                 {
                                     case "Ini":
-                                        escuela.Tags.Add(inicial);
+                                        if (!escuela.NivelEducativo.Contains(inicial))
+                                        {
+                                            escuela.NivelEducativo.Add(inicial);
+                                        }
                                         break;
                                     case "Pri":
-                                        escuela.Tags.Add(primario);
+                                        if (!escuela.NivelEducativo.Contains(primario))
+                                        {
+                                            escuela.NivelEducativo.Add(primario);
+                                        }
                                         break;
                                     case "Med":
-                                        escuela.Tags.Add(medio);
+                                        if (!escuela.NivelEducativo.Contains(medio))
+                                        {
+                                            escuela.NivelEducativo.Add(medio);
+                                        }
                                         break;
                                     case "SNU":
-                                        escuela.Tags.Add(superior);
+                                        if (!escuela.NivelEducativo.Contains(superior))
+                                        {
+                                            escuela.NivelEducativo.Add(superior);
+                                        }
                                         break;
                                     default:
                                         throw new DataException("no hay un nivel valido");
@@ -202,16 +214,28 @@ namespace dondEducar.Controllers
                                 switch (tipo)
                                 {
                                     case "Com":
-                                        escuela.Tags.Add(comun);
+                                        if (!escuela.TipoDeEstablecimiento.Contains(comun))
+                                        {
+                                            escuela.TipoDeEstablecimiento.Add(comun);
+                                        }
                                         break;
                                     case "Esp":
-                                        escuela.Tags.Add(especial);
+                                        if (!escuela.TipoDeEstablecimiento.Contains(especial))
+                                        {
+                                            escuela.TipoDeEstablecimiento.Add(especial);
+                                        }
                                         break;
                                     case "Adu":
-                                        escuela.Tags.Add(adultos);
+                                        if (!escuela.TipoDeEstablecimiento.Contains(adultos))
+                                        {
+                                            escuela.TipoDeEstablecimiento.Add(adultos);
+                                        }
                                         break;
                                     case "Art":
-                                        escuela.Tags.Add(artistico);
+                                        if (!escuela.TipoDeEstablecimiento.Contains(artistico))
+                                        {
+                                            escuela.TipoDeEstablecimiento.Add(artistico);
+                                        }
                                         break;
                                     default:
                                         throw new DataException("no hay un tipo valido");
