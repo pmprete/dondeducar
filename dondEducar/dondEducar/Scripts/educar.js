@@ -144,6 +144,7 @@ EDUCAR.Grids.ColumnasEscuelas = [
 
 EDUCAR.Grids = {};
 EDUCAR.Grids.Data = [];
+EDUCAR.Grids.DataPagina = [];
 EDUCAR.Grids.DataView = {};
 EDUCAR.Grids.ColumnFilters = {};
 EDUCAR.Grids.TamañoDePagina = 25;
