@@ -1,0 +1,55 @@
+﻿@model  dondEducar.ViewModel.EstablecimientoViewModel
+
+@*<script src="http://servicios.usig.buenosaires.gov.ar/usig-js/3.0/usig.MapaInteractivo.min.js" type="text/javascript"></script> 
+<script src="http://servicios.usig.buenosaires.gov.ar/usig-js/3.0/usig.Punto.min.js" type="text/javascript"></script> 
+ *@   
+
+ <div id="mapa-completo" class="mapa-completo" style="height:500px; width: 100%">
+ </div>
+
+<script type="text/javascript">
+    
+    var nivelEducativo = $("#filtro-NivelEducativo").val();
+    var gestion =  $("#filtro-Gestion").val();
+    var titulo =  $("#filtro-Titulo").val();
+    var tipoDeEstablecimiento =  $("#filtro-TipoDeEstablecimiento").val();
+    
+    $(document).ready(function () {
+        var map = L.map("mapa-completo").setView([-34.599722, -58.381944], 12);
+        
+        L.tileLayer('http://{s}.tile.cloudmade.com/8967791e9dc94b14b46d61c08e9e0d41/997/256/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+            maxZoom: 18
+        }).addTo(map);
+
+        var geojsonFeature = @Html.Raw(Model.GeoJsonEstablecimientos);
+        L.geoJson(geojsonFeature).addTo(map);
+        
+        //var url = '../Home/ListaEstablecimientosGeoJson?nivelEducativo=' + nivelEducativo
+        //    + '&gestion=' + ((!IsNullOrWhitespace(gestion)) ? gestion : '')
+        //    + '&tipoDeEstablecimiento='+ ((!IsNullOrWhitespace(gestion)) ? tipoDeEstablecimiento : '')
+        //    + '&titulo=' + ((!IsNullOrWhitespace(gestion)) ? titulo : '');
+
+        //var mapa = new usig.MapaInteractivo('mapa-completo', {
+        //    includeToolbar: false,
+        //    includePanZoomBar: true,
+        //    onReady: function() {
+        //        var layer = mapa.addVectorLayer('escuelas', { 
+        //            url: url
+        //            ,format:'GeoJSON'
+        //            ,symbolizer: {
+        //                externalGraphic: 'images/biblioteca.png',
+        //                backgroundGraphic: 'images/fondos/cua_azul.png',
+        //                pointRadius: 18
+        //            }
+        //            ,minPointRadius: 9
+        //            ,popup: true
+        //            //,onClick: clickHandler
+        //        });
+        //        layer;
+        //    }
+        //});
+
+
+    });
+</script>

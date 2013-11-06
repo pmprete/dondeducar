@@ -22,9 +22,9 @@ namespace dondEducar
             //    consumerKey: "",
             //    consumerSecret: "");
 
-            //OAuthWebSecurity.RegisterFacebookClient(
-            //    appId: "",
-            //    appSecret: "");
+            OAuthWebSecurity.RegisterFacebookClient(
+                appId: "558824540867090",
+                appSecret: "8ee9acb7c11f1c72046562803844dfdb");
 
             //OAuthWebSecurity.RegisterGoogleClient();
         }

@@ -16,10 +16,7 @@ namespace dondEducar
             bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
                        "~/Content/bootstrap.css",
                        "~/Content/bootstrap-theme.css"));
-
-            bundles.Add(new StyleBundle("~/Content/metro").Include(
-                      "~/Content/m-buttons.css"));
-
+            
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
 
             
@@ -32,7 +29,7 @@ namespace dondEducar
 
     
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                       "~/Scripts/bootstrap.min.js"));
+                       "~/Scripts/bootstrap.js"));
             
             bundles.Add(new ScriptBundle("~/bundles/underscore").Include(
                       "~/Scripts/underscore-min.js"));

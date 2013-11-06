@@ -149,7 +149,7 @@ namespace dondEducar.Controllers
 
                     escuela.Direccion = csvReader.GetField(0); //Domicilio Edificio
                     //csvReader.GetField(1); Domicilio entre calles
-                    escuela.Nombre = csvReader.GetField(2); //Nombre del Establecimiento
+                    escuela.Nombre = csvReader.GetField(2).Replace("ş",""); //Nombre del Establecimiento
                     escuela.Codigo = csvReader.GetField(3); //Nombre abreviado
                     escuela.Telefonos = csvReader.GetField(4); //Telefonos
                     escuela.Email = csvReader.GetField(5); //correo_web
@@ -157,7 +157,7 @@ namespace dondEducar.Controllers
                     //csvReader.GetField(7); Dependencia Funcional
                     escuela.Longitud = Convert.ToDouble(csvReader.GetField(8), CultureInfo.InvariantCulture); //Longitud
                     escuela.Latitud = Convert.ToDouble(csvReader.GetField(9), CultureInfo.InvariantCulture); //Latitud
-                    //csvReader.GetField(10); GeoJson
+                    escuela.GeoJson = csvReader.GetField(10); //GeoJson
 
                     //Añado los Tags Correspondientes
                     escuela.Gestion = gestion;
@@ -167,82 +167,59 @@ namespace dondEducar.Controllers
 
                     //Itero sobre la lista de nivelesTipos separada por "-"
                     var nivelesTipos = csvReader.GetField(6).Split('-');
-                    foreach (var nivelTipo in nivelesTipos)
+                    foreach (var nivelTipoString in nivelesTipos)
                     {
-                        var nivelTipoTrim = nivelTipo.Trim();
-                        if (!String.IsNullOrWhiteSpace(nivelTipoTrim))
+                        var nivelTipoTrim = nivelTipoString.Trim();
+                        if (String.IsNullOrWhiteSpace(nivelTipoTrim)) continue;
+
+                        var nivelTipo = new NivelTipo();
+
+                        if (nivelTipoTrim == "Otras")
                         {
-                            if (nivelTipoTrim == "Otras")
+                            nivelTipo.NivelEducativo = otras;
+                        }
+                        else
+                        {
+                            //Busco el nivel correspondiente
+                            var nivel = nivelTipoTrim.Substring(0, 3);
+                            switch (nivel)
                             {
-                                escuela.NivelEducativo.Add(otras);
+                                case "Ini":
+                                    nivelTipo.NivelEducativo = inicial;
+                                    break;
+                                case "Pri":
+                                    nivelTipo.NivelEducativo = primario;
+                                    break;
+                                case "Med":
+                                    nivelTipo.NivelEducativo = medio;
+                                    break;
+                                case "SNU":
+                                    nivelTipo.NivelEducativo = superior;
+                                    break;
+                                default:
+                                    throw new DataException("no hay un nivel valido");
                             }
-                            else
+                            //Busco el Tipo de escuela correspondiente
+                            var tipo = nivelTipoTrim.Substring(3, 3);
+                            switch (tipo)
                             {
-                                //Busco el nivel correspondiente
-                                var nivel = nivelTipoTrim.Substring(0, 3);
-                                switch (nivel)
-                                {
-                                    case "Ini":
-                                        if (!escuela.NivelEducativo.Contains(inicial))
-                                        {
-                                            escuela.NivelEducativo.Add(inicial);
-                                        }
-                                        break;
-                                    case "Pri":
-                                        if (!escuela.NivelEducativo.Contains(primario))
-                                        {
-                                            escuela.NivelEducativo.Add(primario);
-                                        }
-                                        break;
-                                    case "Med":
-                                        if (!escuela.NivelEducativo.Contains(medio))
-                                        {
-                                            escuela.NivelEducativo.Add(medio);
-                                        }
-                                        break;
-                                    case "SNU":
-                                        if (!escuela.NivelEducativo.Contains(superior))
-                                        {
-                                            escuela.NivelEducativo.Add(superior);
-                                        }
-                                        break;
-                                    default:
-                                        throw new DataException("no hay un nivel valido");
-                                }
-                                //Busco el Tipo de escuela correspondiente
-                                var tipo = nivelTipoTrim.Substring(3, 3);
-                                switch (tipo)
-                                {
-                                    case "Com":
-                                        if (!escuela.TipoDeEstablecimiento.Contains(comun))
-                                        {
-                                            escuela.TipoDeEstablecimiento.Add(comun);
-                                        }
-                                        break;
-                                    case "Esp":
-                                        if (!escuela.TipoDeEstablecimiento.Contains(especial))
-                                        {
-                                            escuela.TipoDeEstablecimiento.Add(especial);
-                                        }
-                                        break;
-                                    case "Adu":
-                                        if (!escuela.TipoDeEstablecimiento.Contains(adultos))
-                                        {
-                                            escuela.TipoDeEstablecimiento.Add(adultos);
-                                        }
-                                        break;
-                                    case "Art":
-                                        if (!escuela.TipoDeEstablecimiento.Contains(artistico))
-                                        {
-                                            escuela.TipoDeEstablecimiento.Add(artistico);
-                                        }
-                                        break;
-                                    default:
-                                        throw new DataException("no hay un tipo valido");
-                                }
+                                case "Com":
+                                    nivelTipo.TipoDeEstablecimiento = comun;
+                                    break;
+                                case "Esp":
+                                    nivelTipo.TipoDeEstablecimiento = especial;
+                                    break;
+                                case "Adu":
+                                    nivelTipo.TipoDeEstablecimiento = adultos;
+                                    break;
+                                case "Art":
+                                    nivelTipo.TipoDeEstablecimiento = artistico;
+                                    break;
+                                default:
+                                    throw new DataException("no hay un tipo valido");
                             }
                         }
-
+                        escuela.NivelTipo.Add(nivelTipo);
                     }
                     establecimientos.Insert(escuela);
                 }
@@ -270,51 +247,55 @@ namespace dondEducar.Controllers
 
             var tags = Database.GetCollection<Tag>("Tag");
             tags.RemoveAll();
-            
-            var categoriaCuota = new Categoria { Nombre = "Gestion", Vista = "Gestión" };
-            var publica = new Tag { Valor = "Publica", Vista = "Publica" };
+
+            const string nombreGestion = "Gestion";
+            var categoriaCuota = new Categoria { Nombre = nombreGestion, Vista = "Gestión" };
+            var publica = new Tag { Valor = "Publica", Vista = "Publica", CategoriaNombre = nombreGestion };
             tags.Insert(publica);
             categoriaCuota.Tags.Add(publica);
-            var privada = new Tag { Valor = "Privada", Vista = "Privada" };
+            var privada = new Tag { Valor = "Privada", Vista = "Privada", CategoriaNombre = nombreGestion };
             tags.Insert(privada);
             categoriaCuota.Tags.Add(privada);
             categoria.Insert(categoriaCuota);
 
-            var categoriaNivel = new Categoria { Nombre = "NivelEducativo", Vista = "Nivel Educativo" };
-            var inicial = new Tag { Valor = "Inicial", Vista = "Inicial" };
+            const string nombreNivel = "NivelEducativo";
+            var categoriaNivel = new Categoria { Nombre = nombreNivel, Vista = "Nivel Educativo" };
+            var inicial = new Tag { Valor = "Inicial", Vista = "Inicial", CategoriaNombre = nombreNivel };
             tags.Insert(inicial);
             categoriaNivel.Tags.Add(inicial);
-            var primario = new Tag { Valor = "Primario", Vista = "Primario" };
+            var primario = new Tag { Valor = "Primario", Vista = "Primario", CategoriaNombre = nombreNivel };
             tags.Insert(primario);
             categoriaNivel.Tags.Add(primario);
-            var medio = new Tag { Valor = "Secundario", Vista = "Secundario" };
+            var medio = new Tag { Valor = "Secundario", Vista = "Secundario", CategoriaNombre = nombreNivel };
             tags.Insert(medio);
             categoriaNivel.Tags.Add(medio);
-            var superior = new Tag { Valor = "Superior", Vista = "Superior" };
+            var superior = new Tag { Valor = "Superior", Vista = "Superior", CategoriaNombre = nombreNivel };
             tags.Insert(superior);
             categoriaNivel.Tags.Add(superior);
-            var otras = new Tag { Valor = "Otros", Vista = "Otros" };
+            var otras = new Tag { Valor = "Otros", Vista = "Otros", CategoriaNombre = nombreNivel };
             tags.Insert(otras);
             categoriaNivel.Tags.Add(otras);
             categoria.Insert(categoriaNivel);
 
-            var categoriaTitulo = new Categoria { Nombre = "Titulo", Vista = "Titulo" };
-            var tecnico = new Tag { Valor = "Tecnico", Vista = "Tecnico" };
+            const string nombreTitulo = "Titulo";
+            var categoriaTitulo = new Categoria { Nombre = nombreTitulo, Vista = "Titulo" };
+            var tecnico = new Tag { Valor = "Tecnico", Vista = "Tecnico", CategoriaNombre = nombreTitulo };
             tags.Insert(tecnico);
             categoriaTitulo.Tags.Add(tecnico);
             categoria.Insert(categoriaTitulo);
 
-            var categoriaTipo = new Categoria { Nombre = "TipoDeEstablecimiento", Vista = "Tipo De Establecimiento" };
-            var especial = new Tag { Valor = "Especial", Vista = "Especial" };
+            const string nombreTipo = "TipoDeEstablecimiento";
+            var categoriaTipo = new Categoria { Nombre = nombreTipo, Vista = "Tipo De Establecimiento" };
+            var especial = new Tag { Valor = "Especial", Vista = "Especial", CategoriaNombre = nombreTipo };
             tags.Insert(especial);
             categoriaTipo.Tags.Add(especial);
-            var comun = new Tag { Valor = "Comun", Vista = "Comun" };
+            var comun = new Tag { Valor = "Comun", Vista = "Comun", CategoriaNombre = nombreTipo };
             tags.Insert(comun);
             categoriaTipo.Tags.Add(comun);
-            var adultos = new Tag { Valor = "Adultos", Vista = "Adultos" };
+            var adultos = new Tag { Valor = "Adultos", Vista = "Adultos", CategoriaNombre = nombreTipo };
             tags.Insert(adultos);
             categoriaTipo.Tags.Add(adultos);
-            var artisitco = new Tag { Valor = "Artistico", Vista = "Artistico" };
+            var artisitco = new Tag { Valor = "Artistico", Vista = "Artistico", CategoriaNombre = nombreTipo };
             tags.Insert(artisitco);
             categoriaTipo.Tags.Add(artisitco);
             categoria.Insert(categoriaTipo);

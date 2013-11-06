@@ -1,0 +1,175 @@
+﻿@model  dondEducar.ViewModel.EstablecimientoViewModel
+
+<form id="formEstablecimientos" action="@Url.Action("ListaEstablecimientos", "Home")" method="post">
+
+    @Html.HiddenFor(x => x.EsMapa, new { Id = "es-mapa" })
+    @Html.HiddenFor(x => x.Pagina, new { Id = "pagina-selecionada" })
+    @Html.HiddenFor(x => x.TotalDePaginas, new { Id = "total-de-paginas" })
+    @Html.HiddenFor(x => x.Filtro.Gestion.Valor, new { Id = "filtro-Gestion" })
+    @Html.HiddenFor(x => x.Filtro.NivelEducativo.Valor, new { Id = "filtro-NivelEducativo" })
+    @Html.HiddenFor(x => x.Filtro.TipoDeEstablecimiento.Valor, new { Id = "filtro-TipoDeEstablecimiento" })
+    @Html.HiddenFor(x => x.Filtro.Titulo.Valor, new { Id = "filtro-Titulo" })
+
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+        <li class="active">Nivel @Model.Filtro.NivelEducativo.Vista</li>
+    </ol>
+    <div class="row">
+        <aside id="bar" role="complementary" class="sidebar options col-xs-6 col-md-2">
+            @if (Model.Filtro.Filtrado == true)
+            {
+                <div id="filtradas" class="design-selection">
+                    <h3>Filtrado por:</h3>
+                    <nav role="navigation">
+                        <ul>
+
+                            @if (@Model.Filtro.Gestion.Vista != null)
+                            {
+                                <li class="filtrado">
+                                    <h4>@Model.Filtro.Gestion.Vista</h4>
+                                    <a id="@Model.Filtro.Gestion.CategoriaNombre" class="desfiltrar" href="#" >
+                                        <span class="glyphicon glyphicon-remove ch-icon-remove"></span>
+                                    </a>
+                                </li>
+                            }
+
+                            @if (@Model.Filtro.TipoDeEstablecimiento.Vista != null)
+                            {
+                                <li class="filtrado">
+                                    <h4>@Model.Filtro.TipoDeEstablecimiento.Vista</h4>
+                                    <a id="@Model.Filtro.TipoDeEstablecimiento.CategoriaNombre"  class="desfiltrar" href="#" >
+                                        <span class="glyphicon glyphicon-remove ch-icon-remove"></span>
+                                    </a>
+                                </li>
+                            }
+
+                            @if (@Model.Filtro.Titulo.Vista != null)
+                            {
+                                <li class="filtrado">
+                                    <h4>@Model.Filtro.Titulo.Vista</h4>
+                                    <a id="@Model.Filtro.Titulo.CategoriaNombre"  class="desfiltrar" href="#" >
+                                        <span class="glyphicon glyphicon-remove ch-icon-remove"></span>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </nav>
+                </div>
+            }
+            <div id="opciones" class="design-selection">
+                @if(Model.Filtro.NivelEducativo.Valor != "Otros")
+                {
+                    foreach (var categoria in Model.Categorias)
+                    {
+                        <div id="@categoria.Nombre" class="design-selection categoria">
+                            <h3 class="select">@categoria.Vista</h3>
+                            <nav role="navigation">
+                                <ul>
+                                    @foreach (var tag in categoria.Tags)
+                                    {
+                                        <li class="tag">
+                                            <a id="@tag.Valor" href="#">@tag.Vista</a>
+                                        </li>
+                                    }
+                                </ul>
+                            </nav>
+                        </div>
+                    }
+                }
+            </div>
+
+            <a href="http://www.buenosaires.gob.ar/areas/educacion/inscripcionescolar/" class="btnInscribir" target="_blank">
+                <span>Inscribite!
+                    <br />
+                    <strong>en la escuela publica</strong>
+                </span>
+            </a>
+        </aside>
+
+
+        <div role="main" id="zen-supporting" class="main col-xs-12 col-sm-6 col-md-10">
+            <div role="article" id="zen-explanation" class="explanation">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                    <li  @(Model.EsMapa != true ? "class=active" : "")>
+                        <a id="lista" href="#lista" data-toggle="tab">Lista</a>
+                    </li>
+                    <li @(Model.EsMapa == true ? "class=active" : "")>
+                        <a id="mapa" href="#mapa" data-toggle="tab">Mapa</a>
+                    </li>
+                </ul>
+     
+                @if (Model.EsMapa == true)
+                {
+                    @Html.Partial("_MapaEstablecimientos", Model)
+                }
+                else
+                {
+                    <div class="dropdown">
+                        <span class="dropdown-lbl">Ordenar por: </span>
+                        <button class="btn dropdown-toggle sr-only" type="button" id="ordenarDropdown" data-toggle="dropdown">
+                            Primera Opcion:
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="ordenarMenu">
+                            <li role="presentation" class="dropdown-header">Ordenar por:</li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Puntaje más alto</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Puntaje más bajo</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nombre ascendente</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nombre descendente</a></li>
+                        </ul>
+                    </div>
+                    @Html.Partial("_ListaEstablecimientos", Model)
+                }
+
+            </div>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript">
+
+    function Filtrar(categoria, valor) {
+
+        EDUCAR.Grids.DataFiltrada = _.filter(EDUCAR.Grids.DataFiltrada,
+            function (establecimiento) { return _.contains(establecimiento[categoria], valor); }
+        );
+    };
+
+
+    function seleccionarTag(event) {
+        event.preventDefault();
+        var valor = $(this).attr("id");
+        var categoria = $(this).closest(".categoria");
+        var nombreCategoria = categoria.attr("id");
+        $("#filtro-" + nombreCategoria).val(valor);
+        $("#formEstablecimientos").submit();
+    }
+
+    function desSeleccionarTag(event) {
+        event.preventDefault();
+        var nombreCategoria = $(this).attr("id");
+        $("#filtro-" + nombreCategoria).val('');
+        $("#formEstablecimientos").submit();
+    }
+
+    $(document).ready(function () {
+
+        $(".tag a").click(seleccionarTag);
+        $(".desfiltrar").click(desSeleccionarTag);
+
+        $("#mapa").click(function (event) {
+            event.preventDefault();
+            $("#es-mapa").val('True');
+            $("#formEstablecimientos").submit();
+        });
+
+        $("#lista").click(function (event) {
+            event.preventDefault();
+            $("#es-mapa").val('False');
+            $("#formEstablecimientos").submit();
+        });
+
+    });
+</script>

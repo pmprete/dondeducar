@@ -25,14 +25,19 @@ header h1, header h2, .sidebar h3 {
     display: none;
 }
 
+.barra-de-navegacion li {
+    float: right;
+    text-decoration: underline;
+    color: #428BCA;
+}
+
 .content-wrapper {
     display: block;
 }
 
-.center
-{
-    margin-left:auto;
-    margin-right:auto;
+.center {
+    margin-left: auto;
+    margin-right: auto;
     width: 70%;
     text-align: center;
 }
@@ -47,14 +52,14 @@ div.summary {
     padding-right: 10px;
 }
 
-div.summary a {
-    font-weight: bold;
-    color: #FFE6F0;
-}
+    div.summary a {
+        font-weight: bold;
+        color: #FFE6F0;
+    }
 
-div.summary a:hover {
-    color: #000;
-}
+        div.summary a:hover {
+            color: #000;
+        }
 
 div.main h3 {
     display: block;
@@ -74,13 +79,13 @@ div.main h3 {
     line-height: 1.5em;
 }
 
-.sidebar a{
+.sidebar a {
     color: #000;
 }
 
-.sidebar a:hover{
-    color: #FFF;
-}
+    .sidebar a:hover {
+        color: #FFF;
+    }
 
 div.main abbr {
     border-bottom: 1px dotted #000;
@@ -94,7 +99,7 @@ footer {
     line-height: 20px;
     text-align: center;
     margin-bottom: 10px;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .body-wrapper {
@@ -108,14 +113,14 @@ footer, .push {
     height: 80px; /* '.push' must be the same height as 'footer' */
 }
 
-footer a {
-    color: #FFF;
-    font-weight: bold;
-}
+    footer a {
+        color: #FFF;
+        font-weight: bold;
+    }
 
-footer a:hover {
-    color: #000;
-}
+        footer a:hover {
+            color: #000;
+        }
 
 
 .sidebar {
@@ -124,101 +129,99 @@ footer a:hover {
     font-family: Baskerville, Georgia, Garamond, Times New Roman, serif;
 }
 
-.sidebar.selected {
-    background-color: #F06;
-    color: #FFF;
-}
+    .sidebar.selected {
+        background-color: #F06;
+        color: #FFF;
+    }
 
-.sidebar.options {
-    background-color:  #FFF;
-}
+    .sidebar.options {
+        background-color: #FFF;
+    }
 
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
-.sidebar ul {
-    list-style: none;
-}
+    .sidebar ul {
+        list-style: none;
+    }
 
-.sidebar ul li {
-    border-bottom: 1px solid #CCC;
-}
+        .sidebar ul li {
+            border-bottom: 1px solid #CCC;
+        }
 
-.sidebar ul li a {
-    display: block;
-    padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-weight: bold;
-    font-size: 12px;
-    text-transform: uppercase;
-    text-decoration: none;
-}
+            .sidebar ul li a {
+                display: block;
+                padding: 5px;
+                padding-left: 20px;
+                padding-right: 20px;
+                font-weight: bold;
+                font-size: 12px;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
 
-.sidebar.selected ul li a {
-    color: #FFF;
-}
+    .sidebar.selected ul li a {
+        color: #FFF;
+    }
 
-.sidebar.options ul li a {
-    color: #F06;
-}
-
-
-.sidebar ul li a:hover {
-    background-color: #000;
-    color: #FFF;
-}
-
-.sidebar div.design-selection ul li {
-    padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 10px;
-}
-
-.sidebar div.design-selection ul li a {
-    padding: 0;
-    font-size: 12px;
-}
-
-.sidebar div.design-selection ul li a:hover {
-    color: #000;
-    background-color: #FFF;
-}
-
-.sidebar div.design-selection ul li a.designer-name {
-    display: inline;
-    text-transform: none;
-    font-size: 10px;
-    color: #000;
-}
-
-.sidebar div.design-selection ul li a.designer-name:hover {
-    text-decoration: underline;
-}
-
-.sidebar div.design-selection {
-    display: block;
-    margin-top: 10px;
-}
-
-.sidebar div.design-selection h3 {
-    display: block;
-    height: 35px;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.sidebar div.design-selection h3 {
-    white-space: nowrap;
-    overflow: hidden;
-}
+    .sidebar.options ul li a {
+        color: #F06;
+    }
 
 
+    .sidebar ul li a:hover {
+        background-color: #000;
+        color: #FFF;
+    }
+
+    .sidebar div.design-selection ul li {
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 10px;
+    }
+
+        .sidebar div.design-selection ul li a {
+            padding: 0;
+            font-size: 12px;
+        }
+
+            .sidebar div.design-selection ul li a:hover {
+                color: #000;
+                background-color: #FFF;
+            }
+
+            .sidebar div.design-selection ul li a.designer-name {
+                display: inline;
+                text-transform: none;
+                font-size: 10px;
+                color: #000;
+            }
+
+                .sidebar div.design-selection ul li a.designer-name:hover {
+                    text-decoration: underline;
+                }
+
+    .sidebar div.design-selection {
+        display: block;
+        margin-top: 10px;
+    }
+
+        .sidebar div.design-selection h3 {
+            display: block;
+            height: 35px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar div.design-selection h3 {
+            white-space: nowrap;
+            overflow: hidden;
+        }
 
 .blocks {
     margin-left: 50px;
@@ -229,6 +232,7 @@ footer a:hover {
     column-count: 3;
     column-gap: 0;
     width: 1200px;
+    list-style-type: none;
 }
 
 .establecimientos li {
@@ -238,44 +242,28 @@ footer a:hover {
     margin: 5px 5px 0 0;
     position: relative;
     width: 100%;
+    list-style-type: none;
 }
 
-.establecimientos li .mini-imagen {
-    width: 170px;
-    height: 170px;
-    float: left;
+    .establecimientos li .puntaje {
+        width: 150px;
+        height: 150px;
+        border: 1px solid;
+        float: left;
+        background-color: #ebe4e4;
+    }
+
+    .establecimientos li .contenido {
+        margin-left: 186px;
+        min-height: 170px;
+        min-width: 175px;
+    }
+
+.panel-title {
+    color: white;
 }
 
-
-.establecimientos li .direccion {
-    float: right;
-    width: 130px;
-    margin-right: 30px;
-    /*margin-top: 37px;*/
-    height: 133px;
-}
-
-.establecimientos li .contenido{
-    margin-left: 186px;
-    max-width: 540px;
-    min-height: 170px;
-    min-width: 175px;
-    width: 58%;
-}
-
-.establecimientos li .nombre{
-    color: #333333;
-    float: left;
-    font-size: 15px;
-    font-weight: bold;
-    margin-top: 20px;
-    line-height: 18px;
-    margin-left: 10px;
-    width: 90%;
-    min-width: 175px;
-}
-
-.establecimientos li .contenido span  {
+.establecimientos li .contenido span {
     display: block;
     float: left;
     margin: 10px 0 0 10px;
@@ -286,6 +274,81 @@ footer a:hover {
     width: 90%;
 }
 
-.paginas a{
+.paginas a {
     margin: 2px;
 }
+
+.filtrado {
+    background: #D3D3D3;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    margin: 4px 0 0;
+    padding: 0;
+    position: relative;
+    text-shadow: 0 1px 1px #fff;
+}
+
+    .filtrado h4 {
+        text-align: left;
+        padding: 0px;
+        font-weight: bold;
+        font-size: 12px;
+        /*text-transform: uppercase;*/
+        margin: 10px 0 0 10px;
+    }
+
+.desfiltrar {
+    cursor: pointer;
+    font-size: 6px;
+    opacity: .7;
+    filter: alpha(opacity=70);
+    position: absolute;
+    right: 7px;
+    top: 5px;
+}
+
+.ch-icon-remove {
+    color: #555;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    color: #E4DA00;
+}
+
+.btnInscribir {
+    width: 312px;
+    height: 150px;
+    background-image: url(images/btn-inscribir01.png) !important;
+    margin: 0;
+    text-align: center;
+    display: table !important;
+    font-size: 35px !important;
+    line-height: 1em;
+    font-family: 'dk_crayon_crumbleregular';
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 !important;
+    margin: 0 !important;
+    transition: color .2s;
+    -webkit-transition: color .2s;
+}
+
+    .btnInscribir span {
+        width: 100%;
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+        .btnInscribir span strong {
+            font-family: Gotham;
+            font-size: 20px;
+            font-weight: normal;
+            color: #E4DA00;
+        }

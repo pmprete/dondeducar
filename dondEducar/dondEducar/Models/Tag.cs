@@ -8,5 +8,6 @@ namespace dondEducar.Models
     {
         public string Valor { get; set; }
         public string Vista { get; set; }
+        public string CategoriaNombre { get; set; }
     }
 }

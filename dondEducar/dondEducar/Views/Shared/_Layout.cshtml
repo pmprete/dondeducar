@@ -1,42 +1,118 @@
 ﻿<!DOCTYPE html>
+
 <html lang="as-AR">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - dondEducar.com.ar</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+
     @Styles.Render("~/Content/themes/base/css")
     @Styles.Render("~/Content/bootstrap")
-    @Styles.Render("~/Content/metro")
     @Styles.Render("~/Content/css")
-    
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/underscore")
     @Scripts.Render("~/bundles/educar")
-    <head>
-        <meta charset="utf-8" />
-        <title>@ViewBag.Title - dondEducar.com.ar</title>
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width" />
-    </head>
-    <body>
-        <div class="body-wrapper">
-            <header>             
-            </header>
-            <div id="body" class="content-wrapper">
-                @* modal *@
-                <div id="educarModal" class="modal hide fade"></div>
-                @RenderBody()
-            </div>
-            <div class="push"></div>
-        </div>
-        <footer>
-            <a class="zen-validate-html" title="Check the validity of this site’s HTML" href="http://validator.w3.org/check/referer">HTML</a>
-            <a class="zen-validate-css" title="Check the validity of this site’s CSS" href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
-            <a class="zen-license" title="View the Creative Commons license of this site: Attribution-NonCommercial-ShareAlike." href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC</a>
-            <a class="zen-accessibility" title="Read about the accessibility of this site" href="http://mezzoblue.com/zengarden/faq/#aaa">A11y</a>
-            <a class="zen-github" title="Fork this site on Github" href="https://github.com/mezzoblue/csszengarden.com">GH</a>
-            <div class="float-left">
-                <p>&copy; @DateTime.Now.Year - Bs Apps</p>
-            </div>
-        </footer>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <div class="body-wrapper">
+        <header>
+            <ul class="nav nav-pills barra-de-navegacion">
+                @*<li>@Html.ActionLink("Iniciar Sesión", "ExternalLoginsList", "Account", new { returnUrl = Request.RawUrl }, new { @id = "login" })</li>*@
+                <li><fb:login-button>Login with Facebook</fb:login-button></li>
+                <li>@Html.ActionLink("Contacto", "Contacto", "Home")</li>
+                <li>@Html.ActionLink("Informacion", "Informacion", "Home")</li>
+                <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+            </ul>
+        </header>
+        <div id="body" class="content-wrapper">
 
-    </body>
-    
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Iniciar Sesión</h4>
+                        </div>
+                        <div id="myModal-body" class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+
+            @RenderBody()
+
+        </div>
+        <div class="push"></div>
+    </div>
+    <footer>
+        <a class="zen-validate-html" title="Check the validity of this site’s HTML" href="http://validator.w3.org/check/referer">HTML</a>
+        <a class="zen-validate-css" title="Check the validity of this site’s CSS" href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+        <a class="zen-license" title="View the Creative Commons license of this site: Attribution-NonCommercial-ShareAlike." href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC</a>
+        <a class="zen-accessibility" title="Read about the accessibility of this site" href="http://mezzoblue.com/zengarden/faq/#aaa">A11y</a>
+        <a class="zen-github" title="Fork this site on Github" href="https://github.com/mezzoblue/csszengarden.com">GH</a>
+        <div class="float-left">
+            <p>&copy; @DateTime.Now.Year - Bs Apps</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        window.fbAsyncInit = function () {
+            // init the FB JS SDK
+            FB.init({
+                appId: '558824540867090',                        // App ID from the app dashboard
+                channelUrl: '@Request.Url.Authority' + '/channel.html', // Channel file for x-domain comms
+                status: true,                               // check login status
+                cookie: true,                               // enable cookies to allow server to access session,
+                xfbml: true                                 // Look for social plugins on the page
+            });
+
+            // Additional initialization code such as adding Event Listeners goes here
+        };
+
+        // Load the SDK asynchronously
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=558824540867090";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        
+
+        //Mis cosas
+        $(document).ready(function () {
+
+            $("#login").click(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: "GET",
+                    url: event.target.href,
+                    dataType: "html",
+                    async: false,
+                    cache: false
+                })
+                    .done(function (response) {
+                        $('#myModal-body').html(response);
+                        $('#myModal').modal('show');
+                    });
+
+            });
+
+        });
+    </script>
+
+</body>
+
 </html>

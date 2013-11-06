@@ -1,6 +1,14 @@
 ﻿/* ===================================================
  * educar.js 
  * =================================================== */
+
+function IsNullOrWhitespace(input) {
+
+    if (input == null) return true;
+
+    return input.replace(/\s/g, '').length < 1;
+}
+
 var EDUCAR = {
     /**
      * Verifica si el objeto es undefined, array vacío o string vacía.
@@ -144,13 +152,15 @@ EDUCAR.Grids.ColumnasEscuelas = [
 
 EDUCAR.Grids = {};
 EDUCAR.Grids.Data = [];
-EDUCAR.Grids.DataPagina = [];
-EDUCAR.Grids.DataView = {};
-EDUCAR.Grids.ColumnFilters = {};
+
 EDUCAR.Grids.TamañoDePagina = 25;
 EDUCAR.Grids.PaginaActual = 0;
-EDUCAR.Grids.TotalDeFilas = 0;
 EDUCAR.Grids.TotalDePaginas = 1;
+
+EDUCAR.Grids.TamañoDeBloque = 10;
+EDUCAR.Grids.BloqueActual = 0;
+EDUCAR.Grids.TotalDeBloques = 0;
+
 
 
 EDUCAR.Modals = {
