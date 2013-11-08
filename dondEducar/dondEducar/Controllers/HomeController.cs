@@ -116,7 +116,7 @@ namespace dondEducar.Controllers
             
             if (esMapa)
             {
-                var geoJson = String.Join(",", establecimientosConTag.Take(100)
+                var geoJson = String.Join(",", establecimientosConTag
                     .Select(x => @"{ ""type"": ""Feature"" ," + Environment.NewLine
                         + @"""geometry"":" + x.GeoJson + "," + Environment.NewLine
                         + @" ""properties"": {" + Environment.NewLine
