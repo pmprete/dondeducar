@@ -1,4 +1,5 @@
-﻿@model  dondEducar.ViewModel.EstablecimientoViewModel
+﻿@using dondEducar.ViewModel
+@model  EstablecimientoViewModel
 
 
      
@@ -188,7 +189,31 @@
         EDUCAR.Grids.TotalDePaginas = @Model.TotalDePaginas;
         EDUCAR.Grids.TotalDeBloques = Math.ceil(EDUCAR.Grids.TotalDePaginas / EDUCAR.Grids.TamañoDeBloque);
         
-        InicializarPaginas();
+        $("#puntaje-mayor").click(function(event) {
+            event.preventDefault();
+            $("#orden-selecionado").val('@Ordenamiento.MayorPuntaje');
+            $("#formEstablecimientos").submit();
+        });
+        
+        $("#puntaje-menor").click(function (event) {
+            event.preventDefault();
+            $("#orden-selecionado").val('@Ordenamiento.MenorPuntaje');
+            $("#formEstablecimientos").submit();
+        });
+        
+        $("#nombre-ascendente").click(function (event) {
+            event.preventDefault();
+            $("#orden-selecionado").val('@Ordenamiento.NombreAscendente');
+            $("#formEstablecimientos").submit();
+        });
+        
+        $("#nombre-descendente").click(function (event) {
+            event.preventDefault();
+            $("#orden-selecionado").val('@Ordenamiento.NombreDescendente');
+            $("#formEstablecimientos").submit();
+        });
 
+        InicializarPaginas();
+        
     });
 </script>

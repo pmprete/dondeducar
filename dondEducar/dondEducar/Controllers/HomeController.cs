@@ -36,12 +36,12 @@ namespace dondEducar.Controllers
             const int pagina = 1;
             var filtro = new Filtro {NivelEducativo = {Valor = nivelEducativo}};
 
-            var establecimientoViewModel = CrearViewModel(false, pagina, filtro);
+            var establecimientoViewModel = CrearViewModel(false, pagina, Ordenamiento.MayorPuntaje, filtro);
 
             return View("Filtrado", establecimientoViewModel);
         }
 
-        private EstablecimientoViewModel CrearViewModel(bool esMapa, int pagina, Filtro filtro)
+        private EstablecimientoViewModel CrearViewModel(bool esMapa, int pagina, Ordenamiento orden, Filtro filtro)
         {
             IMongoQuery query = null;
             Tag tag = null;
@@ -131,7 +131,26 @@ namespace dondEducar.Controllers
             }
             else
             {
-                listaDeEstablecimientos = establecimientosConTag
+                IOrderedEnumerable<Establecimiento> establecimeintosOrdenados = null;
+
+                if (orden == Ordenamiento.MayorPuntaje)
+                {
+                    establecimeintosOrdenados = establecimientosConTag.OrderByDescending(x => x.Puntaje);
+                }
+                if (orden == Ordenamiento.MenorPuntaje)
+                {
+                    establecimeintosOrdenados = establecimientosConTag.OrderBy(x => x.Puntaje);
+                }
+                if (orden == Ordenamiento.NombreAscendente)
+                {
+                    establecimeintosOrdenados = establecimientosConTag.OrderBy(x => x.Nombre);
+                }
+                if (orden == Ordenamiento.NombreDescendente)
+                {
+                    establecimeintosOrdenados = establecimientosConTag.OrderByDescending(x => x.Nombre);
+                }
+
+                listaDeEstablecimientos = establecimeintosOrdenados
                     .Skip(_tamañoDePagina*(pagina - 1))
                     .Take(_tamañoDePagina)
                     .ToList();
@@ -156,7 +175,10 @@ namespace dondEducar.Controllers
         [HttpPost]
         public ActionResult ListaEstablecimientos(EstablecimientoViewModel establecimientoViewModel)
         {
-            var establecimientoNuevoViewModel = CrearViewModel(establecimientoViewModel.EsMapa, establecimientoViewModel.Pagina, establecimientoViewModel.Filtro);
+            var establecimientoNuevoViewModel = CrearViewModel(establecimientoViewModel.EsMapa, 
+                establecimientoViewModel.Pagina, 
+                establecimientoViewModel.Orden,
+                establecimientoViewModel.Filtro);
 
             return View("Filtrado", establecimientoNuevoViewModel);
         }

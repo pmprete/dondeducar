@@ -196,6 +196,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\UrlHelperExtension.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Mensaje.cs" />
     <Compile Include="Models\MongoEntity.cs" />

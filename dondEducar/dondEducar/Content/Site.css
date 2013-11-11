@@ -124,7 +124,7 @@ footer, .push {
 
 
 .sidebar {
-    top: 0px;
+    top: 0;
     height: 100%;
     font-family: Baskerville, Georgia, Garamond, Times New Roman, serif;
 }
@@ -235,13 +235,18 @@ footer, .push {
     list-style-type: none;
 }
 
+#tabs-vista li.dropdown{
+    float: right;
+    margin-right: 20%;
+}
+
 .establecimientos li {
     float: left;
-    max-width: 810px;
     min-height: 170px;
     margin: 5px 5px 0 0;
     position: relative;
-    width: 100%;
+    min-width: 360px;
+    width: 80%;
     list-style-type: none;
 }
 
@@ -256,7 +261,7 @@ footer, .push {
     .establecimientos li .contenido {
         margin-left: 186px;
         min-height: 170px;
-        min-width: 175px;
+        min-width: 200px;
     }
 
 .panel-title {

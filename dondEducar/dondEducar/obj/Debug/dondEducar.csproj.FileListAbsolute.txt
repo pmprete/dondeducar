@@ -265,7 +265,6 @@ C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\bin\ko\System.Spatial.r
 C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\bin\ru\System.Spatial.resources.dll
 C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.csprojResolveAssemblyReference.cache
 C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.dll
 C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.pdb
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\dondEducar.dll
@@ -358,3 +357,4 @@ C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\zh-Hant\System.Spat
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.csprojResolveAssemblyReference.cache
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.pdb
+C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.csprojResolveAssemblyReference.cache

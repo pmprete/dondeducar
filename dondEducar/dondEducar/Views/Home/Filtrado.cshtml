@@ -3,6 +3,7 @@
 <form id="formEstablecimientos" action="@Url.Action("ListaEstablecimientos", "Home")" method="post">
 
     @Html.HiddenFor(x => x.EsMapa, new { Id = "es-mapa" })
+    @Html.HiddenFor(x => x.Orden, new { Id = "orden-selecionado" })
     @Html.HiddenFor(x => x.Pagina, new { Id = "pagina-selecionada" })
     @Html.HiddenFor(x => x.TotalDePaginas, new { Id = "total-de-paginas" })
     @Html.HiddenFor(x => x.Filtro.Gestion.Valor, new { Id = "filtro-Gestion" })
@@ -14,6 +15,7 @@
         <li><a href="@Url.Action("Index", "Home")">Home</a></li>
         <li class="active">Nivel @Model.Filtro.NivelEducativo.Vista</li>
     </ol>
+    
     <div class="row">
         <aside id="bar" role="complementary" class="sidebar options col-xs-6 col-md-2">
             @if (Model.Filtro.Filtrado == true)
@@ -90,13 +92,37 @@
         <div role="main" id="zen-supporting" class="main col-xs-12 col-sm-6 col-md-10">
             <div role="article" id="zen-explanation" class="explanation">
                 <!-- Nav tabs -->
-                <ul class="nav nav-tabs">
+                <ul id="tabs-vista" class="nav nav-tabs">
                     <li  @(Model.EsMapa != true ? "class=active" : "")>
                         <a id="lista" href="#lista" data-toggle="tab">Lista</a>
                     </li>
                     <li @(Model.EsMapa == true ? "class=active" : "")>
                         <a id="mapa" href="#mapa" data-toggle="tab">Mapa</a>
                     </li>
+                    @if (Model.EsMapa == false)
+                    {
+                        <li class="dropdown">
+                            <a data-toggle="dropdown"  id="ordenarDropdown">
+                                Ordenado Por:
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="ordenarDropdown">
+                                <li role="presentation">
+                                    <a id="puntaje-mayor" role="menuitem" tabindex="-1" href="#">Mayor puntaje</a>
+                                </li>
+                                <li role="presentation">
+                                    <a id="puntaje-menor"role="menuitem" tabindex="-1" href="#">Menor Puntaje</a>
+                                </li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation">
+                                    <a id="nombre-ascendente" role="menuitem" tabindex="-1" href="#">Nombre ascendente</a>
+                                </li>
+                                <li role="presentation">
+                                    <a id="nombre-descendente" role="menuitem" tabindex="-1" href="#">Nombre descendente</a>
+                                </li>
+                            </ul>
+                        </li>
+                    }
                 </ul>
      
                 @if (Model.EsMapa == true)
@@ -105,21 +131,6 @@
                 }
                 else
                 {
-                    <div class="dropdown">
-                        <span class="dropdown-lbl">Ordenar por: </span>
-                        <button class="btn dropdown-toggle sr-only" type="button" id="ordenarDropdown" data-toggle="dropdown">
-                            Primera Opcion:
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="ordenarMenu">
-                            <li role="presentation" class="dropdown-header">Ordenar por:</li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Puntaje más alto</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Puntaje más bajo</a></li>
-                            <li role="presentation" class="divider"></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nombre ascendente</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nombre descendente</a></li>
-                        </ul>
-                    </div>
                     @Html.Partial("_ListaEstablecimientos", Model)
                 }
 
@@ -170,6 +181,6 @@
             $("#es-mapa").val('False');
             $("#formEstablecimientos").submit();
         });
-
+       
     });
 </script>
