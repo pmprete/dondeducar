@@ -267,6 +267,9 @@ C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\bin\zh-Hans\System.Spat
 C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.dll
 C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.pdb
+C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\bin\SharpSquare.dll
+C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.csprojResolveAssemblyReference.cache
+C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.csprojResolveAssemblyReference.cache
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\dondEducar.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\dondEducar.pdb
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Antlr3.Runtime.dll
@@ -285,6 +288,7 @@ C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Microsoft.Web.WebPa
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\MongoDB.Bson.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\MongoDB.Driver.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Newtonsoft.Json.dll
+C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\SharpSquare.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\System.Net.Http.Formatting.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\System.Spatial.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\System.Web.Helpers.dll
@@ -300,6 +304,7 @@ C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\System.Web.WebPages
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\WebGrease.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\WebMatrix.Data.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\WebMatrix.WebData.dll
+C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\SharpSquare.pdb
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\CsvHelper.pdb
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\CsvHelper.xml
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\MongoDB.Bson.xml
@@ -354,7 +359,5 @@ C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\ko\System.Spatial.r
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\ru\System.Spatial.resources.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.csprojResolveAssemblyReference.cache
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.pdb
-C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.csprojResolveAssemblyReference.cache

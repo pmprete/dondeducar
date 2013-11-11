@@ -1,5 +1,5 @@
 ﻿@using dondEducar.ViewModel
-@model  EstablecimientoViewModel
+@model  ListaEstablecimientosViewModel
 
 
      
@@ -18,7 +18,7 @@
 
                             <a class="pull-left" href="@Url.Action("Establecimiento", "Home", new { EstablecimientoId = establecimiento.Id })">
                                 <div class="media-object puntaje">
-                                    <div style="font-size: 70px; text-align: center;">@String.Format("{0:0.0}",establecimiento.Puntaje)</div>
+                                    <div style="font-size: 70px; text-align: center;">@String.Format("{0:0.0}",establecimiento.Likes)</div>
                                     <div style="text-align: center;">Puntaje</div>
                                 </div>
                             </a>

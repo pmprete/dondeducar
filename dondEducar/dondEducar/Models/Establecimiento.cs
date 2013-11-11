@@ -7,6 +7,7 @@ namespace dondEducar.Models
 {
     public class Establecimiento : MongoEntity
     {
+        //Provenientes del CSV
         public string Codigo { get; set; }
         public string Nombre { get; set; }
         public string Direccion { get; set; }
@@ -18,7 +19,10 @@ namespace dondEducar.Models
         public Tag Titulo { get; set; }
         public Tag Gestion { get; set; }
         public string GeoJson { get; set; }
-        public double Puntaje { get; set; }
+
+        //Agregados
+        public long Likes { get; set; }
+        public string FourSquareVenueId { get; set; }
 
         public Establecimiento()
         {

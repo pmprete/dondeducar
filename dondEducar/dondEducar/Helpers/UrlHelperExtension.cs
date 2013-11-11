@@ -28,6 +28,7 @@ namespace dondEducar.Helpers
             return uriBuilder.Uri.AbsoluteUri;
         }
 
+
         public static string ToPublicUrl(this UrlHelper urlHelper, Uri relativeUri)
         {
             var httpContext = urlHelper.RequestContext.HttpContext;

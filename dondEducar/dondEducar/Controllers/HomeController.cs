@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web.Mvc;
+using FourSquare.SharpSquare.Core;
+using FourSquare.SharpSquare.Entities;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using dondEducar.Models;
@@ -11,10 +14,16 @@ namespace dondEducar.Controllers
 {
     public class HomeController : BaseController
     {
-        private const int _tamañoDePagina = 25;
+        private const int TamañoDePagina = 25;
 
-        public ActionResult Index()
+        public ActionResult Index(string code)
         {
+            var sharpSquare = (SharpSquare)Session["SharpSquare"];
+            if (!String.IsNullOrWhiteSpace(code))
+            {
+                var accessToken = sharpSquare.GetAccessToken((string)Session["RedirectUri"], code);
+                Session["AccessToken"] = accessToken;
+            }
             return View("Index");
         }
 
@@ -34,14 +43,14 @@ namespace dondEducar.Controllers
         {
             ViewBag.Title = nivelEducativo;
             const int pagina = 1;
-            var filtro = new Filtro {NivelEducativo = {Valor = nivelEducativo}};
+            var filtro = new Filtro { NivelEducativo = { Valor = nivelEducativo } };
 
             var establecimientoViewModel = CrearViewModel(false, pagina, Ordenamiento.MayorPuntaje, filtro);
 
             return View("Filtrado", establecimientoViewModel);
         }
 
-        private EstablecimientoViewModel CrearViewModel(bool esMapa, int pagina, Ordenamiento orden, Filtro filtro)
+        private ListaEstablecimientosViewModel CrearViewModel(bool esMapa, int pagina, Ordenamiento orden, Filtro filtro)
         {
             IMongoQuery query = null;
             Tag tag = null;
@@ -108,12 +117,12 @@ namespace dondEducar.Controllers
                 query = Query.And(query, Query<Establecimiento>.Where(e => e.NivelTipo.Any(t => t.TipoDeEstablecimiento.Valor == filtro.TipoDeEstablecimiento.Valor)));
             }
             var establecimientosConTag = establecimientos.Find(query);
-            
+
             var cantidadEstablecimientos = establecimientosConTag.Count();
-           
+
             var listaDeEstablecimientos = new List<Establecimiento>();
-            var listaSerializada = "";
-            
+            var geoJsonEstablecimientos = "";
+
             if (esMapa)
             {
                 var geoJson = String.Join(",", establecimientosConTag
@@ -121,12 +130,12 @@ namespace dondEducar.Controllers
                         + @"""geometry"":" + x.GeoJson + "," + Environment.NewLine
                         + @" ""properties"": {" + Environment.NewLine
                         + @" ""id"":""" + x.Id + @"""," + Environment.NewLine
-                        + @" ""nombre"":""" + x.Nombre.Replace(@"""","'") + @"""," + Environment.NewLine
+                        + @" ""nombre"":""" + x.Nombre.Replace(@"""", "'") + @"""," + Environment.NewLine
                         + @" ""direccion"": """ + x.Direccion.Replace(@"""", "'") + @"""," + Environment.NewLine
-                        + @" ""puntaje"": " + x.Puntaje +", " + Environment.NewLine
-                        + @" ""show_on_map"": true" + Environment.NewLine 
+                        + @" ""likes"": " + x.Likes + ", " + Environment.NewLine
+                        + @" ""show_on_map"": true" + Environment.NewLine
                         + @"} } "));
-                listaSerializada = @"{ ""type"": ""FeatureCollection""," + Environment.NewLine
+                geoJsonEstablecimientos = @"{ ""type"": ""FeatureCollection""," + Environment.NewLine
                                     + @" ""features"": [" + geoJson + "] }";
             }
             else
@@ -135,11 +144,11 @@ namespace dondEducar.Controllers
 
                 if (orden == Ordenamiento.MayorPuntaje)
                 {
-                    establecimeintosOrdenados = establecimientosConTag.OrderByDescending(x => x.Puntaje);
+                    establecimeintosOrdenados = establecimientosConTag.OrderByDescending(x => x.Likes);
                 }
                 if (orden == Ordenamiento.MenorPuntaje)
                 {
-                    establecimeintosOrdenados = establecimientosConTag.OrderBy(x => x.Puntaje);
+                    establecimeintosOrdenados = establecimientosConTag.OrderBy(x => x.Likes);
                 }
                 if (orden == Ordenamiento.NombreAscendente)
                 {
@@ -151,14 +160,14 @@ namespace dondEducar.Controllers
                 }
 
                 listaDeEstablecimientos = establecimeintosOrdenados
-                    .Skip(_tamañoDePagina*(pagina - 1))
-                    .Take(_tamañoDePagina)
+                    .Skip(TamañoDePagina * (pagina - 1))
+                    .Take(TamañoDePagina)
                     .ToList();
             }
-            var totalDePaginas = Convert.ToInt32(Math.Ceiling((double)cantidadEstablecimientos / _tamañoDePagina));
+            var totalDePaginas = Convert.ToInt32(Math.Ceiling((double)cantidadEstablecimientos / TamañoDePagina));
             totalDePaginas = (totalDePaginas == 0) ? 1 : totalDePaginas;
 
-            var establecimientoViewModel = new EstablecimientoViewModel
+            var establecimientoViewModel = new ListaEstablecimientosViewModel
                                                {
                                                    EsMapa = esMapa,
                                                    Pagina = pagina,
@@ -166,19 +175,19 @@ namespace dondEducar.Controllers
                                                    Filtro = filtro,
                                                    Categorias = listaCategorias,
                                                    Establecimientos = listaDeEstablecimientos,
-                                                   GeoJsonEstablecimientos = listaSerializada,
+                                                   GeoJsonEstablecimientos = geoJsonEstablecimientos,
                                                };
             return establecimientoViewModel;
         }
 
 
         [HttpPost]
-        public ActionResult ListaEstablecimientos(EstablecimientoViewModel establecimientoViewModel)
+        public ActionResult ListaEstablecimientos(ListaEstablecimientosViewModel listaEstablecimientosViewModel)
         {
-            var establecimientoNuevoViewModel = CrearViewModel(establecimientoViewModel.EsMapa, 
-                establecimientoViewModel.Pagina, 
-                establecimientoViewModel.Orden,
-                establecimientoViewModel.Filtro);
+            var establecimientoNuevoViewModel = CrearViewModel(listaEstablecimientosViewModel.EsMapa,
+                listaEstablecimientosViewModel.Pagina,
+                listaEstablecimientosViewModel.Orden,
+                listaEstablecimientosViewModel.Filtro);
 
             return View("Filtrado", establecimientoNuevoViewModel);
         }
@@ -190,7 +199,19 @@ namespace dondEducar.Controllers
             var query = Query<Establecimiento>.EQ(e => e.Id, establecimientoId);
             var establecimiento = establecimientos.FindOne(query);
 
-            return View("Establecimiento", establecimiento);
+            var fourSquareVenue = BuscarAgregarEstablecimiento(establecimiento);
+
+            establecimiento.FourSquareVenueId = fourSquareVenue.id;
+            establecimiento.Likes = fourSquareVenue.likes.count;
+            establecimientos.Save(establecimiento);
+
+            var establecimientoViewModel = new EstablecimientoViewModel
+                                               {
+                                                   Establecimiento = establecimiento,
+                                                   Venue = fourSquareVenue
+                                               };
+
+            return View("Establecimiento", establecimientoViewModel);
         }
 
     }

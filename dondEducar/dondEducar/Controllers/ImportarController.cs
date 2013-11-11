@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
 using System.IO;
@@ -6,6 +7,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CsvHelper;
+using FourSquare.SharpSquare.Core;
+using FourSquare.SharpSquare.Entities;
 using MongoDB.Driver.Builders;
 using dondEducar.Models;
 
@@ -17,6 +20,23 @@ namespace dondEducar.Controllers
         public ActionResult Importar()
         {
             ViewBag.Message = "Seleccione el archivo csv a importar.";
+            return View("Importar");
+        }
+
+        public ActionResult AgregarFourSquareIds()
+        {
+            var establecimientos = Database.GetCollection<Establecimiento>("Establecimiento");
+            var query = Query<Establecimiento>.Where(x => x.FourSquareVenueId == null);
+            var listaEstablecimientos = establecimientos.Find(query);
+            var cantidad = 0;
+            foreach (var escuela in listaEstablecimientos)
+            {
+                var fourSquareVenue = BuscarAgregarEstablecimiento(escuela);
+
+                escuela.FourSquareVenueId = fourSquareVenue.id;
+                escuela.Likes = fourSquareVenue.likes.count;
+                establecimientos.Save(escuela);
+            }
             return View("Importar");
         }
         
@@ -136,7 +156,7 @@ namespace dondEducar.Controllers
 
 
             var establecimientos = Database.GetCollection<Establecimiento>("Establecimiento");
-
+          
             using (var readFile = new StreamReader(file.InputStream))
             {
                 var csvReader = new CsvReader(readFile);
@@ -221,12 +241,13 @@ namespace dondEducar.Controllers
                         }
                         escuela.NivelTipo.Add(nivelTipo);
                     }
+                    
                     establecimientos.Insert(escuela);
                 }
             }
         }
 
-
+       
         public ActionResult LimpiarBase()
         {
             ViewBag.Message = "Seleccione el archivo csv a importar.";

@@ -206,6 +206,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\AccountViewModel.cs" />
     <Compile Include="ViewModel\EstablecimientoViewModel.cs" />
+    <Compile Include="ViewModel\ListaEstablecimientosViewModel.cs" />
     <Compile Include="ViewModel\Filtro.cs" />
     <Compile Include="ViewModel\IndexViewModel.cs" />
   </ItemGroup>
@@ -382,6 +383,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SharpSquare-master\SharpSquare.csproj">
+      <Project>{f6163f95-da23-49c6-b58b-cef0cf0b2c83}</Project>
+      <Name>SharpSquare</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

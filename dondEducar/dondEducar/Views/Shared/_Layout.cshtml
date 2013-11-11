@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using FourSquare.SharpSquare.Core
+<!DOCTYPE html>
 
 <html lang="es">
 <head>
@@ -24,7 +25,8 @@
         <header>
             <ul class="nav nav-pills barra-de-navegacion">
                 @*<li>@Html.ActionLink("Iniciar Sesión", "ExternalLoginsList", "Account", new { returnUrl = Request.RawUrl }, new { @id = "login" })</li>*@
-                <li><fb:login-button>Login with Facebook</fb:login-button></li>
+                @*<li><fb:login-button>Login with Facebook</fb:login-button></li>*@
+                <li><a href="@Session["AutenticateUrl"]">Sign In</a></li>
                 <li>@Html.ActionLink("Contacto", "Contacto", "Home")</li>
                 <li>@Html.ActionLink("Informacion", "Informacion", "Home")</li>
                 <li>@Html.ActionLink("Inicio", "Index", "Home")</li>

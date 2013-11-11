@@ -1,27 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using FourSquare.SharpSquare.Entities;
 using dondEducar.Models;
 
 namespace dondEducar.ViewModel
 {
-    public enum Ordenamiento { MayorPuntaje, MenorPuntaje, NombreAscendente, NombreDescendente };
-
     public class EstablecimientoViewModel
     {
-        public bool EsMapa { get; set; }
-        public int Pagina { get; set; }
-        public int TotalDePaginas { get; set; }
-        public List<Establecimiento> Establecimientos { get; set; }
-        public string GeoJsonEstablecimientos { get; set; }
-        public List<Categoria> Categorias {get; set; }
-        public Filtro Filtro { get; set; }
-        public Ordenamiento Orden { get; set; }
-
-        public EstablecimientoViewModel()
-        {
-            Establecimientos = new List<Establecimiento>();
-            Categorias = new List<Categoria>();
-            Orden = Ordenamiento.MayorPuntaje;
-        }
-
+        public Establecimiento Establecimiento { get; set; }
+        public Venue Venue { get; set; }
     }
 }

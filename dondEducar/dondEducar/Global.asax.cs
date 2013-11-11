@@ -7,6 +7,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using FourSquare.SharpSquare.Core;
 using WebMatrix.WebData;
 
 namespace dondEducar
@@ -16,9 +17,9 @@ namespace dondEducar
 
     public class MvcApplication : HttpApplication
     {
-        //private static SimpleMembershipInitializer _initializer;
-        //private static object _initializerLock = new object();
-        //private static bool _isInitialized;
+        private const string ClientId = "GT3S33AR2TROAVTWMR0A32LRFNQHBD2NSYJADY4VINQHCO13";
+        private const string ClientSecret = "35ERC44TORCEQJOJZM1APV1BPUDKJ1NVCWWCXR3T4D1UMUFC";
+        private const string RedirectUri = "http://localhost:2673/Home/Index";
 
         protected void Application_Start()
         {
@@ -29,20 +30,20 @@ namespace dondEducar
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+        }
 
-            //LazyInitializer.EnsureInitialized(ref _initializer, ref _isInitialized, ref _initializerLock);
+        protected void Session_Start(object sender, EventArgs e)
+        {
+            // Code that runs when a new session is started
+            if (HttpContext.Current.Session["SharpSquare"] != null) return;
+
+            var sharpSquare = new SharpSquare(ClientId, ClientSecret);
+            var autenticateUrl = sharpSquare.GetAuthenticateUrl(RedirectUri);
+            Session["AutenticateUrl"] = autenticateUrl;
+            Session["RedirectUri"] = RedirectUri;
+            Session["SharpSquare"] = sharpSquare;
         }
     }
 
-    //public class SimpleMembershipInitializer
-    //{
-    //    public SimpleMembershipInitializer()
-    //    {
-    //        using (var context = new UsersContext())
-    //            context.UserProfiles.Find(1);
 
-    //        if (!WebSecurity.Initialized)
-    //            WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
-    //    }
-    //}
 }
