@@ -191,6 +191,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\EstablecimientoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImportarController.cs" />
     <Compile Include="Global.asax.cs">
@@ -216,6 +217,32 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\foursquare-main.css" />
+    <Content Include="Content\foursquare-venue.css" />
+    <Content Include="Content\foursquare\activitystream-sprite%402x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png" />
+    <Content Include="Content\foursquare\activitystream-sprite-ac2267a377053841f4d13adc9444165b.png" />
+    <Content Include="Content\foursquare\button-loading-3bb46079e9415b490f318918f98337dc.gif" />
+    <Content Include="Content\foursquare\button_icon_saveribbon%402x-d809e5af932a66d1725c40dfddcc2855.png" />
+    <Content Include="Content\foursquare\button_icon_saveribbon-9c5999c47028ca670954422ee53e7d96.png" />
+    <Content Include="Content\foursquare\checkinon-black.png" />
+    <Content Include="Content\foursquare\checkinon-blue.png" />
+    <Content Include="Content\foursquare\checkinon-white.png" />
+    <Content Include="Content\foursquare\connect-black.png" />
+    <Content Include="Content\foursquare\connect-blue.png" />
+    <Content Include="Content\foursquare\connect-white.png" />
+    <Content Include="Content\foursquare\footer-top%402x-ef6ccfa1b4ce50e9257b922d1c8935ac.png" />
+    <Content Include="Content\foursquare\footer-top-fa1353033c43b8d9c1ea995d2b66371e.png" />
+    <Content Include="Content\foursquare\foursquare-logo.png" />
+    <Content Include="Content\foursquare\icon-16x16.png" />
+    <Content Include="Content\foursquare\icon-36x36.png" />
+    <Content Include="Content\foursquare\icon-512x512.png" />
+    <Content Include="Content\foursquare\icon-grey-link%402x-fe123a731d90ac73122629804f10445d.png" />
+    <Content Include="Content\foursquare\icon-grey-link-578061970634420cbe2544e90723a127.png" />
+    <Content Include="Content\foursquare\icon-tipcarat%402x-7e425b8090106b75eaa5e38ccac6bc05.png" />
+    <Content Include="Content\foursquare\logo-cae1f44bd6db94bf44d62c8d306ba199.png" />
+    <Content Include="Content\foursquare\poweredByFoursquare_16x16.png" />
+    <Content Include="Content\foursquare\poweredByFoursquare_36x36.png" />
+    <Content Include="Content\foursquare\poweredByFoursquare_gray.png" />
     <Content Include="Content\images\bg.gif" />
     <Content Include="Content\images\botonInicial.png" />
     <Content Include="Content\images\botonOtros.png" />
@@ -305,6 +332,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\fonts\dk_crayon_crumble-webfont.woff" />
+    <Content Include="Content\foursquare\foursquare-logo-border.eps" />
+    <Content Include="Content\foursquare\foursquare-logo.eps" />
+    <Content Include="Content\foursquare\onecolor.eps" />
+    <Content Include="Content\foursquare\popularcling.pdf" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
@@ -366,7 +397,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Importar\Importar.cshtml" />
-    <Content Include="Views\Home\Establecimiento.cshtml" />
+    <Content Include="Views\Establecimiento\Establecimiento.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -376,6 +407,7 @@
     <Content Include="Views\Home\Informacion.cshtml" />
     <Content Include="Views\Home\Contacto.cshtml" />
     <Content Include="Views\channel.html" />
+    <Content Include="Views\Establecimiento\_FourSquareInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

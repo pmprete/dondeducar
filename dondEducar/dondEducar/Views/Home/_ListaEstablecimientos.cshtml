@@ -11,12 +11,12 @@
             <li>
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        @Html.ActionLink(establecimiento.Nombre, "Establecimiento", "Home", new { EstablecimientoId = establecimiento.Id }, new { @class = "panel-title" })
+                        @Html.ActionLink(establecimiento.Nombre, "Establecimiento", "Establecimiento", new { EstablecimientoId = establecimiento.Id }, new { @class = "panel-title" })
                     </div>
                     <div class="panel-body">
                         <div class="media">
 
-                            <a class="pull-left" href="@Url.Action("Establecimiento", "Home", new { EstablecimientoId = establecimiento.Id })">
+                            <a class="pull-left" href="@Url.Action("Establecimiento", "Establecimiento", new { EstablecimientoId = establecimiento.Id })">
                                 <div class="media-object puntaje">
                                     <div style="font-size: 70px; text-align: center;">@String.Format("{0:0.0}",establecimiento.Likes)</div>
                                     <div style="text-align: center;">Puntaje</div>

@@ -1,0 +1,133 @@
+﻿@using System.Globalization
+@model dondEducar.ViewModel.EstablecimientoViewModel
+
+<script src="http://servicios.usig.buenosaires.gov.ar/usig-js/3.0/usig.core.min.js" type="text/javascript"></script>
+<script src="http://servicios.usig.buenosaires.gov.ar/usig-js/3.0/usig.FotosParcela.min.js" type="text/javascript"></script>
+<script src="http://servicios.usig.buenosaires.gov.ar/usig-js/3.0/usig.GeoCoder.min.js" type="text/javascript"></script>
+
+@*<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>*@
+
+
+@Html.AntiForgeryToken()
+
+<h2>@Html.DisplayFor(model => model.Establecimiento.Nombre)</h2>
+<br />
+<div class="media">
+  <a class="pull-left" href="#">
+    <div id="foto">
+    </div>
+  </a>
+    <div class="media-body">
+        <div class="table-responsive">
+            <table class="table">
+               @* <tr>
+                    <th>Atributo</th>
+                    <th>Valor</th>
+                </tr>*@
+                <tr>
+                    <td></td>
+                    <td>@Html.LabelFor(model => model.Establecimiento.Codigo)</td>
+                    <td>@Html.DisplayFor(model => model.Establecimiento.Codigo)</td>
+        
+                </tr>
+        
+                <tr class="gestion">
+                    <td></td>
+                    <td>@Html.LabelFor(model => model.Establecimiento.Gestion)</td>
+                    <td>@Html.DisplayFor(model => model.Establecimiento.Gestion.Vista)</td>
+                </tr>
+    
+                @if (@Model.Establecimiento.Titulo != null)
+                {
+                    <tr class="titulo">
+                        <td></td>
+                        <td>@Html.LabelFor(model => model.Establecimiento.Titulo)</td>
+                        <td>@Html.DisplayFor(model => model.Establecimiento.Titulo.Vista)</td>
+                    </tr>
+                }
+        
+                <tr class="nivel-educativo">
+                    <td></td>
+                    <td>@Html.Label("Nivel Educativo - Tipo de Establecimiento")</td>
+                    <td>@String.Join(" | ", Model.Establecimiento.NivelTipo)</td>
+                </tr>
+
+                @if (!String.IsNullOrWhiteSpace(@Model.Establecimiento.Telefonos))
+                {
+                    <tr class="telefonos">
+                        <td></td>
+                        <td>@Html.LabelFor(model => model.Establecimiento.Telefonos)</td>
+                        <td>@Html.DisplayFor(model => model.Establecimiento.Telefonos)</td>
+                    </tr>
+                }
+                @if (!String.IsNullOrWhiteSpace(@Model.Establecimiento.Email))
+                {
+                    <tr class="email">
+                        <td></td>
+                        <td>@Html.LabelFor(model => model.Establecimiento.Email)</td>
+                        <td>@Html.DisplayFor(model => model.Establecimiento.Email)</td>
+                    </tr>
+                }
+                @if (!String.IsNullOrWhiteSpace(@Model.Establecimiento.Direccion))
+                {
+                    <tr class="direccion">
+                        <td></td>
+                        <td>@Html.LabelFor(model => model.Establecimiento.Direccion)</td>
+                        <td>@Html.DisplayFor(model => model.Establecimiento.Direccion)</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div> 
+</div>       
+
+<div id="container">
+    <div class="venueDetail">
+        @Html.Partial("_FourSquareInfo",Model.Venue)
+    </div>
+</div>
+
+<div id="mapa-google" class="mapa-google">
+</div>
+
+
+
+<script >
+    var geoCoder = null;
+    var mapa = null;
+      
+    function onLoadFotos() {	
+        /*fotosParcela.setFechaFoto($('.fecha-foto'));
+        if (fotosParcela.numFotos() > 1) {
+            $('div.foto-recorrido').show();
+        } else {
+            $('div.foto-recorrido').hide();
+        }			
+        */
+    }
+
+    function onReverseGeoCoding(data) {
+        var fotosParcela = new usig.FotosParcela(data.parcela, {maxHeight : 350, maxWidth : 350, onLoad: onLoadFotos});
+        fotosParcela.cargarFoto($("#foto"));
+    }
+
+    function onReverseGeoCodingError(e) {
+        alert("Error en el geoCoder");
+        usig.debug('Se produjo un error con el geocoder inverso.');
+    };
+    $(document).ready(function () {
+        geoCoder = new usig.GeoCoder();
+        var longitud = '@Model.Establecimiento.Longitud.ToString(CultureInfo.InvariantCulture.NumberFormat)';
+        var latitud = '@Model.Establecimiento.Latitud.ToString(CultureInfo.InvariantCulture.NumberFormat)';
+        geoCoder.reverseGeoCoding(longitud, latitud, onReverseGeoCoding, onReverseGeoCodingError);
+        
+       @* var myOptions =
+        {
+            zoom: 18,
+            center: new google.maps.LatLng('@Model.Latitud', '@Model.Longitud'),
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        };
+        new google.maps.Map(document.getElementById("EsMapa-google"), myOptions);*@
+       
+    });
+</script>

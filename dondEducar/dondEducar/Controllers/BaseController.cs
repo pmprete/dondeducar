@@ -49,9 +49,9 @@ namespace dondEducar.Controllers
 
             if (establecimiento.FourSquareVenueId == null)
             {
-                var latitudLongitud = establecimiento.Latitud.ToString("##.##", CultureInfo.InvariantCulture.NumberFormat)
+                var latitudLongitud = establecimiento.Latitud.ToString(CultureInfo.InvariantCulture.NumberFormat)
                                       + "," +
-                                      establecimiento.Longitud.ToString("##.##", CultureInfo.InvariantCulture.NumberFormat);
+                                      establecimiento.Longitud.ToString(CultureInfo.InvariantCulture.NumberFormat);
 
                 var parametros = new Dictionary<string, string>();
                 parametros.Add("ll", latitudLongitud);

@@ -9,6 +9,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using FourSquare.SharpSquare.Core;
 using WebMatrix.WebData;
+using dondEducar.Helpers;
 
 namespace dondEducar
 {
@@ -19,7 +20,6 @@ namespace dondEducar
     {
         private const string ClientId = "GT3S33AR2TROAVTWMR0A32LRFNQHBD2NSYJADY4VINQHCO13";
         private const string ClientSecret = "35ERC44TORCEQJOJZM1APV1BPUDKJ1NVCWWCXR3T4D1UMUFC";
-        private const string RedirectUri = "http://localhost:2673/Home/Index";
 
         protected void Application_Start()
         {
@@ -34,13 +34,28 @@ namespace dondEducar
 
         protected void Session_Start(object sender, EventArgs e)
         {
+            var request = HttpContext.Current.Request;
+            var uriBuilder = new UriBuilder
+            {
+                Host = request.Url.Host,
+                Path = "/Home/Index",
+                Port = 80,
+                Scheme = "http",
+            };
+            if (request.IsLocal)
+            {
+                uriBuilder.Port = request.Url.Port;
+            }
+
+            var redirectUri = uriBuilder.Uri.AbsoluteUri;
+
             // Code that runs when a new session is started
             if (HttpContext.Current.Session["SharpSquare"] != null) return;
 
             var sharpSquare = new SharpSquare(ClientId, ClientSecret);
-            var autenticateUrl = sharpSquare.GetAuthenticateUrl(RedirectUri);
+            var autenticateUrl = sharpSquare.GetAuthenticateUrl(redirectUri);
             Session["AutenticateUrl"] = autenticateUrl;
-            Session["RedirectUri"] = RedirectUri;
+            Session["RedirectUri"] = redirectUri;
             Session["SharpSquare"] = sharpSquare;
         }
     }

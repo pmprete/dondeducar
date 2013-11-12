@@ -1,0 +1,665 @@
+﻿
+#container .venueDetail .wideColumn .venueInfoSection .venueHeader .mainIconWrapper {
+    float: left;
+    line-height: 0;
+    margin-right: 20px;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueHeader .mainIconWrapper img {
+    border-radius: 3px 3px 3px 3px;
+}
+
+#container .venueDetail .wideColumn .venueInfoSection .venueHeader .mainIconWrapper {
+    float: left;
+    line-height: 0;
+    margin-right: 20px;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueHeader .mainIconWrapper img {
+    border-radius: 3px 3px 3px 3px;
+}
+
+#container .venueDetail .wideColumn .venueInfoSection .venueHeader .primaryInfo {
+    float: left;
+    padding-top: 5px;
+    width: 470px;
+    z-index: 1;
+}
+
+#container .venueDetail .wideColumn .venueInfoSection .venueHeader .primaryInfo h1.venueName {
+    color: #4D4D4D;
+    line-height: 30px;
+    margin: 0;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueHeader .primaryInfo h1.venueName .venueClosed, #container .venueDetail .wideColumn .venueInfoSection .venueHeader .primaryInfo h1.venueName .venueDeleted, #container .venueDetail .wideColumn .venueInfoSection .venueHeader .primaryInfo h1.venueName .venuePrivate {
+    color: #DF7A77;
+    font-size: 15px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+#container .venueDetail .wideColumn .venueInfoSection .venueHeader .primaryInfo .categories {
+    font-size: 13px;
+    margin: 0;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueHeader .primaryInfo .categories a {
+    color: #4D4D4D;
+}
+
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes {
+    font-size: 11px;
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes .venueDescription {
+    font-size: 13px;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes .venueLinkAttr.venueWebsite .linkAttrValue {
+    height: 16px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes .venueLinkAttr {
+    float: left;
+    height: 16px;
+    margin: 0 10px 0 0;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes .linkAttrKey {
+    float: left;
+    margin-right: 5px;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes .linkAttrValue {
+    float: left;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes .attrKeyImage {
+    display: inline-block;
+    padding-right: 5px;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes .attrKeyImage img {
+    height: 16px;
+    position: relative;
+    top: 3px;
+    width: 16px;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes .attrKey {
+    color: #999999;
+    display: inline-block;
+    padding-right: 5px;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes .attrKey a {
+    font-weight: normal;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes .attrValue {
+    display: inline;
+}
+
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes .linkBar, #container .venueDetail .wideColumn .venueInfoSection .venueAttributes .attrBar {
+    background: none repeat scroll 0 0 #F4F3F1;
+    border-bottom: 1px solid #E6E3E1;
+    border-top: 1px solid #E6E3E1;
+    line-height: 16px;
+    margin: 15px -20px 0;
+    overflow: hidden;
+    padding: 12px 20px;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes .linkBar .venueScore, #container .venueDetail .wideColumn .venueInfoSection .venueAttributes .attrBar .venueScore {
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    font-size: 17px;
+    line-height: 32px;
+    margin-right: 23px;
+    padding: 0 10px;
+    width: 47px;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes .linkBar .venueScore sup, #container .venueDetail .wideColumn .venueInfoSection .venueAttributes .attrBar .venueScore sup {
+    bottom: 5px;
+    font-size: 11px;
+    left: 5px;
+    position: relative;
+}
+
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes .linkBar .rightColumn .venueStat, #container .venueDetail .wideColumn .venueInfoSection .venueAttributes .attrBar .rightColumn .venueStat {
+    color: #999999;
+    float: left;
+    line-height: 16px;
+    margin-right: 10px;
+    max-width: 90px;
+    min-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes .linkBar .rightColumn .venueStat:last-child, #container .venueDetail .wideColumn .venueInfoSection .venueAttributes .attrBar .rightColumn .venueStat:last-child {
+    margin: 0;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes .linkBar .rightColumn .venueStat strong, #container .venueDetail .wideColumn .venueInfoSection .venueAttributes .attrBar .rightColumn .venueStat strong {
+    color: #4D4D4D;
+    font-size: 13px;
+}
+
+#container .venueDetail .wideColumn .venueInfoSection .venueActions {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: medium none;
+    border-radius: 0 0 3px 3px;
+    padding: 15px 20px;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueActions .likeDislikeControls, #container .venueDetail .wideColumn .venueInfoSection .venueActions .saveButton {
+    display: inline-block;
+    vertical-align: middle;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueActions .likeDislikeControls {
+    margin-right: 20px;
+}
+
+#container .venueDetail .wideColumn .venueInfoSection .venueActions .shareWidget {
+    display: inline-block;
+    float: right;
+    position: relative;
+    width: 260px;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueActions .shareWidget input.shareLink {
+    left: 0;
+    line-height: 15px;
+    margin: 0;
+    /*padding: 8px 66px 7px 6px;*/
+    position: absolute;
+    width: 180px;
+    z-index: 1;
+}
+#container .venueDetail .wideColumn .venueInfoSection .venueActions .shareWidget .greyButton {
+    float: right;
+    position: relative;
+    z-index: 2;
+}
+
+#container .venueDetail .wideColumn .venueInfoSection .venueActions .likeDislikeControls, #container .venueDetail .wideColumn .venueInfoSection .venueActions .link, #container .venueDetail .wideColumn .venueInfoSection .venueActions .greyButton {
+    float: none;
+    left: 0;
+    position: static;
+}
+
+#container .venueDetail .wideColumn .venueInfoSection .venueAttributes .linkBar .ratingJustification, #container .venueDetail .wideColumn .venueInfoSection .venueAttributes .attrBar .ratingJustification {
+    display: table-cell;
+    height: 32px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+
+.comboRatingButton {
+    overflow: hidden;
+}
+.comboRatingButton.loading .comboRatingButtonLike, .comboRatingButton.loading .comboRatingButtonDislike {
+    background: url("/Content/foursquare/button-loading-3bb46079e9415b490f318918f98337dc.gif") repeat scroll 0 0 #E5E5E5;
+}
+.comboRatingButton.loading .comboRatingButtonLike:hover, .comboRatingButton.loading .comboRatingButtonDislike:hover, .comboRatingButton.loading .comboRatingButtonLike.active, .comboRatingButton.loading .comboRatingButtonDislike.active {
+    background: url("/Content/foursquare/button-loading-3bb46079e9415b490f318918f98337dc.gif") repeat scroll 0 0 #E5E5E5;
+}
+.comboRatingButton .iconPosition {
+    left: 9px;
+    top: 7px;
+}
+.comboRatingButton .comboRatingButtonLike, .comboRatingButton .comboRatingButtonDislike {
+    background: -moz-linear-gradient(center top , #F8F8F9, #E6E6E8) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    color: #808080;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+    text-transform: uppercase;
+    width: 32px;
+}
+.comboRatingButton .comboRatingButtonLike:hover, .comboRatingButton .comboRatingButtonDislike:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+.comboRatingButton .comboRatingButtonLike:active, .comboRatingButton .comboRatingButtonDislike:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+.comboRatingButton .comboRatingButtonLike:hover, .comboRatingButton .comboRatingButtonDislike:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+.comboRatingButton .comboRatingButtonLike:active, .comboRatingButton .comboRatingButtonDislike:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+
+.comboRatingButton .comboRatingButtonLike.link, .comboRatingButton .comboRatingButtonDislike.link, .comboRatingButton .comboRatingButtonLikea, .comboRatingButton .comboRatingButtonDislikea, .comboRatingButton .comboRatingButtonLike a, .comboRatingButton .comboRatingButtonDislike a {
+    color: #808080;
+}
+.comboRatingButton .comboRatingButtonLike:hover, .comboRatingButton .comboRatingButtonDislike:hover, .comboRatingButton .comboRatingButtonLike.link:hover, .comboRatingButton .comboRatingButtonDislike.link:hover {
+    text-decoration: none;
+}
+.comboRatingButton .comboRatingButtonLike .icon, .comboRatingButton .comboRatingButtonDislike .icon {
+    display: block;
+    height: 14px;
+    width: 14px;
+}
+.comboRatingButton .comboRatingButtonLike.active, .comboRatingButton .comboRatingButtonDislike.active {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+.comboRatingButton .comboRatingButtonLike {
+    border-radius: 5px 0 0 5px;
+}
+.comboRatingButton .comboRatingButtonLike .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll 0 -32px transparent;
+    height: 16px;
+    left: 9px;
+    position: absolute;
+    top: 7px;
+    width: 16px;
+}
+.comboRatingButton .comboRatingButtonLike .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonLike .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonLike .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonLike .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonLike.active .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll 0 -48px transparent;
+    height: 16px;
+    left: 9px;
+    position: absolute;
+    top: 7px;
+    width: 16px;
+}
+.comboRatingButton .comboRatingButtonLike.active .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonLike.active .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonLike.active .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonLike.active .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonLike.inactive .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll 0 -16px transparent;
+    height: 16px;
+    left: 9px;
+    position: absolute;
+    top: 7px;
+    width: 16px;
+}
+.comboRatingButton .comboRatingButtonLike.inactive .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonLike.inactive .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonLike.inactive .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonLike.inactive .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonDislike {
+    border-left: 0 none;
+    border-radius: 0 5px 5px 0;
+}
+.comboRatingButton .comboRatingButtonDislike .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll -208px -32px transparent;
+    height: 16px;
+    left: 9px;
+    position: absolute;
+    top: 7px;
+    width: 16px;
+}
+.comboRatingButton .comboRatingButtonDislike .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonDislike .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonDislike .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonDislike .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonDislike:hover {
+    border-left: 0 none;
+}
+.comboRatingButton .comboRatingButtonDislike.active .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll -208px -48px transparent;
+    height: 16px;
+    left: 9px;
+    position: absolute;
+    top: 7px;
+    width: 16px;
+}
+.comboRatingButton .comboRatingButtonDislike.active .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonDislike.active .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonDislike.active .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonDislike.active .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonDislike.inactive .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll -208px -16px transparent;
+    height: 16px;
+    left: 9px;
+    position: absolute;
+    top: 7px;
+    width: 16px;
+}
+.comboRatingButton .comboRatingButtonDislike.inactive .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonDislike.inactive .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonDislike.inactive .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.comboRatingButton .comboRatingButtonDislike.inactive .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+
+
+#container .venueDetail .wideColumn .tipsSections .addTipsSection {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+    margin-left: 5px;
+    padding: 0;
+    position: relative;
+    width: 640px;
+}
+#container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipCarat {
+    bottom: -10px;
+    left: 26px;
+    position: absolute;
+}
+#container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipTeaser {
+    padding: 20px;
+}
+#container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock {
+    background: none repeat scroll 0 0 transparent;
+    border-bottom: medium none;
+    border-top: medium none;
+    margin: 0;
+    overflow: hidden;
+    padding: 20px 20px 15px;
+}
+#container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock a.userImage, #container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock .addTipArea, #container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock .shareTipButton, #container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock .photoUploadForm, #container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock .addLink {
+    float: left;
+}
+#container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock a.userImage {
+    height: 32px;
+    margin-right: 10px;
+}
+#container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock a.userImage img {
+    border-radius: 3px 3px 3px 3px;
+}
+#container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock .addTipArea {
+    width: 487px;
+}
+/*#container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock .addTipArea textarea {
+    width: 406px;
+}*/
+#container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock .buttonArea {
+    float: left;
+}
+#container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock .buttonArea .shareTipButton {
+    margin: 0;
+}
+#container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock #tipLink {
+    display: none;
+    margin: 10px 0 0 42px;
+}
+#container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock #tipLink .formStyle {
+    width: 214px;
+}
+#container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock .photoPreview {
+    display: none;
+    margin: 10px 0 0 42px;
+}
+#container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock .photoPreview img.photoAttachmentPreview {
+    border-radius: 3px 3px 3px 3px;
+    max-height: 100px;
+    max-width: 100px;
+}
+#container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock .photoPreview .removeAttachment {
+    font-size: 11px;
+    position: relative;
+    top: -3px;
+}
+#container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock.has-error textarea {
+    border-color: red;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+    margin-left: 5px;
+    width: 640px;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionHeader {
+    border: medium none;
+    overflow: hidden;
+    padding: 10px 20px;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionHeader h3 {
+    font-size: 15px;
+    line-height: 30px;
+    margin: 0;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionHeader h3 {
+    line-height: 33px;
+}
+
+
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .authorImage, #container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .tipContents {
+    display: inline-block;
+    vertical-align: top;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .authorImage {
+    margin-right: 10px;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .authorImage .avatar {
+    border-radius: 3px 3px 3px 3px;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .tipPhoto {
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    float: right;
+}
+
+
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .tipContents {
+    max-width: 558px;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .tipContents.hasPhoto {
+    max-width: 440px;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .tipInfo {
+    color: #999999;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .tipInfo .userName a, #container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .tipInfo .tipDate a, #container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .tipInfo .tipList a {
+    color: #999999;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .actionButtons {
+    white-space: nowrap;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .actionButtons .likeButtonContainer {
+    float: none;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .actionButtons .likeButtonContainer .link:hover {
+    text-decoration: none;
+}
+
+
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .actionButtons .likeButtonContainer .icon {
+    bottom: -2px;
+    top: auto;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .actionButtons .flagTipLink .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll -240px -16px transparent;
+    display: inline-block;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: -2px;
+    width: 16px;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .actionButtons .flagTipLink {
+    padding-left: 16px;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .actionButtons .flagTipLink, #container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .actionButtons .editTipLink {
+    margin-right: 15px;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .actionButtons .flagTipLink:hover .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll -240px -32px transparent;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .actionButtons .flagTipLink, #container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .actionButtons .editTipLink, #container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .actionButtons .deleteTipLink {
+    color: #999999;
+    cursor: pointer;
+    font-size: 11px;
+    position: relative;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .actionButtons .flagTipLink:hover, #container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .actionButtons .editTipLink:hover, #container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .actionButtons .deleteTipLink:hover {
+    color: #666666;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .actionButtons .flagTipLink, #container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip .actionButtons .deleteTipLink {
+    display: none;
+}
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip:hover .actionButtons .flagTipLink, #container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip:hover .actionButtons .deleteTipLink {
+    display: inline;
+}
+
+.addItemArea {
+    position: relative;
+}
+
+.addItemArea .input-holder {
+    display: block;
+    overflow: hidden;
+    position: static;
+}
+.addItemArea .input-default {
+    font-size: 13px;
+    left: 13px;
+    top: 7px;
+}
+.addItemArea .charCount {
+    position: absolute;
+    right: 15px;
+    top: 90px;
+}
+.addItemArea .charCount.error {
+    color: red;
+}
+.addItemArea textarea {
+    margin: 0;
+    padding: 6px 60px 6px 10px;
+    resize: none;
+    transition: height 0.5s ease 0s, background 1s ease 0s, background 1s ease 0s;
+}
+.addItemArea textarea:focus {
+    background: none repeat scroll 0 0 #FEFEFE;
+    border: 1px solid #86B400;
+}
+.addItemArea textarea.selected {
+    height: 90px;
+    padding-bottom: 17px;
+}
+.addItemArea p.inputError {
+    color: red;
+    font-size: 11px;
+    margin: 5px 0 0;
+}
+.addItemArea .photoLinkButtons {
+    position: absolute;
+    right: 20px;
+    top: -1px;
+}
+.addItemArea .photoLinkButtons .photoUploadForm, .addItemArea .photoLinkButtons .addLink {
+    margin-left: 5px;
+    position: relative;
+}
+.addItemArea .photoLinkButtons .photoUploadForm {
+    top: 4px;
+}
+.addItemArea .photoLinkButtons .removeAttachment {
+    font-size: 11px;
+}
+.addItemArea .photoLinkButtons .addLink {
+    background-image: url("/Content/foursquare/icon-grey-link-578061970634420cbe2544e90723a127.png");
+    cursor: pointer;
+    height: 16px;
+    top: 9px;
+    width: 16px;
+}
+.addItemArea .photoLinkButtons .addLink {
+    background-image: url("/Content/foursquare/icon-grey-link@2x-fe123a731d90ac73122629804f10445d.png");
+    background-size: 16px 16px;
+}
+.addItemArea .photoLinkButtons .addLink {
+    background-image: url("/Content/foursquare/icon-grey-link@2x-fe123a731d90ac73122629804f10445d.png");
+    background-size: 16px 16px;
+}

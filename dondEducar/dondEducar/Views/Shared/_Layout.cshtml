@@ -20,7 +20,6 @@
     <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
 </head>
 <body>
-    <div id="fb-root"></div>
     <div class="body-wrapper">
         <header>
             <ul class="nav nav-pills barra-de-navegacion">
@@ -70,29 +69,7 @@
     </footer>
 
     <script type="text/javascript">
-        window.fbAsyncInit = function () {
-            // init the FB JS SDK
-            FB.init({
-                appId: '558824540867090',                        // App ID from the app dashboard
-                channelUrl: '@Request.Url.Authority' + '/channel.html', // Channel file for x-domain comms
-                status: true,                               // check login status
-                cookie: true,                               // enable cookies to allow server to access session,
-                xfbml: true                                 // Look for social plugins on the page
-            });
-
-            // Additional initialization code such as adding Event Listeners goes here
-        };
-
-        // Load the SDK asynchronously
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) { return; }
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=558824540867090";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-        
-
+       
         //Mis cosas
         $(document).ready(function () {
 

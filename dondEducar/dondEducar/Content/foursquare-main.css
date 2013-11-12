@@ -1,0 +1,3612 @@
+﻿
+
+body .link {
+    color: #2398C9;
+    cursor: pointer;
+    text-decoration: none;
+}
+body .fade {
+    transition-duration: 0.33s;
+    transition-property: background, border, color, opacity, box-shadow;
+}
+body .ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+body .photoStyle {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E3E3E3;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+body .pinned {
+    position: fixed;
+    top: 60px;
+    z-index: 1;
+}
+body .charCount {
+    color: #999999;
+    font: italic 15px/100% Georgia,Times,serif;
+}
+body .formStyle {
+    background: none repeat scroll 0 0 #FCFCFC;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1) inset;
+    color: #4D4D4D;
+    font-family: inherit;
+    font-size: 13px;
+    outline: medium none;
+    padding: 6px;
+    transition-duration: 0.33s;
+    transition-property: background, border, color, opacity, box-shadow;
+}
+body .formStyle:hover {
+    border: 1px solid #BBBBBB;
+}
+body .formStyle:focus {
+    background: none repeat scroll 0 0 #FEFEFE;
+    border: 1px solid #B3B3B3;
+    box-shadow: none;
+    color: #333333;
+}
+body .formStyle.loadingInput {
+    background: url("/Content/foursquare/input-loading-37ae1d608a187fd13f6624252933d85b.gif") repeat scroll 0 0 #E5E5E5;
+    border: 1px solid #BBBBBB;
+}
+body input.greenButton, body button.greenButton, body input.orangeButton, body button.orangeButton, body input.greyButton, body button.greyButton, body input.blueButton, body button.blueButton, body input.disabledButton, body button.disabledButton {
+    height: 32px;
+}
+body .greenButton, body a.greenButton {
+    background: -moz-linear-gradient(center top , #A7E300, #99D100) repeat scroll 0 0 transparent;
+    border: 1px solid #87B800;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+body .greenButton:hover, body a.greenButton:hover {
+    background: -moz-linear-gradient(center top , #B2EB14, #A4DA14) repeat scroll 0 0 transparent;
+    border: 1px solid #87B800;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+body .greenButton:active, body a.greenButton:active {
+    background: -moz-linear-gradient(center top , #99D100, #A7E300) repeat scroll 0 0 transparent;
+    border: 1px solid #87B800;
+    box-shadow: none;
+    color: #FFFFFF;
+}
+body .greenButton.link, body a.greenButton.link, body .greenButtona, body a.greenButtona, body .greenButton a, body a.greenButton a {
+    color: #FFFFFF;
+}
+body .greenButton:hover, body a.greenButton:hover, body .greenButton.link:hover, body a.greenButton.link:hover {
+    text-decoration: none;
+}
+body .orangeButton, body a.orangeButton {
+    background: -moz-linear-gradient(center top , #FF9900, #FF6200) repeat scroll 0 0 transparent;
+    border: 1px solid #E55800;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+body .orangeButton:hover, body a.orangeButton:hover {
+    background: -moz-linear-gradient(center top , #FFAD32, #FF8132) repeat scroll 0 0 transparent;
+    border: 1px solid #E55800;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+body .orangeButton:active, body a.orangeButton:active {
+    background: -moz-linear-gradient(center top , #FF8132, #FFAD32) repeat scroll 0 0 transparent;
+    border: 1px solid #E55800;
+    box-shadow: none;
+    color: #FFFFFF;
+}
+body .orangeButton.link, body a.orangeButton.link, body .orangeButtona, body a.orangeButtona, body .orangeButton a, body a.orangeButton a {
+    color: #FFFFFF;
+}
+body .orangeButton:hover, body a.orangeButton:hover, body .orangeButton.link:hover, body a.orangeButton.link:hover {
+    text-decoration: none;
+}
+body .greyButton, body a.greyButton {
+    background: -moz-linear-gradient(center top , #F8F8F9, #E6E6E8) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    color: #808080;
+    cursor: pointer;
+    display: block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+    text-transform: uppercase;
+}
+body .greyButton:hover, body a.greyButton:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+body .greyButton:active, body a.greyButton:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+body .greyButton.link, body a.greyButton.link, body .greyButtona, body a.greyButtona, body .greyButton a, body a.greyButton a {
+    color: #808080;
+}
+body .greyButton:hover, body a.greyButton:hover, body .greyButton.link:hover, body a.greyButton.link:hover {
+    text-decoration: none;
+}
+body .blackButton, body a.blackButton {
+    background: -moz-linear-gradient(center top , #555555, #3A3A3A) repeat scroll 0 0 transparent;
+    border: 1px solid #070707;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-shadow: 0 1px 0 #000000;
+    text-transform: uppercase;
+}
+body .blackButton:hover, body a.blackButton:hover {
+    background: -moz-linear-gradient(center top , #666666, #4A4A4A) repeat scroll 0 0 transparent;
+    border: 1px solid #070707;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+body .blackButton:active, body a.blackButton:active {
+    background: -moz-linear-gradient(center top , #4A4A4A, #4A4A4A) repeat scroll 0 0 transparent;
+    border: 1px solid #070707;
+    box-shadow: none;
+    color: #FFFFFF;
+}
+body .blackButton.link, body a.blackButton.link, body .blackButtona, body a.blackButtona, body .blackButton a, body a.blackButton a {
+    color: #808080;
+}
+body .blackButton:hover, body a.blackButton:hover, body .blackButton.link:hover, body a.blackButton.link:hover {
+    text-decoration: none;
+}
+body .blueButton, body a.blueButton {
+    background: -moz-linear-gradient(center top , #70C6E6, #1C91C4) repeat scroll 0 0 transparent;
+    border: 1px solid #0077BC;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+body .blueButton:hover, body a.blueButton:hover {
+    background: -moz-linear-gradient(center top , #77D1F2, #1D9BD1) repeat scroll 0 0 transparent;
+    border: 1px solid #0077BC;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+body .blueButton:active, body a.blueButton:active {
+    background: -moz-linear-gradient(center top , #1C91C4, #70C6E6) repeat scroll 0 0 transparent;
+    border: 1px solid #0077BC;
+    box-shadow: none;
+    color: #FFFFFF;
+}
+body .blueButtona, body a.blueButtona, body .blueButton a, body a.blueButton a {
+    color: #FFFFFF;
+}
+body .disabledButton, body a.disabledButton {
+    background: none repeat scroll 0 0 #E5E5E5;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: none;
+    color: #999999 !important;
+    cursor: default;
+    display: inline-block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none !important;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+body .disabledButton:hover, body a.disabledButton:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+body .disabledButton:active, body a.disabledButton:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+body .disabledButton.link, body a.disabledButton.link, body .disabledButtona, body a.disabledButtona, body .disabledButton a, body a.disabledButton a {
+    color: #808080;
+}
+body .disabledButton:hover, body a.disabledButton:hover, body .disabledButton.link:hover, body a.disabledButton.link:hover {
+    text-decoration: none;
+}
+body .disabledButton:hover, body a.disabledButton:hover {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+body .disabledButton:active, body a.disabledButton:active {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+body .loadingButton, body a.loadingButton {
+    background: url("/Content/foursquare/button-loading-3bb46079e9415b490f318918f98337dc.gif") repeat scroll 0 0 #E5E5E5;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: none;
+    color: #999999 !important;
+    cursor: default;
+    display: inline-block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none !important;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+body .loadingButton:hover, body a.loadingButton:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+body .loadingButton:active, body a.loadingButton:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+body .loadingButton.link, body a.loadingButton.link, body .loadingButtona, body a.loadingButtona, body .loadingButton a, body a.loadingButton a {
+    color: #808080;
+}
+body .loadingButton:hover, body a.loadingButton:hover, body .loadingButton.link:hover, body a.loadingButton.link:hover {
+    text-decoration: none;
+}
+body .loadingButton:hover, body a.loadingButton:hover {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+body .loadingButton:active, body a.loadingButton:active {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+body .loadingButton:hover, body a.loadingButton:hover {
+    background: url("/Content/foursquare/button-loading-3bb46079e9415b490f318918f98337dc.gif") repeat scroll 0 0 #E5E5E5;
+}
+body .biggerButton, body a.biggerButton, body input.greenButton.biggerButton, body button.greenButton.biggerButton, body input.orangeButton.biggerButton, body button.orangeButton.biggerButton, body input.greyButton.biggerButton, body button.greyButton.biggerButton, body input.blueButton.biggerButton, body button.blueButton.biggerButton, body input.disabledButton.biggerButton, body button.disabledButton.biggerButton, body input.loadingButton.biggerButton, body button.loadingButton.biggerButton {
+    font-size: 16px;
+    height: 36px;
+    line-height: 36px;
+    text-transform: none;
+}
+body .biggerButtoninput, body a.biggerButtoninput, body input.greenButton.biggerButtoninput, body button.greenButton.biggerButtoninput, body input.orangeButton.biggerButtoninput, body button.orangeButton.biggerButtoninput, body input.greyButton.biggerButtoninput, body button.greyButton.biggerButtoninput, body input.blueButton.biggerButtoninput, body button.blueButton.biggerButtoninput, body input.disabledButton.biggerButtoninput, body button.disabledButton.biggerButtoninput, body input.loadingButton.biggerButtoninput, body button.loadingButton.biggerButtoninput, body .biggerButtonbutton, body a.biggerButtonbutton, body input.greenButton.biggerButtonbutton, body button.greenButton.biggerButtonbutton, body input.orangeButton.biggerButtonbutton, body button.orangeButton.biggerButtonbutton, body input.greyButton.biggerButtonbutton, body button.greyButton.biggerButtonbutton, body input.blueButton.biggerButtonbutton, body button.blueButton.biggerButtonbutton, body input.disabledButton.biggerButtonbutton, body button.disabledButton.biggerButtonbutton, body input.loadingButton.biggerButtonbutton, body button.loadingButton.biggerButtonbutton {
+    height: 38px !important;
+}
+body .deleteButton, body a.deleteButton {
+    background: url("/Content/foursquare/icon-delete-5e654699e212267863ac7e65fe087a77.png") no-repeat scroll left top transparent;
+    cursor: pointer;
+    display: block;
+    height: 22px;
+    position: absolute;
+    right: 5px;
+    text-indent: -9999px;
+    top: 5px;
+    width: 22px;
+}
+body .deleteButton:hover, body a.deleteButton:hover {
+    background: url("/Content/foursquare/tips-delete-7fc0997c50014440a42404d99004b710.png") no-repeat scroll 0 -22px transparent;
+}
+body .deleteButton.loadingButton, body a.deleteButton.loadingButton {
+    background: url("/Content/foursquare/ajax_spinner_small_light-23e3947767aef347abf9160b5961e904.gif") no-repeat scroll 3px 3px transparent;
+}
+body .deleteButton:hover, body a.deleteButton:hover {
+    background: url("/Content/foursquare/icon-delete-5e654699e212267863ac7e65fe087a77.png") no-repeat scroll left bottom transparent;
+}
+body .deleteButton.loading, body a.deleteButton.loading {
+    background: url("/Content/foursquare/ajax_spinner_small-7b9776076d5fceef4993b55c9383dedd.gif") no-repeat scroll 3px 3px transparent;
+}
+body .greyDoubleButton, body a.greyDoubleButton {
+    padding: 0;
+}
+body .greyDoubleButton .buttonLeft, body a.greyDoubleButton .buttonLeft, body .greyDoubleButton .buttonRight, body a.greyDoubleButton .buttonRight {
+    background: -moz-linear-gradient(center top , #F8F8F9, #E6E6E8) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    color: #808080;
+    cursor: pointer;
+    display: block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+    text-transform: uppercase;
+}
+body .greyDoubleButton .buttonLeft:hover, body a.greyDoubleButton .buttonLeft:hover, body .greyDoubleButton .buttonRight:hover, body a.greyDoubleButton .buttonRight:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+body .greyDoubleButton .buttonLeft:active, body a.greyDoubleButton .buttonLeft:active, body .greyDoubleButton .buttonRight:active, body a.greyDoubleButton .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+body .greyDoubleButton .buttonLeft.link, body a.greyDoubleButton .buttonLeft.link, body .greyDoubleButton .buttonRight.link, body a.greyDoubleButton .buttonRight.link, body .greyDoubleButton .buttonLefta, body a.greyDoubleButton .buttonLefta, body .greyDoubleButton .buttonRighta, body a.greyDoubleButton .buttonRighta, body .greyDoubleButton .buttonLeft a, body a.greyDoubleButton .buttonLeft a, body .greyDoubleButton .buttonRight a, body a.greyDoubleButton .buttonRight a {
+    color: #808080;
+}
+body .greyDoubleButton .buttonLeft:hover, body a.greyDoubleButton .buttonLeft:hover, body .greyDoubleButton .buttonRight:hover, body a.greyDoubleButton .buttonRight:hover, body .greyDoubleButton .buttonLeft.link:hover, body a.greyDoubleButton .buttonLeft.link:hover, body .greyDoubleButton .buttonRight.link:hover, body a.greyDoubleButton .buttonRight.link:hover {
+    text-decoration: none;
+}
+body .greyDoubleButton .buttonLeft:hover, body a.greyDoubleButton .buttonLeft:hover, body .greyDoubleButton .buttonRight:hover, body a.greyDoubleButton .buttonRight:hover {
+    text-decoration: none !important;
+}
+body .greyDoubleButton:hover, body a.greyDoubleButton:hover {
+    text-decoration: none !important;
+}
+body .greyDoubleButton .buttonLeft, body a.greyDoubleButton .buttonLeft {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #D8D8DA, #B8B8BC) repeat scroll 0 0 transparent;
+    border-color: #B7B7B7 -moz-use-text-color #B7B7B7 #B7B7B7;
+    border-image: none;
+    border-radius: 5px 0 0 5px;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    color: #FFFFFF;
+    float: left;
+    padding: 0 6px;
+}
+body .greyDoubleButton .buttonLeft img, body a.greyDoubleButton .buttonLeft img {
+    position: relative;
+    top: 4px;
+}
+body .greyDoubleButton .buttonLeft:active, body a.greyDoubleButton .buttonLeft:active {
+    background: -moz-linear-gradient(center top , #E5E5E7, #C3C3C6) repeat scroll 0 0 transparent;
+    border: 1px solid #B7B7B7;
+    box-shadow: none;
+    color: #FFFFFF;
+}
+body .greyDoubleButton:hover .buttonLeft, body a.greyDoubleButton:hover .buttonLeft {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #E5E5E7, #C3C3C6) repeat scroll 0 0 transparent;
+    border-color: #B7B7B7 -moz-use-text-color #B7B7B7 #B7B7B7;
+    border-image: none;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    color: #FFFFFF;
+}
+body .greyDoubleButton .buttonRight, body a.greyDoubleButton .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #F8F8F9, #E6E6E8) repeat scroll 0 0 transparent;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    color: #808080;
+    float: left;
+}
+body .greyDoubleButton .buttonRight:active, body a.greyDoubleButton .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+body .greyDoubleButton:hover .buttonRight, body a.greyDoubleButton:hover .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    color: #808080;
+}
+body .greyDoubleButton.loadingDoubleButton .buttonRight, body a.greyDoubleButton.loadingDoubleButton .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("/Content/foursquare/button-loading-3bb46079e9415b490f318918f98337dc.gif") repeat scroll 0 0 #E5E5E5;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    box-shadow: none;
+    color: #999999 !important;
+    cursor: default;
+    display: inline-block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none !important;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+body .greyDoubleButton.loadingDoubleButton .buttonRight:hover, body a.greyDoubleButton.loadingDoubleButton .buttonRight:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+body .greyDoubleButton.loadingDoubleButton .buttonRight:active, body a.greyDoubleButton.loadingDoubleButton .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+body .greyDoubleButton.loadingDoubleButton .buttonRight.link, body a.greyDoubleButton.loadingDoubleButton .buttonRight.link, body .greyDoubleButton.loadingDoubleButton .buttonRighta, body a.greyDoubleButton.loadingDoubleButton .buttonRighta, body .greyDoubleButton.loadingDoubleButton .buttonRight a, body a.greyDoubleButton.loadingDoubleButton .buttonRight a {
+    color: #808080;
+}
+body .greyDoubleButton.loadingDoubleButton .buttonRight:hover, body a.greyDoubleButton.loadingDoubleButton .buttonRight:hover, body .greyDoubleButton.loadingDoubleButton .buttonRight.link:hover, body a.greyDoubleButton.loadingDoubleButton .buttonRight.link:hover {
+    text-decoration: none;
+}
+body .greyDoubleButton.loadingDoubleButton .buttonRight:hover, body a.greyDoubleButton.loadingDoubleButton .buttonRight:hover {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+body .greyDoubleButton.loadingDoubleButton .buttonRight:active, body a.greyDoubleButton.loadingDoubleButton .buttonRight:active {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+body .greyDoubleButton.loadingDoubleButton .buttonRight:hover, body a.greyDoubleButton.loadingDoubleButton .buttonRight:hover {
+    background: url("/Content/foursquare/button-loading-3bb46079e9415b490f318918f98337dc.gif") repeat scroll 0 0 #E5E5E5;
+}
+body .greyDoubleButton.loadingDoubleButton .buttonLeft, body a.greyDoubleButton.loadingDoubleButton .buttonLeft {
+}
+body .greyDoubleButton.disabledDoubleButton .buttonLeft, body a.greyDoubleButton.disabledDoubleButton .buttonLeft {
+    background: none repeat scroll 0 0 #C8C8CB;
+}
+body .greyDoubleButton.disabledDoubleButton .buttonRight, body a.greyDoubleButton.disabledDoubleButton .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #E5E5E5;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    box-shadow: none;
+    color: #999999 !important;
+    cursor: default;
+    display: inline-block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none !important;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+body .greyDoubleButton.disabledDoubleButton .buttonRight:hover, body a.greyDoubleButton.disabledDoubleButton .buttonRight:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+body .greyDoubleButton.disabledDoubleButton .buttonRight:active, body a.greyDoubleButton.disabledDoubleButton .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+body .greyDoubleButton.disabledDoubleButton .buttonRight.link, body a.greyDoubleButton.disabledDoubleButton .buttonRight.link, body .greyDoubleButton.disabledDoubleButton .buttonRighta, body a.greyDoubleButton.disabledDoubleButton .buttonRighta, body .greyDoubleButton.disabledDoubleButton .buttonRight a, body a.greyDoubleButton.disabledDoubleButton .buttonRight a {
+    color: #808080;
+}
+body .greyDoubleButton.disabledDoubleButton .buttonRight:hover, body a.greyDoubleButton.disabledDoubleButton .buttonRight:hover, body .greyDoubleButton.disabledDoubleButton .buttonRight.link:hover, body a.greyDoubleButton.disabledDoubleButton .buttonRight.link:hover {
+    text-decoration: none;
+}
+body .greyDoubleButton.disabledDoubleButton .buttonRight:hover, body a.greyDoubleButton.disabledDoubleButton .buttonRight:hover {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+body .greyDoubleButton.disabledDoubleButton .buttonRight:active, body a.greyDoubleButton.disabledDoubleButton .buttonRight:active {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+body .toggleButton, body a.toggleButton {
+    background: -moz-linear-gradient(center top , #F8F8F9, #E6E6E8) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    border-radius: 0 0 0 0;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    color: #808080;
+    cursor: pointer;
+    display: block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+    text-transform: uppercase;
+}
+body .toggleButton:hover, body a.toggleButton:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+body .toggleButton:active, body a.toggleButton:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+body .toggleButton.link, body a.toggleButton.link, body .toggleButtona, body a.toggleButtona, body .toggleButton a, body a.toggleButton a {
+    color: #808080;
+}
+body .toggleButton:hover, body a.toggleButton:hover, body .toggleButton.link:hover, body a.toggleButton.link:hover {
+    text-decoration: none;
+}
+body .toggleButton.selected, body a.toggleButton.selected {
+    background: -moz-linear-gradient(center top , #70C6E6, #1C91C4) repeat scroll 0 0 transparent;
+    border: 1px solid #0077BC;
+    border-radius: 0 0 0 0;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+body .toggleButton.selected:hover, body a.toggleButton.selected:hover {
+    background: -moz-linear-gradient(center top , #77D1F2, #1D9BD1) repeat scroll 0 0 transparent;
+    border: 1px solid #0077BC;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+body .toggleButton.selected:active, body a.toggleButton.selected:active {
+    background: -moz-linear-gradient(center top , #1C91C4, #70C6E6) repeat scroll 0 0 transparent;
+    border: 1px solid #0077BC;
+    box-shadow: none;
+    color: #FFFFFF;
+}
+body .toggleButton.selecteda, body a.toggleButton.selecteda, body .toggleButton.selected a, body a.toggleButton.selected a {
+    color: #FFFFFF;
+}
+body .iconButton, body a.iconButton {
+    padding: 0;
+}
+body .iconButton .buttonLeft, body a.iconButton .buttonLeft, body .iconButton .buttonRight, body a.iconButton .buttonRight {
+    background: -moz-linear-gradient(center top , #F8F8F9, #E6E6E8) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    color: #808080;
+    cursor: pointer;
+    display: block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+    text-transform: uppercase;
+}
+body .iconButton .buttonLeft:hover, body a.iconButton .buttonLeft:hover, body .iconButton .buttonRight:hover, body a.iconButton .buttonRight:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+body .iconButton .buttonLeft:active, body a.iconButton .buttonLeft:active, body .iconButton .buttonRight:active, body a.iconButton .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+body .iconButton .buttonLeft.link, body a.iconButton .buttonLeft.link, body .iconButton .buttonRight.link, body a.iconButton .buttonRight.link, body .iconButton .buttonLefta, body a.iconButton .buttonLefta, body .iconButton .buttonRighta, body a.iconButton .buttonRighta, body .iconButton .buttonLeft a, body a.iconButton .buttonLeft a, body .iconButton .buttonRight a, body a.iconButton .buttonRight a {
+    color: #808080;
+}
+body .iconButton .buttonLeft:hover, body a.iconButton .buttonLeft:hover, body .iconButton .buttonRight:hover, body a.iconButton .buttonRight:hover, body .iconButton .buttonLeft.link:hover, body a.iconButton .buttonLeft.link:hover, body .iconButton .buttonRight.link:hover, body a.iconButton .buttonRight.link:hover {
+    text-decoration: none;
+}
+body .iconButton .buttonLeft:hover, body a.iconButton .buttonLeft:hover, body .iconButton .buttonRight:hover, body a.iconButton .buttonRight:hover {
+    text-decoration: none !important;
+}
+body .iconButton:hover, body a.iconButton:hover {
+    text-decoration: none !important;
+}
+body .iconButton .buttonLeft, body a.iconButton .buttonLeft {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #D8D8DA, #B8B8BC) repeat scroll 0 0 transparent;
+    border-color: #B7B7B7 -moz-use-text-color #B7B7B7 #B7B7B7;
+    border-image: none;
+    border-radius: 5px 0 0 5px;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    color: #FFFFFF;
+    float: left;
+    padding: 0 6px;
+}
+body .iconButton .buttonLeft img, body a.iconButton .buttonLeft img {
+    position: relative;
+    top: 4px;
+}
+body .iconButton .buttonLeft:active, body a.iconButton .buttonLeft:active {
+    background: -moz-linear-gradient(center top , #E5E5E7, #C3C3C6) repeat scroll 0 0 transparent;
+    border: 1px solid #B7B7B7;
+    box-shadow: none;
+    color: #FFFFFF;
+}
+body .iconButton:hover .buttonLeft, body a.iconButton:hover .buttonLeft {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #E5E5E7, #C3C3C6) repeat scroll 0 0 transparent;
+    border-color: #B7B7B7 -moz-use-text-color #B7B7B7 #B7B7B7;
+    border-image: none;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    color: #FFFFFF;
+}
+body .iconButton .buttonRight, body a.iconButton .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #F8F8F9, #E6E6E8) repeat scroll 0 0 transparent;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    color: #808080;
+    float: left;
+}
+body .iconButton .buttonRight:active, body a.iconButton .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+body .iconButton:hover .buttonRight, body a.iconButton:hover .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    color: #808080;
+}
+body .iconButton.loadingDoubleButton .buttonRight, body a.iconButton.loadingDoubleButton .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("/Content/foursquare/button-loading-3bb46079e9415b490f318918f98337dc.gif") repeat scroll 0 0 #E5E5E5;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    box-shadow: none;
+    color: #999999 !important;
+    cursor: default;
+    display: inline-block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none !important;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+body .iconButton.loadingDoubleButton .buttonRight:hover, body a.iconButton.loadingDoubleButton .buttonRight:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+body .iconButton.loadingDoubleButton .buttonRight:active, body a.iconButton.loadingDoubleButton .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+body .iconButton.loadingDoubleButton .buttonRight.link, body a.iconButton.loadingDoubleButton .buttonRight.link, body .iconButton.loadingDoubleButton .buttonRighta, body a.iconButton.loadingDoubleButton .buttonRighta, body .iconButton.loadingDoubleButton .buttonRight a, body a.iconButton.loadingDoubleButton .buttonRight a {
+    color: #808080;
+}
+body .iconButton.loadingDoubleButton .buttonRight:hover, body a.iconButton.loadingDoubleButton .buttonRight:hover, body .iconButton.loadingDoubleButton .buttonRight.link:hover, body a.iconButton.loadingDoubleButton .buttonRight.link:hover {
+    text-decoration: none;
+}
+body .iconButton.loadingDoubleButton .buttonRight:hover, body a.iconButton.loadingDoubleButton .buttonRight:hover {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+body .iconButton.loadingDoubleButton .buttonRight:active, body a.iconButton.loadingDoubleButton .buttonRight:active {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+body .iconButton.loadingDoubleButton .buttonRight:hover, body a.iconButton.loadingDoubleButton .buttonRight:hover {
+    background: url("/Content/foursquare/button-loading-3bb46079e9415b490f318918f98337dc.gif") repeat scroll 0 0 #E5E5E5;
+}
+body .iconButton.loadingDoubleButton .buttonLeft, body a.iconButton.loadingDoubleButton .buttonLeft {
+}
+body .iconButton.disabledDoubleButton .buttonLeft, body a.iconButton.disabledDoubleButton .buttonLeft {
+    background: none repeat scroll 0 0 #C8C8CB;
+}
+body .iconButton.disabledDoubleButton .buttonRight, body a.iconButton.disabledDoubleButton .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #E5E5E5;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    box-shadow: none;
+    color: #999999 !important;
+    cursor: default;
+    display: inline-block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none !important;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+body .iconButton.disabledDoubleButton .buttonRight:hover, body a.iconButton.disabledDoubleButton .buttonRight:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+body .iconButton.disabledDoubleButton .buttonRight:active, body a.iconButton.disabledDoubleButton .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+body .iconButton.disabledDoubleButton .buttonRight.link, body a.iconButton.disabledDoubleButton .buttonRight.link, body .iconButton.disabledDoubleButton .buttonRighta, body a.iconButton.disabledDoubleButton .buttonRighta, body .iconButton.disabledDoubleButton .buttonRight a, body a.iconButton.disabledDoubleButton .buttonRight a {
+    color: #808080;
+}
+body .iconButton.disabledDoubleButton .buttonRight:hover, body a.iconButton.disabledDoubleButton .buttonRight:hover, body .iconButton.disabledDoubleButton .buttonRight.link:hover, body a.iconButton.disabledDoubleButton .buttonRight.link:hover {
+    text-decoration: none;
+}
+body .iconButton.disabledDoubleButton .buttonRight:hover, body a.iconButton.disabledDoubleButton .buttonRight:hover {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+body .iconButton.disabledDoubleButton .buttonRight:active, body a.iconButton.disabledDoubleButton .buttonRight:active {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+body .deleteButton, body a.deleteButton {
+    background: url("/Content/foursquare/icon-delete-5e654699e212267863ac7e65fe087a77.png") no-repeat scroll left top transparent;
+    cursor: pointer;
+    display: block;
+    height: 22px;
+    position: absolute;
+    right: 5px;
+    text-indent: -9999px;
+    top: 5px;
+    width: 22px;
+}
+body .deleteButton:hover, body a.deleteButton:hover {
+    background: url("/Content/foursquare/tips-delete-7fc0997c50014440a42404d99004b710.png") no-repeat scroll 0 -22px transparent;
+}
+body .deleteButton.loadingButton, body a.deleteButton.loadingButton {
+    background: url("/Content/foursquare/ajax_spinner_small_light-23e3947767aef347abf9160b5961e904.gif") no-repeat scroll 3px 3px transparent;
+}
+body .deleteButton:hover, body a.deleteButton:hover {
+    background: url("/Content/foursquare/icon-delete-5e654699e212267863ac7e65fe087a77.png") no-repeat scroll left bottom transparent;
+}
+body .deleteButton.loading, body a.deleteButton.loading {
+    background: url("/Content/foursquare/ajax_spinner_small-7b9776076d5fceef4993b55c9383dedd.gif") no-repeat scroll 3px 3px transparent;
+}
+body .orangeToggle, body a.orangeToggle {
+    background: -moz-linear-gradient(center top , #E6E6E8, #F6F6F7) repeat scroll 0 0 transparent;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    color: #808080;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 0 0 25px;
+    position: relative;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    width: 43px;
+}
+body .orangeToggle .on, body a.orangeToggle .on, body .orangeToggle .off, body a.orangeToggle .off {
+    cursor: pointer;
+    text-align: center;
+}
+body .orangeToggle .on, body a.orangeToggle .on {
+    display: none;
+}
+body .orangeToggle .off, body a.orangeToggle .off {
+    display: block;
+}
+body .orangeToggle .handle, body a.orangeToggle .handle {
+    background: -moz-linear-gradient(center top , #F7F7F8, #E7E7E9) repeat scroll 0 0 transparent;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px 3px 3px 3px;
+    color: #808080;
+    cursor: pointer;
+    display: block;
+    height: 21px;
+    left: 1px;
+    position: absolute;
+    top: 1px;
+    transition: all 0.3s ease 0s;
+    width: 21px;
+}
+body .orangeToggle:hover, body a.orangeToggle:hover {
+    border-color: #B7B7B7;
+}
+body .orangeToggle.active, body a.orangeToggle.active {
+    background: -moz-linear-gradient(center top , #FE8739, #FEAB52) repeat scroll 0 0 transparent;
+    border: 1px solid #DB8034;
+    color: #FFFFFF;
+    padding: 0 25px 0 0;
+}
+body .orangeToggle.active:hover, body a.orangeToggle.active:hover {
+    border-color: #B95E12;
+}
+body .orangeToggle.active .handle, body a.orangeToggle.active .handle {
+    border-color: #DB8034;
+    left: 44px;
+}
+body .orangeToggle.active .on, body a.orangeToggle.active .on {
+    display: block;
+}
+body .orangeToggle.active .off, body a.orangeToggle.active .off {
+    display: none;
+}
+body .fadeOut {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-name: fadeOut;
+    animation-timing-function: ease;
+}
+body .fadeIn {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-name: fadeIn;
+    animation-timing-function: ease;
+}
+body .slideOutToLeft {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-name: slideOutToLeft;
+    animation-timing-function: ease;
+}
+
+#actionBar {
+    background: none repeat scroll 0 0 #F0F4F5;
+    border-bottom: 1px solid #DAE4E6;
+    overflow: hidden;
+}
+#actionBar .link, #actionBar .comboRatingButton, #actionBar .greenButton, #actionBar .greyButton, #actionBar .orangeButton, #actionBar .blueButton {
+    float: left;
+    left: 50%;
+    margin-left: 15px;
+    max-width: 250px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#actionBar .link:first-child, #actionBar .comboRatingButton:first-child, #actionBar .greenButton:first-child, #actionBar .greyButton:first-child, #actionBar .orangeButton:first-child, #actionBar .blueButton:first-child {
+    margin-left: 0;
+}
+#actionBar .link:hover, #actionBar .comboRatingButton:hover, #actionBar .greenButton:hover, #actionBar .greyButton:hover, #actionBar .orangeButton:hover, #actionBar .blueButton:hover {
+    text-decoration: none;
+}
+#actionBar a, #actionBar span.greenButton, #actionBar span.greyButton, #actionBar span.orangeButton, #actionBar span.blueButton {
+    padding: 0 15px;
+}
+#actionBar .actionContainer {
+    float: right;
+    left: -50%;
+    position: relative;
+    text-align: left;
+}
+#actionBar .actionContainer .friendStatus {
+    left: 50%;
+    position: relative;
+}
+#actionBar .actionContainer .friendStatus .greenButton {
+    clear: both;
+}
+#actionBar .actionContainer .friendStatus .unfollowButton {
+    padding: 0;
+    text-transform: capitalize;
+}
+#actionBar .actionContainer #friendRequestStatus {
+    left: 0;
+}
+#actionBar .actionContainer #alreadyFriends {
+    font-size: 11px;
+}
+#actionBar .actionContainer #alreadyFriends a {
+    color: #999999;
+    padding: 0;
+}
+#actionBar .actionContainer #flagUserModalLauncher {
+    color: #999999;
+    font-size: 11px;
+    left: 50%;
+    margin-top: 5px;
+    position: relative;
+}
+#actionBar .actionContainer p {
+    float: left;
+    left: 50%;
+    overflow: hidden;
+    position: relative;
+}
+#actionBar .listActionButton .link, #actionBar .listActionButton .greenButton, #actionBar .listActionButton .greyButton, #actionBar .listActionButton .orangeButton, #actionBar .listActionButton .blueButton {
+    float: none;
+    left: 0;
+    margin-left: 0;
+}
+#actionBar .listActionButton .link:first-child, #actionBar .listActionButton .greenButton:first-child, #actionBar .listActionButton .greyButton:first-child, #actionBar .listActionButton .orangeButton:first-child, #actionBar .listActionButton .blueButton:first-child {
+    margin-left: 0;
+}
+#actionBar .listActionButton .link:hover, #actionBar .listActionButton .greenButton:hover, #actionBar .listActionButton .greyButton:hover, #actionBar .listActionButton .orangeButton:hover, #actionBar .listActionButton .blueButton:hover {
+    text-decoration: none;
+}
+#actionBar .saveButton {
+    padding: 0;
+}
+#actionBar .saveButton .buttonLeft, #actionBar .saveButton .buttonRight {
+    background: -moz-linear-gradient(center top , #808080, #E6E6E8) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    color: #808080;
+    cursor: pointer;
+    display: block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+    text-transform: uppercase;
+}
+#actionBar .saveButton .buttonLeft:hover, #actionBar .saveButton .buttonRight:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+#actionBar .saveButton .buttonLeft:active, #actionBar .saveButton .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+#actionBar .saveButton .buttonLeft.link, #actionBar .saveButton .buttonRight.link, #actionBar .saveButton .buttonLefta, #actionBar .saveButton .buttonRighta, #actionBar .saveButton .buttonLeft a, #actionBar .saveButton .buttonRight a {
+    color: #808080;
+}
+#actionBar .saveButton .buttonLeft:hover, #actionBar .saveButton .buttonRight:hover, #actionBar .saveButton .buttonLeft.link:hover, #actionBar .saveButton .buttonRight.link:hover {
+    text-decoration: none;
+}
+#actionBar .saveButton .buttonLeft:hover, #actionBar .saveButton .buttonRight:hover {
+    text-decoration: none !important;
+}
+#actionBar .saveButton:hover {
+    text-decoration: none !important;
+}
+#actionBar .saveButton .buttonLeft {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #D8D8DA, #B8B8BC) repeat scroll 0 0 transparent;
+    border-color: #B7B7B7 -moz-use-text-color #B7B7B7 #B7B7B7;
+    border-image: none;
+    border-radius: 5px 0 0 5px;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    color: #FFFFFF;
+    float: left;
+    padding: 0 6px;
+}
+#actionBar .saveButton .buttonLeft img {
+    position: relative;
+    top: 4px;
+}
+#actionBar .saveButton .buttonLeft:active {
+    background: -moz-linear-gradient(center top , #E5E5E7, #C3C3C6) repeat scroll 0 0 transparent;
+    border: 1px solid #B7B7B7;
+    box-shadow: none;
+    color: #FFFFFF;
+}
+#actionBar .saveButton:hover .buttonLeft {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #E5E5E7, #C3C3C6) repeat scroll 0 0 transparent;
+    border-color: #B7B7B7 -moz-use-text-color #B7B7B7 #B7B7B7;
+    border-image: none;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    color: #FFFFFF;
+}
+#actionBar .saveButton .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #F8F8F9, #E6E6E8) repeat scroll 0 0 transparent;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    color: #808080;
+    float: left;
+}
+#actionBar .saveButton .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+#actionBar .saveButton:hover .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    color: #808080;
+}
+#actionBar .saveButton.loadingDoubleButton .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("/Content/foursquare/button-loading-3bb46079e9415b490f318918f98337dc.gif") repeat scroll 0 0 #E5E5E5;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    box-shadow: none;
+    color: #999999 !important;
+    cursor: default;
+    display: inline-block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none !important;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+#actionBar .saveButton.loadingDoubleButton .buttonRight:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+#actionBar .saveButton.loadingDoubleButton .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+#actionBar .saveButton.loadingDoubleButton .buttonRight.link, #actionBar .saveButton.loadingDoubleButton .buttonRighta, #actionBar .saveButton.loadingDoubleButton .buttonRight a {
+    color: #808080;
+}
+#actionBar .saveButton.loadingDoubleButton .buttonRight:hover, #actionBar .saveButton.loadingDoubleButton .buttonRight.link:hover {
+    text-decoration: none;
+}
+#actionBar .saveButton.loadingDoubleButton .buttonRight:hover {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+#actionBar .saveButton.loadingDoubleButton .buttonRight:active {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+#actionBar .saveButton.loadingDoubleButton .buttonRight:hover {
+    background: url("/Content/foursquare/button-loading-3bb46079e9415b490f318918f98337dc.gif") repeat scroll 0 0 #E5E5E5;
+}
+#actionBar .saveButton.loadingDoubleButton .buttonLeft {
+}
+#actionBar .saveButton.disabledDoubleButton .buttonLeft {
+    background: none repeat scroll 0 0 #C8C8CB;
+}
+#actionBar .saveButton.disabledDoubleButton .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #E5E5E5;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    box-shadow: none;
+    color: #999999 !important;
+    cursor: default;
+    display: inline-block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none !important;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+#actionBar .saveButton.disabledDoubleButton .buttonRight:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+#actionBar .saveButton.disabledDoubleButton .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+#actionBar .saveButton.disabledDoubleButton .buttonRight.link, #actionBar .saveButton.disabledDoubleButton .buttonRighta, #actionBar .saveButton.disabledDoubleButton .buttonRight a {
+    color: #808080;
+}
+#actionBar .saveButton.disabledDoubleButton .buttonRight:hover, #actionBar .saveButton.disabledDoubleButton .buttonRight.link:hover {
+    text-decoration: none;
+}
+#actionBar .saveButton.disabledDoubleButton .buttonRight:hover {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+#actionBar .saveButton.disabledDoubleButton .buttonRight:active {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+/*#actionBar .saveButton .label {
+    display: none;
+}*/
+#actionBar .saveButton.active {
+    padding: 0;
+}
+#actionBar .saveButton.active .buttonLeft, #actionBar .saveButton.active .buttonRight {
+    background: -moz-linear-gradient(center top , #F8F8F9, #E6E6E8) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    color: #808080;
+    cursor: pointer;
+    display: block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+    text-transform: uppercase;
+}
+#actionBar .saveButton.active .buttonLeft:hover, #actionBar .saveButton.active .buttonRight:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+#actionBar .saveButton.active .buttonLeft:active, #actionBar .saveButton.active .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+#actionBar .saveButton.active .buttonLeft.link, #actionBar .saveButton.active .buttonRight.link, #actionBar .saveButton.active .buttonLefta, #actionBar .saveButton.active .buttonRighta, #actionBar .saveButton.active .buttonLeft a, #actionBar .saveButton.active .buttonRight a {
+    color: #808080;
+}
+#actionBar .saveButton.active .buttonLeft:hover, #actionBar .saveButton.active .buttonRight:hover, #actionBar .saveButton.active .buttonLeft.link:hover, #actionBar .saveButton.active .buttonRight.link:hover {
+    text-decoration: none;
+}
+#actionBar .saveButton.active .buttonLeft:hover, #actionBar .saveButton.active .buttonRight:hover {
+    text-decoration: none !important;
+}
+#actionBar .saveButton.active:hover {
+    text-decoration: none !important;
+}
+#actionBar .saveButton.active .buttonLeft {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #A7E300, #99D100) repeat scroll 0 0 transparent;
+    border-color: #87B800 -moz-use-text-color #87B800 #87B800;
+    border-image: none;
+    border-radius: 5px 0 0 5px;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    color: #FFFFFF;
+    float: left;
+    padding: 0 6px;
+}
+#actionBar .saveButton.active .buttonLeft img {
+    position: relative;
+    top: 4px;
+}
+#actionBar .saveButton.active .buttonLeft:active {
+    background: -moz-linear-gradient(center top , #99D100, #A7E300) repeat scroll 0 0 transparent;
+    border: 1px solid #87B800;
+    box-shadow: none;
+    color: #FFFFFF;
+}
+#actionBar .saveButton.active:hover .buttonLeft {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #B2EB14, #A4DA14) repeat scroll 0 0 transparent;
+    border-color: #87B800 -moz-use-text-color #87B800 #87B800;
+    border-image: none;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    color: #FFFFFF;
+}
+#actionBar .saveButton.active .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #F8F8F9, #E6E6E8) repeat scroll 0 0 transparent;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    color: #808080;
+    float: left;
+}
+#actionBar .saveButton.active .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+#actionBar .saveButton.active:hover .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    color: #808080;
+}
+#actionBar .saveButton.active.loadingDoubleButton .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("/Content/foursquare/button-loading-3bb46079e9415b490f318918f98337dc.gif") repeat scroll 0 0 #E5E5E5;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    box-shadow: none;
+    color: #999999 !important;
+    cursor: default;
+    display: inline-block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none !important;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+#actionBar .saveButton.active.loadingDoubleButton .buttonRight:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+#actionBar .saveButton.active.loadingDoubleButton .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+#actionBar .saveButton.active.loadingDoubleButton .buttonRight.link, #actionBar .saveButton.active.loadingDoubleButton .buttonRighta, #actionBar .saveButton.active.loadingDoubleButton .buttonRight a {
+    color: #808080;
+}
+#actionBar .saveButton.active.loadingDoubleButton .buttonRight:hover, #actionBar .saveButton.active.loadingDoubleButton .buttonRight.link:hover {
+    text-decoration: none;
+}
+#actionBar .saveButton.active.loadingDoubleButton .buttonRight:hover {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+#actionBar .saveButton.active.loadingDoubleButton .buttonRight:active {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+#actionBar .saveButton.active.loadingDoubleButton .buttonRight:hover {
+    background: url("/Content/foursquare/button-loading-3bb46079e9415b490f318918f98337dc.gif") repeat scroll 0 0 #E5E5E5;
+}
+#actionBar .saveButton.active.loadingDoubleButton .buttonLeft {
+}
+#actionBar .saveButton.active.disabledDoubleButton .buttonLeft {
+    background: none repeat scroll 0 0 #A0DA00;
+}
+#actionBar .saveButton.active.disabledDoubleButton .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #E5E5E5;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    box-shadow: none;
+    color: #999999 !important;
+    cursor: default;
+    display: inline-block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none !important;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+#actionBar .saveButton.active.disabledDoubleButton .buttonRight:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+#actionBar .saveButton.active.disabledDoubleButton .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+#actionBar .saveButton.active.disabledDoubleButton .buttonRight.link, #actionBar .saveButton.active.disabledDoubleButton .buttonRighta, #actionBar .saveButton.active.disabledDoubleButton .buttonRight a {
+    color: #808080;
+}
+#actionBar .saveButton.active.disabledDoubleButton .buttonRight:hover, #actionBar .saveButton.active.disabledDoubleButton .buttonRight.link:hover {
+    text-decoration: none;
+}
+#actionBar .saveButton.active.disabledDoubleButton .buttonRight:hover {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+#actionBar .saveButton.active.disabledDoubleButton .buttonRight:active {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+#actionBar .saveButton.active .saved {
+    display: inline;
+}
+#actionBar .saveButton.inactive .unsaved {
+    display: inline;
+}
+
+.saveButton .label {
+    color: #808080;
+    font-size: 11px;
+}
+
+.been-here-button {
+    color: #999999;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 16px;
+    margin-right: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+.been-here-button:hover {
+    color: #666666;
+}
+.been-here-button .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll -32px -16px transparent;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+.been-here-button .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.been-here-button:hover .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll -32px -32px transparent;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+.been-here-button:hover .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.been-here-button.active .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll -32px -48px transparent;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+.been-here-button.active .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.been-here-button.loadingActionButton span.icon {
+    background: url("/Content/foursquare/ajax_spinner_small_light-23e3947767aef347abf9160b5961e904.gif") repeat scroll 0 0 transparent;
+}
+.save-button .label {
+    color: #999999;
+    font-size: 11px;
+    line-height: 16px;
+}
+.likeButtonContainer .label {
+    color: #999999;
+    font-size: 11px;
+    line-height: 16px;
+}
+.save-button, .save-button.link, .save-button.link:hover {
+    color: #999999;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 16px;
+    margin-right: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+.save-button:hover, .save-button.link:hover, .save-button.link:hover:hover {
+    color: #666666;
+}
+.save-button .icon, .save-button.link .icon, .save-button.link:hover .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll -48px -16px transparent;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+.save-button .icon, .save-button.link .icon, .save-button.link:hover .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.save-button:hover .icon, .save-button.link:hover .icon, .save-button.link:hover:hover .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll -48px -32px transparent;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+.save-button:hover .icon, .save-button.link:hover .icon, .save-button.link:hover:hover .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.save-button.active .icon, .save-button.link.active .icon, .save-button.link.active:hover .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll -48px -48px transparent;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+.save-button.active .icon, .save-button.link.active .icon, .save-button.link.active:hover .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.save-button.loadingActionButton span.icon, .save-button.link.loadingActionButton span.icon, .save-button.link.loadingActionButton:hover span.icon {
+    background: url("/Content/foursquare/ajax_spinner_small_light-23e3947767aef347abf9160b5961e904.gif") repeat scroll 0 0 transparent;
+}
+.save-button .icon, .save-button.link .icon, .save-button.link:hover .icon {
+    width: 10px;
+}
+.save-button .label, .save-button.link .label, .save-button.link:hover .label {
+    margin-left: -4px;
+}
+.like-button, .like-button.link, .like-button.link:hover {
+    color: #999999;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 16px;
+    margin-right: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+.like-button:hover, .like-button.link:hover, .like-button.link:hover:hover {
+    color: #666666;
+}
+.like-button .icon, .like-button.link .icon, .like-button.link:hover .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll 0 -16px transparent;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+.like-button .icon, .like-button.link .icon, .like-button.link:hover .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.like-button:hover .icon, .like-button.link:hover .icon, .like-button.link:hover:hover .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll 0 -32px transparent;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+.like-button:hover .icon, .like-button.link:hover .icon, .like-button.link:hover:hover .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.like-button.active .icon, .like-button.link.active .icon, .like-button.link.active:hover .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll 0 -48px transparent;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+.like-button.active .icon, .like-button.link.active .icon, .like-button.link.active:hover .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.like-button.loadingActionButton span.icon, .like-button.link.loadingActionButton span.icon, .like-button.link.loadingActionButton:hover span.icon {
+    background: url("/Content/foursquare/ajax_spinner_small_light-23e3947767aef347abf9160b5961e904.gif") repeat scroll 0 0 transparent;
+}
+.like-button .icon, .like-button.link .icon, .like-button.link:hover .icon {
+    width: 14px;
+}
+.like-button .label, .like-button.link .label, .like-button.link:hover .label {
+    margin-left: 0;
+}
+#flagUserDialog ul.woeTypes {
+    list-style-type: none;
+    margin: 50px 0 0;
+    padding: 0;
+}
+#flagUserDialog .flagUserComments {
+    margin-top: 10px;
+}
+#flagUserDialog .flagUserButtons {
+    left: 0;
+    overflow: hidden;
+    padding-top: 16px;
+    right: 0;
+    text-align: right;
+}
+#EditListItemContainer h3 {
+    margin-bottom: 0;
+}
+#EditListItemContainer .friends.photos .container {
+    max-height: 250px;
+    overflow: scroll;
+}
+#EditListItemContainer .itemPhoto {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 10px 10px 0;
+}
+#EditListItemContainer .itemPhoto img {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E3E3E3;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    padding: 3px;
+}
+#EditListItemContainer .upload {
+    display: inline-block;
+    margin: 10px;
+    overflow: hidden;
+    padding-left: 32px;
+    position: relative;
+}
+#EditListItemContainer .upload input {
+    bottom: -100px;
+    color: transparent;
+    cursor: pointer;
+    left: -100px;
+    position: absolute;
+    right: -100px;
+    top: -300px;
+}
+#EditListItemContainer .upload .icon {
+    background: url("/Content/foursquare/icon-blue-photos-f3b6fbbdb71e1305a2849b760a14d21e.png") no-repeat scroll 0 0 transparent;
+    height: 16px;
+    left: 8px;
+    position: absolute;
+    top: 6px;
+    width: 16px;
+}
+.super-tip-edit-menu.no-results-menu .no-results {
+    display: block;
+}
+.super-tip-edit-menu .tips-bottom {
+    width: 400px;
+}
+.super-tip-edit-menu .tip-top .arr {
+    right: 18px;
+}
+.super-tip-edit-menu .results-container {
+    max-height: 300px;
+    overflow: auto;
+}
+.super-tip-edit-menu .results-container .result {
+    border-bottom: 1px solid rgba(180, 180, 180, 0.1);
+    cursor: pointer;
+    min-height: 40px;
+    overflow: auto;
+    padding: 10px;
+}
+.super-tip-edit-menu .results-container .result .s-tip .tip-text {
+    font-size: 13px;
+    margin-bottom: 9px;
+}
+.super-tip-edit-menu .results-container .result .s-tip img {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.super-tip-edit-menu .results-container .result .s-tip .user:hover {
+    text-decoration: underline;
+}
+.super-tip-edit-menu .results-container .result .s-tip .pipe {
+    padding: 0 7px;
+}
+.super-tip-edit-menu .results-container .result .s-tip .tip-attribution {
+    color: #999999;
+    font-size: 13px;
+    font-weight: normal;
+}
+.super-tip-edit-menu .results-container .result:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.super-photo-edit-menu.no-results-list-menu .no-results-list, .super-photo-edit-menu.no-results-menu .no-results {
+    display: block;
+}
+.super-photo-edit-menu .photos-bottom {
+    width: 375px;
+}
+.super-photo-edit-menu .photos-top .arr {
+    left: 18px;
+}
+.super-photo-edit-menu .results-container {
+    font-size: 11px;
+    max-height: 300px;
+    overflow: auto;
+    padding: 0;
+}
+.super-photo-edit-menu .results-container .results .photos-section {
+    line-height: 0;
+    margin-left: -20px;
+    padding: 12px;
+}
+.super-photo-edit-menu .results-container .results .photoUploadForm {
+    display: inline-block;
+}
+.super-photo-edit-menu .results-container .results .upload {
+    margin: 10px;
+    overflow: hidden;
+    padding-left: 32px;
+    position: relative;
+}
+.super-photo-edit-menu .results-container .results .upload input {
+    bottom: -100px;
+    cursor: pointer;
+    left: -100px;
+    position: absolute;
+    right: -100px;
+    top: -100px;
+}
+.super-photo-edit-menu .results-container .results .upload .icon {
+    background: url("/Content/foursquare/icon-blue-photos-f3b6fbbdb71e1305a2849b760a14d21e.png") no-repeat scroll 0 0 transparent;
+    height: 16px;
+    left: 8px;
+    position: absolute;
+    top: 6px;
+    width: 16px;
+}
+.super-photo-edit-menu .results-container img {
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.super-photo-edit-menu .results-container img:hover {
+    background: none repeat scroll 0 0 #CCCCCC;
+}
+.super-tip-edit-menu, .super-photo-edit-menu {
+    color: #FFFFFF;
+    position: absolute;
+    z-index: 30;
+}
+.super-tip-edit-menu .results-container, .super-photo-edit-menu .results-container {
+    border-radius: 6px 6px 6px 6px;
+    font-size: 11px;
+}
+.super-tip-edit-menu .results-container .oh-oh-warn, .super-photo-edit-menu .results-container .oh-oh-warn {
+    color: #999999;
+    margin: 0 3px;
+    padding: 0 6px;
+}
+.super-tip-edit-menu.loading .photos-bottom, .super-photo-edit-menu.loading .photos-bottom {
+    background: url("/Content/foursquare/ajax_spinner_dark-59e50f6eabb018b3a7bae18c874d9b05.gif") no-repeat scroll 50% 50% rgba(32, 32, 32, 0.9);
+    min-height: 96px;
+}
+.super-tip-edit-menu .photos-top, .super-photo-edit-menu .photos-top, .super-tip-edit-menu .tip-top, .super-photo-edit-menu .tip-top {
+    background-color: transparent;
+    height: 8px;
+    position: relative;
+}
+.super-tip-edit-menu .photos-top .arr, .super-photo-edit-menu .photos-top .arr, .super-tip-edit-menu .tip-top .arr, .super-photo-edit-menu .tip-top .arr {
+    background: url("/Content/foursquare/tipArrowBlackUp-e56ac60c507dd591012b9eab3fa72824.png") no-repeat scroll left 5px transparent;
+    height: 16px;
+    position: absolute;
+    top: -6px;
+    width: 16px;
+}
+.super-tip-edit-menu .tip-section-header, .super-photo-edit-menu .tip-section-header, .super-tip-edit-menu .photo-section-header, .super-photo-edit-menu .photo-section-header {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(180, 180, 180, 0.1);
+    font-size: 11px;
+    font-weight: bold;
+    padding: 6px 10px;
+    text-transform: uppercase;
+}
+.super-tip-edit-menu .photos-bottom, .super-photo-edit-menu .photos-bottom, .super-tip-edit-menu .tips-bottom, .super-photo-edit-menu .tips-bottom {
+    background-color: rgba(32, 32, 32, 0.9);
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
+}
+.no-results-list, .no-results {
+    border-radius: 5px 5px 5px 5px;
+    display: none;
+    padding: 24px;
+    text-align: center;
+}
+.no-results-list .heady, .no-results .heady {
+    font-size: 16px;
+    font-weight: bold;
+}
+.no-results-list .do-it, .no-results .do-it {
+    margin-top: 12px;
+}
+.super-tip-edit-menu.hidden, .super-photo-edit-menu.hidden {
+    display: none;
+}
+.flyOut {
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1000050;
+}
+.flyOut.hidden {
+    display: none;
+}
+.flyOut .arr {
+    position: absolute;
+}
+.flyOut.righty {
+    padding-left: 6px;
+}
+.flyOut.righty .arr {
+    background: url("/Content/foursquare/flyout-caret-blue-7237547c22ae09cae2ea28c5799e921c.png") no-repeat scroll left top transparent;
+    height: 12px;
+    left: 0;
+    top: 6px;
+    width: 7px;
+}
+.flyOut.lefty {
+    padding-right: 6px;
+}
+.flyOut.lefty .arr {
+    background: url("/Content/foursquare/flyout-caret-blue-right-e9b7d827f7c3dd546fad302e0762fd00.png") no-repeat scroll left top transparent;
+    height: 12px;
+    right: 0;
+    top: 6px;
+    width: 7px;
+}
+.flyOut.above {
+    padding-bottom: 6px;
+}
+.flyOut.above .arr {
+    background: url("/Content/foursquare/flyout-caret-blue-bottom-82cdf1de2ce4597fa3d3fa6a2f68ce7d.png") no-repeat scroll left top transparent;
+    bottom: 0;
+    height: 7px;
+    left: 6px;
+    width: 12px;
+}
+.flyOut.below {
+    padding-top: 6px;
+}
+.flyOut.below .arr {
+    background: url("/Content/foursquare/flyout-caret-blue-top-00dafcd313e3d0d61c5792950d08054d.png") no-repeat scroll left top transparent;
+    height: 7px;
+    left: 6px;
+    top: 0;
+    width: 12px;
+}
+.flyOut .contents {
+    background-color: #FFFFFF;
+    border: 1px solid #2398C9;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+.flyOut.promo .contents {
+    border: 1px solid #D9D9D9;
+    padding: 10px 12px;
+}
+.flyOut.promo.righty .arr {
+    background: url("/Content/foursquare/flyout-caret-grey-89c0f6fbcafb2ed85673f876785b4d39.png") no-repeat scroll left top transparent;
+}
+.flyOut.promo.lefty .arr {
+    background: url("/Content/foursquare/flyout-caret-grey-right-bb4234dd25cf04713544930f3e139f7b.png") no-repeat scroll left top transparent;
+}
+.flyOut.promo.above .arr {
+    background: url("/Content/foursquare/flyout-caret-grey-bottom-5a85e4ffc6cf8b41018d0de96747519c.png") no-repeat scroll left top transparent;
+}
+.flyOut.promo.below .arr {
+    background: url("/Content/foursquare/flyout-caret-grey-top-4908b7839ffc07f34dc6ecbad4227b5b.png") no-repeat scroll left top transparent;
+}
+.flyOut .facepile {
+    float: left;
+    margin: 10px 7px 7px 10px;
+    max-width: 175px;
+}
+.flyOut .facepile img {
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    height: 32px;
+    margin: 0 3px 3px 0;
+    width: 32px;
+}
+.flyOut .listsMenu {
+    font-size: 11px;
+    width: 228px;
+}
+.flyOut .listsMenu .myListsContainer {
+    max-height: 200px;
+    overflow: auto;
+}
+.flyOut .listsMenu .myListsContainer.loading {
+    background-image: url("/Content/foursquare/ajax_spinner_small-7b9776076d5fceef4993b55c9383dedd.gif");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 36px;
+}
+.flyOut .listsMenu .myListsContainer.error .message {
+    background: url("/Content/foursquare/icon-error-e8baa3accc5fb4640a0ce369a0456240.png") no-repeat scroll 18px 13px transparent;
+    font-weight: bold;
+    line-height: 15px;
+    padding: 10px 10px 10px 58px;
+}
+.flyOut .listsMenu .myListsContainer .listMenuItem {
+    background-color: #FFFFFF;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 6px 9px 6px 18px;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.flyOut .listsMenu .myListsContainer .listMenuItem:first-child {
+    border-top-left-radius: 2px;
+}
+.flyOut .listsMenu .myListsContainer .listMenuItem .checkIcon {
+    background-image: url("/Content/foursquare/list-menu-checkmark-5a7716d5803534e472d33af69557d5f0.png");
+    background-position: 5px -8px;
+    background-repeat: no-repeat;
+    display: none;
+    height: 8px;
+    left: 0;
+    position: absolute;
+    top: 11px;
+    width: 17px;
+}
+.flyOut .listsMenu .myListsContainer .listMenuItem.selected .checkIcon {
+    display: inline;
+}
+.flyOut .listsMenu .myListsContainer .listMenuItem .editListItem {
+    display: none;
+}
+.flyOut .listsMenu .myListsContainer .listMenuItem.selected .editListItem {
+    display: block;
+}
+.flyOut .listsMenu .myListsContainer .listMenuItem .loadingIcon {
+    background-image: url("/Content/foursquare/ajax_spinner_small-7b9776076d5fceef4993b55c9383dedd.gif");
+    background-position: 5px 3px;
+    background-repeat: no-repeat;
+    display: none;
+    height: 20px;
+    position: absolute;
+    right: 6px;
+    top: 3px;
+    width: 23px;
+}
+.flyOut .listsMenu .myListsContainer .listMenuItem.loading .loadingIcon {
+    display: inline;
+}
+.flyOut .listsMenu .myListsContainer .listMenuItem:hover {
+    background-color: #F5F5F5;
+    color: #4D4D4D;
+}
+.flyOut .listsMenu .createNewSection {
+    border-radius: 0 0 2px 2px;
+    border-top: 1px solid #D9D9D9;
+    cursor: pointer;
+    padding: 6px 9px 6px 18px;
+}
+.flyOut .listsMenu .createNewSection:hover {
+    background-color: #F5F5F5;
+    color: #4D4D4D;
+}
+.flyOut .noListsPromo {
+    font-size: 11px;
+    line-height: 15px;
+    width: 200px;
+}
+.flyOut .noListsPromo h5 {
+    margin-bottom: 3px;
+}
+.flyOut .noListsPromo .createListLink {
+    margin-top: 3px;
+}
+.venueHoverCard {
+    color: #4D4D4D;
+    padding: 10px;
+    width: 430px;
+}
+.venueHoverCard.loading {
+    width: 16px;
+}
+.venueHoverCard .venueHeader {
+    margin: 0 0 10px;
+    overflow: hidden;
+}
+.venueHoverCard .venueHeader .category {
+    float: left;
+    line-height: 0;
+    margin-right: 5px;
+    width: 32px;
+}
+.venueHoverCard .venueHeader .rating {
+    float: right;
+    margin-left: 5px;
+}
+.venueHoverCard .venueHeader .rating .venueScore {
+    padding: 7px 1px;
+}
+.venueHoverCard .venueHeader .venueName {
+    float: left;
+    line-height: 16px;
+    width: 355px;
+}
+.venueHoverCard .venueHeader .venueName h5, .venueHoverCard .venueHeader .venueName p {
+    margin: 0;
+}
+.venueHoverCard .venueContent {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.venueHoverCard .venueContent .left, .venueHoverCard .venueContent .right {
+    float: left;
+    width: 210px;
+}
+.venueHoverCard .venueContent .left {
+    display: block;
+    height: 145px;
+    margin-right: 10px;
+}
+.venueHoverCard .venueContent .right .photos {
+    background: url("/Content/foursquare/bg-photos-small-f2cd4a6dca9d8ea22cf417c7ef9038d7.png") no-repeat scroll left top transparent;
+    line-height: 0;
+    margin: 0 0 3px;
+    min-height: 68px;
+}
+.venueHoverCard .venueContent .right .photos a {
+    float: left;
+    margin-right: 3px;
+}
+.venueHoverCard .venueContent .right .photos a:last-child {
+    margin-right: 0;
+}
+.venueHoverCard .venueContent .right .photos img {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E3E3E3;
+    box-shadow: none;
+    float: left;
+    height: 60px;
+    padding: 3px;
+    width: 60px;
+}
+.venueHoverCard .venueActions {
+    background: none repeat scroll 0 0 #FCFCFC;
+    border-radius: 0 0 3px 3px;
+    border-top: 1px solid #E8E9EB;
+    line-height: 32px;
+    margin: 0 0 -10px -10px;
+    overflow: hidden;
+    padding: 8px 10px 9px;
+    width: 430px;
+}
+.venueHoverCard .venueActions > span, .venueHoverCard .venueActions > div {
+    display: block;
+    float: left;
+}
+/*#wrapper {
+    background: none repeat scroll 0 0 #F0F1F2;
+    padding-top: 70px;
+}*/
+#container {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+#container .oneColumn {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    padding: 20px;
+    width: 920px;
+}
+#container .twoColumns {
+    background: url("/Content/foursquare/container-a5c2b18fbfefb7f4b28dcf9b5d9e6b33.png") repeat-y scroll 0 0 #FFFFFF;
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+#container .wideColumn {
+    overflow: hidden;
+    padding: 0px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#container .narrowColumn {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    padding: 0;
+    width: 320px;
+}
+.wrap {
+    margin: 0 auto;
+    width: 960px;
+}
+.infinitePage {
+    background: none repeat scroll 0 0 #F0F1F2;
+}
+.infinitePage #wrapper {
+    padding-bottom: 20px;
+}
+#blankPage {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    padding: 80px;
+    width: 800px;
+}
+.narrowColumn .box {
+    border-bottom: 1px solid #E8E9EB;
+    border-left: 1px solid #E8E9EB;
+    padding: 20px;
+}
+.narrowColumn .box:last-child {
+    border-bottom: medium none;
+}
+.narrowColumn .boxLink {
+    color: #999999;
+    float: right;
+    font-size: 11px;
+}
+#fsq-notification {
+    font-size: 16px;
+    left: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+#fsq-notification .notification {
+    background-color: rgba(253, 247, 175, 0.95);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    color: #4D4D4D;
+    line-height: 45px;
+    position: fixed;
+    width: 100%;
+}
+#fsq-notification .notification.start-anim {
+    transition: top 0.6s ease-in 0s;
+}
+#fsq-notification .notification.info {
+    background-color: #F0F4F5;
+}
+#fsq-notification .notification.warning {
+    background-color: #FDF7D8;
+}
+#fsq-notification .notification.error {
+    background-color: #FFCCCC;
+    color: #FF0000;
+}
+#fsq-notification .notification.error a {
+    color: #FF0000;
+}
+#pagesBar {
+    background: none repeat scroll 0 0 #FDF7D8;
+    border-bottom: 1px solid #E5DA9C;
+    left: 0;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    z-index: 4;
+}
+#pagesBar.adminWarning {
+    border: 1px solid red;
+}
+#pagesBar .wrap {
+    margin: 0 auto;
+    overflow: auto;
+    width: 920px;
+}
+#pagesBar .wrap img {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 3px 3px 3px 3px;
+    height: 32px;
+    width: 32px;
+}
+#pagesBar .wrap p {
+    line-height: 32px;
+    margin: 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#pagesBarLeft {
+    float: left;
+    width: 64%;
+}
+#pagesBarLeft img {
+    float: left;
+    margin-right: 8px;
+}
+#pagesBarRight {
+    float: right;
+    text-align: right;
+    width: 35%;
+}
+#pagesBarRight a {
+    font-weight: normal;
+}
+#pagesBarRight img {
+    float: right;
+    margin-left: 8px;
+}
+#pagesBarRight .exitLink {
+    margin-left: 24px;
+}
+#pagesBar {
+    position: absolute;
+    width: 960px;
+}
+@font-face {
+    font-family: "Foursquare Icons";
+    font-style: normal;
+    font-weight: normal;
+    src: url("https://playfoursquare.s3.amazonaws.com/fonts/foursquareicons-regular-webfont.eot?#iefix") format("embedded-opentype"), url("https://playfoursquare.s3.amazonaws.com/fonts/foursquareicons-regular-webfont.woff") format("woff"), url("https://playfoursquare.s3.amazonaws.com/fonts/foursquareicons-regular-webfont.ttf") format("truetype");
+}
+textarea.formStyle {
+    padding: 10px;
+    resize: vertical;
+}
+.formStyle.hasError {
+    border-color: #FF0000;
+}
+.formStyle.hasError:focus, .formStyle.hasError:hover {
+    border-color: #FF0000;
+}
+.errorMessage {
+    color: #FF0000;
+}
+#charCount {
+    color: #999999;
+    font: italic 15px/100% Georgia,Times,serif;
+}
+.userInputForm .userInputResultRow {
+    height: 58px;
+    padding: 5px;
+    width: 400px;
+}
+.userInputForm .userInputResultRow .desc {
+    float: left;
+    margin-left: 5px;
+}
+.userInputForm .userInputResultRow .name {
+    font-size: 18px;
+}
+.userInputForm .userInputResultRow .loc {
+    font-size: 12px;
+}
+.userInputForm .userInputResultRow .image {
+    float: left;
+}
+.userInputForm .userInputResultRow .image img {
+    height: 48px;
+    width: 48px;
+}
+.userInputForm .userInputResultRow .custom {
+    float: right;
+    margin-right: 5px;
+}
+.userInputForm .userInputResultRow .remove {
+    float: right;
+}
+.userInputForm .userInputResultRow .separator {
+    clear: both;
+}
+
+.input-holder {
+    position: relative;
+}
+.input-default {
+    color: #999999;
+    font-size: 12px;
+    left: 9px;
+    position: absolute;
+    top: -1px;
+}
+.statsBlock {
+    line-height: 13px;
+    overflow: hidden;
+}
+.statsBlock .stat {
+    border-left: 1px dotted rgba(0, 0, 0, 0.1);
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    width: 91px;
+}
+.statsBlock .stat:first-child {
+    border: medium none;
+}
+.statsBlock .stat strong {
+    color: #A8A8A8;
+    font-size: 10px;
+}
+.statsBlock .stat span {
+    font-size: 15px;
+    line-height: 20px;
+}
+.statsBlock .stat.herenow {
+    border: medium none;
+    padding-top: 15px;
+    width: 100%;
+}
+.statsBlock .stat.herenow span {
+    color: #4D4D4D;
+    font-size: 13px;
+}
+.ratingsBlock {
+    overflow: hidden;
+}
+.ratingsBlock .rating {
+    float: left;
+    text-align: center;
+    width: 90px;
+}
+.ratingsBlock .rating .score {
+    color: #999999;
+    font-size: 17px;
+    font-weight: bold;
+}
+.ratingsBlock .rating .score.positive {
+    color: #69BF13;
+}
+.ratingsBlock .rating .score.neutral {
+    color: #ABABAB;
+}
+.ratingsBlock .rating .score.negative {
+    color: #BF4444;
+}
+.ratingsBlock .rating sup {
+    color: #999999;
+    font-size: 11px;
+    left: 2px;
+    position: relative;
+    top: -4px;
+}
+.ratingsBlock .description {
+    border-left: 1px dotted rgba(0, 0, 0, 0.1);
+    color: #999999;
+    float: left;
+    padding-left: 20px;
+    width: 168px;
+}
+.ratingsBlock .description strong {
+    color: #4D4D4D;
+}
+.venueScore {
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    cursor: default;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 0;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+    width: 30px;
+}
+.venueScore.positive {
+    background: none repeat scroll 0 0 #69BF13;
+}
+.venueScore.neutral {
+    background: none repeat scroll 0 0 #BFBFBF;
+}
+.venueScore.negative {
+    background: none repeat scroll 0 0 #BF4444;
+}
+/*.sidebarMenu {
+    border-top: 1px solid #E8E9EB;
+    list-style: none outside none;
+    margin: 20px 0;
+}
+.sidebarMenu li {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border-bottom: 1px solid #E8E9EB;
+    border-left: 1px solid #E8E9EB;
+}
+.sidebarMenu li.selected {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-left: 1px solid #FFFFFF;
+}
+.sidebarMenu li.selected a {
+    color: #4D4D4D;
+}
+.sidebarMenu li.selected a:hover {
+    text-decoration: none;
+}
+.sidebarMenu a {
+    display: block;
+    line-height: 40px;
+    text-indent: 20px;
+}
+.ajax_checkbox_msg {
+    left: 19px;
+    position: absolute;
+}
+.errormsg, .errorMsg {
+    background: none repeat scroll 0 0 #FFCCCC;
+    border-radius: 3px 3px 3px 3px;
+    color: #FF0000;
+    margin: 0 0 20px;
+    padding: 6px 8px;
+}
+.errormsg p, .errorMsg p {
+    margin: 0;
+}
+.alerts_notice {
+    background: none repeat scroll 0 0 #FFCB00;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #AB8800;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 40px;
+    margin: -10px 0 10px;
+    text-align: center;
+    width: 100%;
+}
+.pagination {
+    float: right;
+    overflow: hidden;
+}
+.pagination .selected, .pagination a, .pagination span {
+    background: none repeat scroll 0 0 #F0F1F2;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    float: left;
+    margin-right: 4px;
+    padding: 4px 8px;
+}
+.pagination .selected {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+}
+.pagination .more {
+    display: block;
+    float: left;
+    margin-right: 4px;
+}*/
+.shout {
+    background: url("/Content/foursquare/icon-shout-872a040484d2ff4c8b57581a7392d19d.png") no-repeat scroll left top transparent;
+    color: #4D4D4D;
+    font-size: 15px;
+    margin: 0 0 10px;
+    text-indent: 20px;
+}
+/*#friendsLists, #listDiscoveryPage {
+    padding-bottom: 10px;
+}
+#friendsLists .listMini, #listDiscoveryPage .listMini {
+    margin: 0 0 10px;
+    overflow: hidden;
+}
+#friendsLists .listMini .listImage, #listDiscoveryPage .listMini .listImage {
+    float: left;
+    width: 84px;
+}
+#friendsLists .listMini .listImage img, #listDiscoveryPage .listMini .listImage img {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E3E3E3;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    height: 64px;
+    padding: 3px;
+    width: 64px;
+}
+#friendsLists .listMini .listName, #listDiscoveryPage .listMini .listName {
+    margin: 0;
+}
+#friendsLists .listMini .listDetails, #listDiscoveryPage .listMini .listDetails {
+    color: #999999;
+}
+#friendsLists .listMini .listDetails a, #listDiscoveryPage .listMini .listDetails a {
+    color: #999999;
+}
+#friendsLists .listMini .listDetails img, #listDiscoveryPage .listMini .listDetails img {
+    display: none;
+}
+#friendsLists .listMini .listDetails .count, #listDiscoveryPage .listMini .listDetails .count {
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+}*/
+.blockContainer {
+    margin: 40px 0 0;
+    width: 600px;
+}
+.blockContainer.noBuffer {
+    margin: 0;
+}
+.blockContainer.halfBuffer {
+    margin-top: 20px;
+}
+.blockHeader {
+    border-bottom: 1px solid #F0F1F2;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.blockHeader.noBuffer {
+    margin-bottom: 0;
+}
+.blockHeader h3 {
+    float: left;
+}
+.blockHeader h3 span {
+    font-weight: bold;
+}
+.blockHeader p {
+    color: #999999;
+    float: right;
+    line-height: 33px;
+    margin: 0;
+}
+.blockHeader a.selected {
+    color: #4D4D4D;
+}
+.foursqInlineSlides .inlineSlide {
+    position: absolute;
+    top: 0;
+}
+.foursqInlineSlides #slidesWrapper {
+    overflow: hidden;
+    position: relative;
+}
+.foursqInlineSlides .galButton {
+    height: 32px;
+    position: absolute;
+    width: 32px;
+}
+.foursqInlineSlides .galButton.right {
+    background-image: url("/Content/foursquare/gallery-next-4fe893b7a611387276ef45cd74632759.png");
+    right: 5px;
+}
+.foursqInlineSlides .galButton.left {
+    background-image: url("/Content/foursquare/gallery-prev-6da401eecb2e8a276e2a89bea5ac3819.png");
+    left: 5px;
+}
+.foursqInlineSlides .sliderDot {
+    background: url("/Content/foursquare/awesomebox-off-dcafa24e3f39203ea76c337d4e0fd7c9.png") no-repeat scroll center top transparent;
+    display: inline-block;
+    height: 11px;
+    overflow: hidden;
+}
+.foursqInlineSlides .sliderDot.selected {
+    background: url("/Content/foursquare/awesomebox-on-df8a1b2b668b834f3e9319d6dc7c2352.png") no-repeat scroll center top transparent;
+}
+.foursqInlineSlides.progress {
+    height: 20px;
+    margin: 5px auto 0;
+}
+.venueCompact {
+    position: relative;
+}
+.venueCompact .venueIcon {
+    float: left;
+    margin: 0 0 10px;
+    width: 32px;
+}
+.venueCompact .venueIcon .specialImage {
+    height: 24px;
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    width: 24px;
+}
+.venueCompact .venueName {
+    float: left;
+    margin: 0 0 10px 10px;
+    width: 215px;
+}
+.venueCompact .venueName h5, .venueCompact .venueName p {
+    line-height: 16px;
+    margin: 0;
+}
+.venueCompact .venueName p {
+    color: #999999;
+}
+.venueCompact .listControlHolder {
+    clear: both;
+}
+.venueCompact .listControlHolder .list-toggle {
+    margin-top: 0;
+}
+.venueCompact .venueButtons {
+    margin-top: 10px;
+}
+.venueCompact .vmap {
+    clear: both;
+    height: 135px;
+    margin: 0;
+    width: 279px;
+}
+.homeVenue {
+    background: none repeat scroll 0 0 #FDF7D8;
+    border: 1px solid #F0EBCD;
+    border-radius: 5px 5px 5px 5px;
+    margin: 10px 0 0;
+    padding: 10px;
+}
+.photoAddButtonHolder {
+    -moz-user-select: none;
+    cursor: pointer;
+    height: 20px;
+    margin: 2px 0 0;
+    overflow: hidden;
+    position: relative;
+    width: 20px;
+}
+.photoAddButtonHolder .icon {
+    background: url("/Content/foursquare/icon-grey-photos-53d765c9f43c9a8d7c005518d37644a7.png") no-repeat scroll left top transparent;
+    cursor: pointer;
+    height: 16px;
+    left: 2px;
+    overflow: hidden;
+    position: absolute;
+    top: 3px;
+    width: 16px;
+}
+.photoAddButtonHolder .icon {
+    background-image: url("/Content/foursquare/icon-grey-photos@2x-9c1a8379da453fb530df38a29da3d105.png");
+    background-size: 16px 16px;
+}
+.photoAddButtonHolder.has-photo .icon {
+    background: url("/Content/foursquare/icon-blue-photos-f3b6fbbdb71e1305a2849b760a14d21e.png") no-repeat scroll left top transparent;
+}
+.photoAddButtonHolder.has-photo .icon {
+    background-image: url("/Content/foursquare/icon-blue-photos@2x-e7fc424719cc3b45a8e0d35a667eda4b.png");
+    background-size: 16px 16px;
+}
+.photoAddButtonHolder input {
+    cursor: pointer;
+    font-size: 50px;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+#tipsContainer .blockHeader {
+    border-bottom: 0 none;
+    margin-bottom: 0;
+}
+#tipsContainer #addTipBlock, #tip-list-creator .super-search-box, .addTipBlock {
+    background: none repeat scroll 0 0 #F0F4F5;
+    border-bottom: 1px solid #DAE4E6;
+    border-top: 1px solid #DAE4E6;
+    margin: 0 0 20px -20px;
+    overflow: hidden;
+    padding: 20px;
+    width: 600px;
+}
+#tipsContainer #tipsList .tipContainer {
+    border-bottom: 1px solid #F0F1F2;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    position: relative;
+}
+#tipsContainer #tipsList .tipContainer .image {
+    float: left;
+    text-align: right;
+    width: 64px;
+}
+#tipsContainer #tipsList .tipContainer .image img {
+    border-radius: 3px 3px 3px 3px;
+    height: 32px;
+    width: 32px;
+}
+#tipsContainer #tipsList .tipContainer .editor {
+    float: left;
+    margin-left: 13px;
+}
+#tipsContainer #tipsList .tipContainer .editor textarea {
+    width: 490px;
+}
+#tipsContainer #tipsList .tipContainer .editor .editTip #editText {
+    margin-left: 10px;
+}
+#tipsContainer #tipsList .tipContainer .editor .editTipOptions {
+    margin-left: 7px;
+}
+#tipsContainer #tipsList .tipContainer .editor .editTipOptions #editButton {
+    display: inline;
+}
+#tipsContainer #tipsList .tipContainer .content {
+    float: left;
+    margin-left: 20px;
+    width: 516px;
+}
+#tipsContainer #tipsList .tipContainer .content h3 {
+    font-size: 13px;
+    margin: 0;
+}
+#tipsContainer #tipsList .tipContainer .content p {
+    margin: 0;
+}
+#tipsContainer #tipsList .tipContainer .content .tipDate a, #tipsContainer #tipsList .tipContainer .content .tipDate a:visited {
+    color: #999999;
+    font-weight: normal;
+}
+#tipsContainer #tipsList .tipContainer .content .auxActions {
+    color: #999999;
+    font-weight: normal;
+}
+#tipsContainer #tipsList .tipContainer .content .auxActions .edit {
+    color: #999999;
+}
+#tipsContainer #tipsList .tipContainer .content .actions {
+    color: #999999;
+    margin-top: 3px;
+}
+#tipsContainer #tipsList .tipContainer .content .actions a {
+    color: #999999;
+    font-size: 11px;
+}
+#tipsContainer #tipsList .tipContainer .tipPhoto img {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E3E3E3;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    display: block;
+    float: right;
+    padding: 3px;
+}
+#tipsContainer #tipsList .tipContainer .link.delete, #tipsContainer #tipsList .tipContainer a.delete {
+    visibility: hidden;
+}
+#tipsContainer #tipsList .tipContainer:hover .link.delete, #tipsContainer #tipsList .tipContainer:hover a.delete {
+    background: url("/Content/foursquare/icon-delete-5e654699e212267863ac7e65fe087a77.png") no-repeat scroll left top transparent;
+    display: block;
+    height: 22px;
+    position: absolute;
+    right: 0;
+    text-indent: -9999px;
+    top: 0;
+    visibility: visible;
+    width: 22px;
+}
+#tipsContainer #tipsList .tipContainer:hover .link.delete:hover, #tipsContainer #tipsList .tipContainer:hover a.delete:hover {
+    background: url("/Content/foursquare/icon-delete-5e654699e212267863ac7e65fe087a77.png") no-repeat scroll left bottom transparent;
+}
+.listsContainer {
+    width: 600px;
+}
+.listsContainer .listsBlock {
+    margin-left: -30px;
+    overflow: hidden;
+    position: relative;
+    width: 630px;
+}
+.listsContainer .listsBlock .listContainer {
+    border-bottom: 1px solid #F0F1F2;
+    float: left;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    padding-bottom: 15px;
+    width: 285px;
+}
+.listsContainer .listsBlock .listContainer .listHeader {
+    margin-bottom: 0;
+    overflow: hidden;
+}
+.listsContainer .listsBlock .listContainer .listHeader h5 {
+    margin: 0;
+}
+.listsContainer .listsBlock .listContainer a.listPhoto {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E3E3E3;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    clear: both;
+    display: block;
+    margin: 3px 0 10px;
+    padding: 5px;
+}
+.listsContainer .listsBlock .listContainer a.listPhoto div {
+    height: 137px;
+    overflow: hidden;
+}
+.listsContainer .listsBlock .listContainer a.listPhoto div img {
+    margin-top: -66px;
+    min-height: 100%;
+    width: 100%;
+}
+.listsContainer .listsBlock .listContainer .listUserIcon, .listsContainer .listsBlock .listContainer .avatar {
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    height: 32px;
+    margin: 4px 10px 10px 0;
+    width: 32px;
+}
+.listsContainer .listsBlock .listContainer .listStats {
+    color: #999999;
+    font-size: 11px;
+    margin: 0 0 5px;
+}
+.listsContainer .listsBlock .listContainer .listStats a {
+    color: #999999;
+}
+.listsContainer .listsBlock .listContainer .listStats .pipe:first-child {
+    display: none;
+}
+.listsContainer .listsSeeAll {
+    clear: both;
+    padding-top: 20px;
+}
+.listsContainer .listsSeeAll a {
+    width: 160px;
+}
+.photoStrip {
+    background: url("/Content/foursquare/bg-photos-10f45215bdc21e0539ac0b5a50f82990.png") no-repeat scroll left bottom transparent;
+    overflow: hidden;
+}
+.photoThumb {
+    margin-left: 17px;
+}
+.photoThumb:first-child {
+    margin: 0;
+}
+.photoThumb:hover {
+    text-decoration: none;
+}
+.photoThumb img {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E3E3E3;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    height: 125px;
+    padding: 5px;
+    width: 125px;
+}
+.chainVenues .chainHeader {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.chainVenues .chainLogo {
+    float: left;
+    height: 32px;
+    margin-right: 10px;
+    width: 32px;
+}
+.chainVenues .chainName {
+    float: left;
+    line-height: 16px;
+}
+.chainVenues .chainName h5 {
+    margin: 0;
+}
+.chainVenues .chainName span {
+    color: #999999;
+    font-size: 11px;
+    font-weight: normal;
+}
+.chainVenues .chainVenue {
+    line-height: 16px;
+}
+.chainVenues .chainVenue p {
+    margin-top: 8px;
+}
+.chainVenues .chainVenue span {
+    color: #999999;
+    font-size: 11px;
+}
+.friendsFirstGrid {
+    margin-right: -1px;
+    overflow: hidden;
+}
+.friendsFirstGrid img {
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    margin: 0 2px 2px 0;
+}
+.activityAttachment {
+    margin-top: 16px;
+}
+.venueCard .hiddenAddress {
+    display: none;
+}
+.narrowColumn .eventsList {
+    padding-bottom: 0;
+}
+.narrowColumn .eventsList .entry {
+    margin: 0 0 10px;
+    overflow: hidden;
+}
+.narrowColumn .eventsList .entry .eventimg {
+    float: left;
+    margin: 0 10px 0 0;
+    width: 52px;
+}
+.narrowColumn .eventsList .entry .eventDate {
+    color: #999999;
+}
+.narrowColumn .eventsList .attribution {
+    color: #999999;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 20px;
+    margin: -10px 0 10px;
+    padding: 0 10px 0 0;
+    text-align: right;
+}
+.narrowColumn .eventsList .attribution img {
+    height: 18px;
+    margin-top: -2px;
+    opacity: 0.45;
+    vertical-align: middle;
+}
+#addTipBlock {
+    background: none repeat scroll 0 0 #F0F4F5;
+    border-bottom: 1px solid #DAE4E6;
+    border-top: 1px solid #DAE4E6;
+    margin: 0 0 20px -20px;
+    overflow: hidden;
+    padding: 10px 20px;
+    width: 600px;
+}
+#addTipBlock .input-holder {
+    float: left;
+}
+#addTipBlock .input-default {
+    font-size: 13px;
+    left: 6px;
+    padding: 5px;
+    top: 5px;
+}
+#addTipBlock #addTipImage {
+    float: left;
+    width: 64px;
+}
+#addTipBlock #addTipImage img {
+    border-radius: 3px 3px 3px 3px;
+    height: 64px;
+    width: 64px;
+}
+#addTipBlock #addTipForm {
+    float: left;
+    margin-left: 20px;
+    position: relative;
+    width: 510px;
+}
+#addTipBlock #addTipForm h4 {
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+#addTipBlock #addTipForm #addTip textarea {
+    height: 15px;
+    margin-bottom: 5px;
+    width: 495px;
+}
+#addTipBlock #addTipForm #addTip textarea:focus {
+    background: none repeat scroll 0 0 #FEFEFE;
+    border: 1px solid #86B400;
+    box-shadow: none;
+    color: #333333;
+}
+#addTipBlock #addTipForm #addTip textarea.selected {
+    height: 45px;
+    transition: height 0.5s ease 0s, background 1s ease 0s, background 1s ease 0s;
+}
+#addTipBlock #addTipForm #addTipOptions button, #addTipBlock #addTipForm #addTipOptions .photoAddButtonHolder, #addTipBlock #addTipForm #addTipOptions .addLink {
+    float: left;
+}
+#addTipBlock #addTipForm #addTipOptions .addLink {
+    margin-left: 10px;
+    margin-top: 8px;
+}
+#addTipBlock #addTipForm #addTipOptions .photoAddButtonHolder {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+#addTipBlock #addTipForm #tipImageUpload, #addTipBlock #addTipForm #tipLink {
+    margin: 5px 0 0;
+}
+#addTipBlock #addTipForm #tipInputError {
+    display: none;
+}
+#addTipBlock #addTipForm #charCount {
+    position: absolute;
+    right: -10px;
+    top: 2px;
+}
+#addTipBlock #addTipForm .photoPreview {
+    clear: both;
+    position: relative;
+}
+#addTipBlock #addTipForm .photoPreview .photoAttachmentContainer {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E3E3E3;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    height: 120px;
+    line-height: 0;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 5px;
+    width: 120px;
+}
+#addTipBlock #addTipForm .photoPreview .photoAttachmentContainer .photoAttachmentClip {
+    height: 120px;
+    overflow: hidden;
+}
+#addTipBlock #addTipForm .photoPreview .photoAttachmentContainer .photoAttachmentClip .photoAttachmentPreview {
+    position: relative;
+}
+#addTipBlock #addTipForm .photoPreview .photoAttachmentContainer .photoPlaceholder {
+    background: url("/Content/foursquare/camera_big_flat-26b75d1bbf8ae706543c5fe716304c69.png") no-repeat scroll center 15px #FFFFFF;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    color: #999999;
+    font-weight: bold;
+    padding: 65px 0 10px;
+    text-align: center;
+    width: 120px;
+}
+#addTipBlock #addTipForm .photoPreview .removeAttachment {
+    background: url("/Content/foursquare/icon-delete-5e654699e212267863ac7e65fe087a77.png") no-repeat scroll left top transparent;
+    cursor: pointer;
+    display: block;
+    height: 22px;
+    left: 104px;
+    margin-top: 1px;
+    position: absolute;
+    right: auto;
+    text-indent: -9999px;
+    top: 5px;
+    width: 22px;
+}
+#addTipBlock #addTipForm .photoPreview .removeAttachment:hover {
+    background: url("/Content/foursquare/tips-delete-7fc0997c50014440a42404d99004b710.png") no-repeat scroll 0 -22px transparent;
+}
+#addTipBlock #addTipForm .photoPreview .removeAttachment.loadingButton {
+    background: url("/Content/foursquare/ajax_spinner_small_light-23e3947767aef347abf9160b5961e904.gif") no-repeat scroll 3px 3px transparent;
+}
+#addTipBlock #addTipForm .photoPreview .removeAttachment:hover {
+    background: url("/Content/foursquare/icon-delete-5e654699e212267863ac7e65fe087a77.png") no-repeat scroll left bottom transparent;
+}
+#addTipBlock #addTipForm .photoPreview .removeAttachment.loading {
+    background: url("/Content/foursquare/ajax_spinner_small-7b9776076d5fceef4993b55c9383dedd.gif") no-repeat scroll 3px 3px transparent;
+}
+#addTipBlock #addTipForm.has-error #tipInputError {
+    color: red;
+    display: block;
+}
+#addTipBlock #addTipForm.has-error textarea {
+    border-color: red;
+}
+#addTipBlock #addTipForm .loading {
+    display: none;
+}
+#addTipBlock #addTipForm.loading .loading {
+    background-image: url("/Content/foursquare/ajax_spinner_small-7b9776076d5fceef4993b55c9383dedd.gif");
+    bottom: 10px;
+    display: block;
+    height: 15px;
+    position: absolute;
+    right: -40px;
+    width: 15px;
+}
+#addTipBlock #addTipForm.loading .photoAddButtonHolder input {
+}
+#addTipBlock .noTips {
+    background: none repeat scroll 0 0 #FFEE99;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 11px;
+    padding: 5px;
+    text-align: center;
+}
+.moreInfoAnchor {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-radius: 30px 30px 30px 30px;
+    color: #888888;
+    cursor: pointer;
+    font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0;
+    padding: 2px 5px;
+    position: relative;
+    top: -3px;
+}
+a.moreInfoAnchor:hover {
+    text-decoration: none;
+}
+#signupAlertContainer.list-signup {
+    margin: 10px auto 0;
+    padding: 0 20px;
+    position: relative;
+    width: 920px;
+}
+.viewTipMode .textContainer {
+    display: block;
+}
+.viewTipMode .editor {
+    display: none;
+}
+.viewTipMode .content {
+    display: block;
+}
+.editTipMode .textContainer {
+    display: none;
+}
+.editTipMode .editor {
+    display: block;
+}
+.editTipMode .editor #editButton {
+    margin-left: 3px;
+}
+.editTipMode .content {
+    display: none;
+}
+#container .venueDetail #tipsList .likeButtonContainer, #userPage .tip .likeButtonContainer, #listPage .s-list-item .likeButtonContainer {
+    color: #999999;
+    float: left;
+    font-size: 11px;
+    line-height: 16px;
+    margin-right: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+#container .venueDetail #tipsList .likeButtonContainer .icon, #userPage .tip .likeButtonContainer .icon, #listPage .s-list-item .likeButtonContainer .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll 0 -16px transparent;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+#container .venueDetail #tipsList .likeButtonContainer .icon, #userPage .tip .likeButtonContainer .icon, #listPage .s-list-item .likeButtonContainer .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+#container .venueDetail #tipsList .likeButtonContainer:hover .icon, #userPage .tip .likeButtonContainer:hover .icon, #listPage .s-list-item .likeButtonContainer:hover .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll 0 -32px transparent;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+#container .venueDetail #tipsList .likeButtonContainer:hover .icon, #userPage .tip .likeButtonContainer:hover .icon, #listPage .s-list-item .likeButtonContainer:hover .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+#container .venueDetail #tipsList .likeButtonContainer.active .icon, #userPage .tip .likeButtonContainer.active .icon, #listPage .s-list-item .likeButtonContainer.active .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll 0 -48px transparent;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+#container .venueDetail #tipsList .likeButtonContainer.active .icon, #userPage .tip .likeButtonContainer.active .icon, #listPage .s-list-item .likeButtonContainer.active .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+#container .venueDetail #tipsList .likeButtonContainer.loadingActionButton span.icon, #userPage .tip .likeButtonContainer.loadingActionButton span.icon, #listPage .s-list-item .likeButtonContainer.loadingActionButton span.icon {
+    background: url("/Content/foursquare/ajax_spinner_small_light-23e3947767aef347abf9160b5961e904.gif") repeat scroll 0 0 transparent;
+}
+#container .venueDetail #tipsList .likeButtonContainer .icon, #userPage .tip .likeButtonContainer .icon, #listPage .s-list-item .likeButtonContainer .icon {
+    width: 16px;
+}
+#container .venueDetail #tipsList .likeButtonContainer .link, #userPage .tip .likeButtonContainer .link, #listPage .s-list-item .likeButtonContainer .link {
+    color: #999999;
+}
+#container .venueDetail #tipsList .likeButtonContainer:hover .link, #userPage .tip .likeButtonContainer:hover .link, #listPage .s-list-item .likeButtonContainer:hover .link {
+    color: #666666;
+}
+#container #containerFooter, #standaloneFooter {
+    background: url("/Content/foursquare/container-a5c2b18fbfefb7f4b28dcf9b5d9e6b33.png") repeat-y scroll left top #FFFFFF;
+    border-radius: 0 0 3px 3px;
+    clear: both;
+    color: #A8A8A8;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 20px;
+    overflow: hidden;
+}
+#container #containerFooter a, #standaloneFooter a, #container #containerFooter .link, #standaloneFooter .link {
+    color: #8D8D8D;
+}
+#container #containerFooter .wideColumn, #standaloneFooter .wideColumn {
+    display: inline;
+    overflow: hidden;
+    padding: 0;
+    text-transform: capitalize;
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#container #containerFooter .narrowColumn, #standaloneFooter .narrowColumn {
+    text-align: center;
+}
+#container #containerFooter .narrowColumn img, #standaloneFooter .narrowColumn img {
+    margin-right: 2px;
+}
+#container #containerFooter .wideColumn, #standaloneFooter .wideColumn, #container #containerFooter .narrowColumn, #standaloneFooter .narrowColumn {
+    border-top: 1px solid #F0F1F2;
+    margin: 0 !important;
+    padding: 15px 0;
+}
+#container #containerFooter ul, #standaloneFooter ul {
+    margin-left: 20px;
+}
+#container #containerFooter ul li, #standaloneFooter ul li {
+    float: left;
+    list-style: none outside none;
+    margin: 0 10px 0 0;
+}
+.likesContainer .like .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll 0 -16px transparent;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+.likesContainer .like .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.likesContainer .like:hover .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll 0 -32px transparent;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+.likesContainer .like:hover .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.likesContainer .like.active .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll 0 -48px transparent;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+.likesContainer .like.active .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.likesContainer .like.loadingActionButton span.icon {
+    background: url("/Content/foursquare/ajax_spinner_small_light-23e3947767aef347abf9160b5961e904.gif") repeat scroll 0 0 transparent;
+}
+.likesContainer .like .link {
+    display: inline-block;
+    padding-left: 20px;
+    position: relative;
+}
+.likesContainer.active .like .icon {
+    background: url("/Content/foursquare/activitystream-sprite-ac2267a377053841f4d13adc9444165b.png") no-repeat scroll 0 -48px transparent;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+.likesContainer.active .like .icon {
+    background-image: url("/Content/foursquare/activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png");
+    background-size: 272px auto;
+}
+.likesContainer {
+    color: #999999;
+    font-size: 11px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.likesContainer a, .likesContainer .link {
+    color: #999999;
+    font-size: 11px;
+    line-height: 16px;
+    margin-right: 10px;
+}
+.likesContainer a:hover, .likesContainer .link:hover {
+    color: #666666;
+}
+.likesContainer .timestamp {
+    margin-right: 10px;
+}
+.likesContainer .like .separator {
+    margin-left: -10px;
+}
+.likesContainer:hover {
+    color: #666666;
+}
+.likesContainer:hover .link {
+    color: #666666;
+}
+.likeButton.active {
+    padding: 0;
+}
+.likeButton.active .buttonLeft, .likeButton.active .buttonRight {
+    background: -moz-linear-gradient(center top , #F8F8F9, #E6E6E8) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    color: #808080;
+    cursor: pointer;
+    display: block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+    text-transform: uppercase;
+}
+.likeButton.active .buttonLeft:hover, .likeButton.active .buttonRight:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+.likeButton.active .buttonLeft:active, .likeButton.active .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+.likeButton.active .buttonLeft.link, .likeButton.active .buttonRight.link, .likeButton.active .buttonLefta, .likeButton.active .buttonRighta, .likeButton.active .buttonLeft a, .likeButton.active .buttonRight a {
+    color: #808080;
+}
+.likeButton.active .buttonLeft:hover, .likeButton.active .buttonRight:hover, .likeButton.active .buttonLeft.link:hover, .likeButton.active .buttonRight.link:hover {
+    text-decoration: none;
+}
+.likeButton.active .buttonLeft:hover, .likeButton.active .buttonRight:hover {
+    text-decoration: none !important;
+}
+.likeButton.active:hover {
+    text-decoration: none !important;
+}
+.likeButton.active .buttonLeft {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #FF5310, #B80000) repeat scroll 0 0 transparent;
+    border-color: #B00000 -moz-use-text-color #B00000 #B00000;
+    border-image: none;
+    border-radius: 5px 0 0 5px;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    color: #FFFFFF;
+    float: left;
+    padding: 0 6px;
+}
+.likeButton.active .buttonLeft img {
+    position: relative;
+    top: 4px;
+}
+.likeButton.active .buttonLeft:active {
+    background: -moz-linear-gradient(center top , #FF5310, #B80000) repeat scroll 0 0 transparent;
+    border: 1px solid #B00000;
+    box-shadow: none;
+    color: #FFFFFF;
+}
+.likeButton.active:hover .buttonLeft {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #FF6600, #F34500) repeat scroll 0 0 transparent;
+    border-color: #B00000 -moz-use-text-color #B00000 #B00000;
+    border-image: none;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    color: #FFFFFF;
+}
+.likeButton.active .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #F8F8F9, #E6E6E8) repeat scroll 0 0 transparent;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    color: #808080;
+    float: left;
+}
+.likeButton.active .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+.likeButton.active:hover .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    color: #808080;
+}
+.likeButton.active.loadingDoubleButton .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("/Content/foursquare/button-loading-3bb46079e9415b490f318918f98337dc.gif") repeat scroll 0 0 #E5E5E5;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    box-shadow: none;
+    color: #999999 !important;
+    cursor: default;
+    display: inline-block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none !important;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+.likeButton.active.loadingDoubleButton .buttonRight:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+.likeButton.active.loadingDoubleButton .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+.likeButton.active.loadingDoubleButton .buttonRight.link, .likeButton.active.loadingDoubleButton .buttonRighta, .likeButton.active.loadingDoubleButton .buttonRight a {
+    color: #808080;
+}
+.likeButton.active.loadingDoubleButton .buttonRight:hover, .likeButton.active.loadingDoubleButton .buttonRight.link:hover {
+    text-decoration: none;
+}
+.likeButton.active.loadingDoubleButton .buttonRight:hover {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+.likeButton.active.loadingDoubleButton .buttonRight:active {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+.likeButton.active.loadingDoubleButton .buttonRight:hover {
+    background: url("/Content/foursquare/button-loading-3bb46079e9415b490f318918f98337dc.gif") repeat scroll 0 0 #E5E5E5;
+}
+.likeButton.active.loadingDoubleButton .buttonLeft {
+}
+.likeButton.active.disabledDoubleButton .buttonLeft {
+    background: none repeat scroll 0 0 #DC2A08;
+}
+.likeButton.active.disabledDoubleButton .buttonRight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #E5E5E5;
+    border-color: #CCCCCC #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    box-shadow: none;
+    color: #999999 !important;
+    cursor: default;
+    display: inline-block;
+    font: bold 11px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none !important;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+.likeButton.active.disabledDoubleButton .buttonRight:hover {
+    background: -moz-linear-gradient(center top , #FCFCFC, #F3F2F3) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    color: #808080;
+    text-decoration: none;
+}
+.likeButton.active.disabledDoubleButton .buttonRight:active {
+    background: -moz-linear-gradient(center top , #F3F2F3, #FCFCFC) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    color: #808080;
+}
+.likeButton.active.disabledDoubleButton .buttonRight.link, .likeButton.active.disabledDoubleButton .buttonRighta, .likeButton.active.disabledDoubleButton .buttonRight a {
+    color: #808080;
+}
+.likeButton.active.disabledDoubleButton .buttonRight:hover, .likeButton.active.disabledDoubleButton .buttonRight.link:hover {
+    text-decoration: none;
+}
+.likeButton.active.disabledDoubleButton .buttonRight:hover {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+.likeButton.active.disabledDoubleButton .buttonRight:active {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+.likes.facepile .leaderImage {
+    float: left;
+    margin-right: 6px;
+}
+.likes.facepile .summary {
+    font-weight: bold;
+}
+.likes.facepile .faces {
+    margin-top: 6px;
+    overflow: hidden;
+}
+.likes.facepile .faces img {
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    margin-bottom: 2px;
+    margin-right: 2px;
+}
+.likes.facepile .faces .friend img {
+    height: 32px;
+    width: 32px;
+}
+.likes.facepile .faces .other img {
+    height: 16px;
+    width: 16px;
+}
+.likes.facepile .faces .remaining {
+    background: none repeat scroll 0 0 #E7E7E7;
+    border-radius: 3px 3px 3px 3px;
+    color: #999999;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 2px 2px 0;
+    text-align: center;
+    width: 32px;
+}
+.likes.facepile .faces .remaining.longNumber {
+    font-size: 9px;
+}
+div.postMsg {
+    clear: both;
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+div.toInfo {
+    color: #999999;
+    font-size: 11px;
+    margin: -5px 0 20px;
+}
+.shareSocialFacebox .greenButton, .shareSocialFacebox .greyButton {
+    float: right;
+    margin-right: 0;
+}
+
+.save-save-button .label{
+    color: #999999;
+}

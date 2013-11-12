@@ -17,7 +17,10 @@ namespace dondEducar
                        "~/Content/bootstrap.css",
                        "~/Content/bootstrap-theme.css"));
             
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                "~/Content/site.css",
+                "~/Content/foursquare-main.css",
+                "~/Content/foursquare-venue.css"));
 
             
             //****************************** JS *************************************
