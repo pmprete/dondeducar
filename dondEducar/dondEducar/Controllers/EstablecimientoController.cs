@@ -1,4 +1,6 @@
 ﻿using System.Web.Mvc;
+using FourSquare.SharpSquare.Core;
+using FourSquare.SharpSquare.Entities;
 using MongoDB.Driver.Builders;
 using dondEducar.Models;
 using dondEducar.ViewModel;
@@ -23,10 +25,11 @@ namespace dondEducar.Controllers
             var establecimientoViewModel = new EstablecimientoViewModel
                 {
                     Establecimiento = establecimiento,
-                    Venue = fourSquareVenue
+                    Venue = fourSquareVenue,
                 };
 
             return View("Establecimiento", establecimientoViewModel);
         }
+
     }
 }

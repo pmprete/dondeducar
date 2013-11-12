@@ -18,8 +18,8 @@
 
                             <a class="pull-left" href="@Url.Action("Establecimiento", "Establecimiento", new { EstablecimientoId = establecimiento.Id })">
                                 <div class="media-object puntaje">
-                                    <div style="font-size: 70px; text-align: center;">@String.Format("{0:0.0}",establecimiento.Likes)</div>
-                                    <div style="text-align: center;">Puntaje</div>
+                                    <div style="font-size: 70px; text-align: center;">@establecimiento.Likes</div>
+                                    <div style="text-align: center;">Me gusta</div>
                                 </div>
                             </a>
 
@@ -34,7 +34,7 @@
                                     </div>
                                 }
                                     
-@*Titulo*@
+                                @*Titulo*@
                                 @if (establecimiento.Titulo != null)
                                 {
                                     <div class="titulo">
@@ -64,7 +64,7 @@
                                     </div>
                                 }
                                     
-@*Telefono*@
+                                @*Telefono*@
                                 @if (!String.IsNullOrWhiteSpace(establecimiento.Telefonos))
                                 {
                                     <div class="telefono">
@@ -73,7 +73,7 @@
                                     </div>
                                 }
                                     
-@*Direccion*@
+                                @*Direccion*@
                                 @if (!String.IsNullOrWhiteSpace(establecimiento.Direccion))
                                 {
                                     <div class="direccion">

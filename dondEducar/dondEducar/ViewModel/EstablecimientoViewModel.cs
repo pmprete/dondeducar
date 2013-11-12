@@ -11,5 +11,6 @@ namespace dondEducar.ViewModel
     {
         public Establecimiento Establecimiento { get; set; }
         public Venue Venue { get; set; }
+        public string OauthToken { get; set; }
     }
 }

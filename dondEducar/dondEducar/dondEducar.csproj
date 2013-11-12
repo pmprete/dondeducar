@@ -199,7 +199,6 @@
     </Compile>
     <Compile Include="Helpers\UrlHelperExtension.cs" />
     <Compile Include="Models\Categoria.cs" />
-    <Compile Include="Models\Mensaje.cs" />
     <Compile Include="Models\MongoEntity.cs" />
     <Compile Include="Models\Establecimiento.cs" />
     <Compile Include="Models\NivelTipo.cs" />

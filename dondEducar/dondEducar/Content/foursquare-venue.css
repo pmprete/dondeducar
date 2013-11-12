@@ -616,7 +616,7 @@
 }
 .addItemArea textarea {
     margin: 0;
-    padding: 6px 60px 6px 10px;
+    padding: 6px 100px 6px 10px;
     resize: none;
     transition: height 0.5s ease 0s, background 1s ease 0s, background 1s ease 0s;
 }

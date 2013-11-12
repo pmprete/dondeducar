@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Web.Mvc;
 using FourSquare.SharpSquare.Core;
-using FourSquare.SharpSquare.Entities;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using dondEducar.Models;
@@ -23,6 +21,7 @@ namespace dondEducar.Controllers
             {
                 var accessToken = sharpSquare.GetAccessToken((string)Session["RedirectUri"], code);
                 Session["AccessToken"] = accessToken;
+                sharpSquare.SetAccessToken(accessToken);
             }
             return View("Index");
         }

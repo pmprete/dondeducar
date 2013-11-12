@@ -136,7 +136,7 @@ namespace dondEducar.Controllers
                     fourSquareVenue = sharpSquare.AddVenue(venue);
                     return fourSquareVenue;
                 }
-                
+
                 fourSquareVenue = sharpSquare.GetVenue(lugar.id);
                 return fourSquareVenue;
             }
