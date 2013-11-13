@@ -62,12 +62,12 @@ namespace FourSquare.SharpSquare.Core
                 stream.Write(bytes, 0, bytes.Length);
                 stream.Dispose();
             }
-            Logger.Debug("Hago un request al url" + url + "con la data" + data);
+            Logger.Error("Hago un request al url" + url + "con la data" + data);
             var httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
             var reader = new StreamReader(httpWebResponse.GetResponseStream());
             result = reader.ReadToEnd();
             reader.Dispose();
-            Logger.Debug("Response:" + result);
+            Logger.Error("Response:" + result);
             return result;
         }
 

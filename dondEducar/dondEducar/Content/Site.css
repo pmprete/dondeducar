@@ -8,7 +8,7 @@
    designer's written permission. However, feel free to study the CSS and use 
    techniques you learn from it elsewhere. */
 
-@colorPrimario: #444444;
+/*@colorPrimario: #444444;*/
 
 html, body {
     /*background: url(images/bg.gif) left top repeat-y #F06;*/
@@ -16,7 +16,7 @@ html, body {
     height: 100%;
     padding: 0;
     font-family: "Trebuchet MS", Tahoma, Lucida Sans, Arial, Verdana, Helvetica, sans-serif;
-    background-color: @colorPrimario;
+    background-color: #444444;
 }
 
 .header-color {
