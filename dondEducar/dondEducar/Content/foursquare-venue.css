@@ -425,7 +425,7 @@
     margin-left: 5px;
     padding: 0;
     position: relative;
-    width: 640px;
+    /*width: 640px;*/
 }
 #container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipCarat {
     bottom: -10px;
@@ -454,7 +454,8 @@
     border-radius: 3px 3px 3px 3px;
 }
 #container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock .addTipArea {
-    width: 487px;
+    /*width: 487px;*/
+    width: 80%;
 }
 /*#container .venueDetail .wideColumn .tipsSections .addTipsSection .addTipBlock .addTipArea textarea {
     width: 406px;
@@ -616,7 +617,7 @@
 }
 .addItemArea textarea {
     margin: 0;
-    padding: 6px 100px 6px 10px;
+    padding: 6px 5% 6px 10px;
     resize: none;
     transition: height 0.5s ease 0s, background 1s ease 0s, background 1s ease 0s;
 }

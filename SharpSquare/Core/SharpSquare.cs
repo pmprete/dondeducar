@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Net;
 using System.Text;
 using System.IO;
-using System.Web.Script.Serialization;
 using FourSquare.SharpSquare.Entities;
 using Newtonsoft.Json;
 
@@ -84,7 +81,7 @@ namespace FourSquare.SharpSquare.Core
 
         private FourSquareSingleResponse<T> GetSingle<T>(string endpoint) where T : FourSquareEntity
         {
-            return GetSingle<T>(endpoint, null, false);
+            return GetSingle<T>(endpoint, null, String.IsNullOrWhiteSpace(accessToken) );
         }
 
         private FourSquareSingleResponse<T> GetSingle<T>(string endpoint, bool unauthenticated) where T : FourSquareEntity
@@ -123,7 +120,7 @@ namespace FourSquare.SharpSquare.Core
 
         private FourSquareMultipleResponse<T> GetMultiple<T>(string endpoint) where T : FourSquareEntity
         {
-            return GetMultiple<T>(endpoint, null, false);
+            return GetMultiple<T>(endpoint, null, String.IsNullOrWhiteSpace(accessToken));
         }
 
         private FourSquareMultipleResponse<T> GetMultiple<T>(string endpoint, bool unauthenticated) where T : FourSquareEntity
@@ -209,7 +206,7 @@ namespace FourSquare.SharpSquare.Core
         {
             string url = string.Format("{0}?client_id={1}&client_secret={2}&grant_type=authorization_code&redirect_uri={3}&code={4}", accessTokenUrl, clientId, clientSecret, redirectUri, code);
             string json = Request(url, HttpMethod.GET);
-            AccessToken accessToken = JsonConvert.DeserializeObject<AccessToken>(json);
+            var accessToken = JsonConvert.DeserializeObject<AccessToken>(json);
             SetAccessToken(accessToken.access_token);
             return accessToken.access_token;
         }
@@ -398,8 +395,9 @@ namespace FourSquare.SharpSquare.Core
         /// </summary>
         public Venue GetVenue(string venueId)
         {
-            return GetSingle<Venue>("/venues/" + venueId, true).response["venue"];
+            return GetSingle<Venue>("/venues/" + venueId).response["venue"];
         }
+
 
         /// <summary>
         /// https://api.foursquare.com/v2/venues/add
@@ -422,7 +420,7 @@ namespace FourSquare.SharpSquare.Core
         /// </summary>
         public List<Category> GetVenueCategories()
         {
-            return GetMultiple<Category>("/venues/categories", true).response["categories"];
+            return GetMultiple<Category>("/venues/categories").response["categories"];
         }
 
         /// <summary>
@@ -478,7 +476,7 @@ namespace FourSquare.SharpSquare.Core
         /// </summary>
         public List<Venue> SearchVenues(Dictionary<string, string> parameters)
         {
-            var venues = GetMultiple<Venue>("/venues/search", parameters, true).response["venues"];
+            var venues = GetMultiple<Venue>("/venues/search", parameters).response["venues"];
 
             return venues;
         }
@@ -489,7 +487,7 @@ namespace FourSquare.SharpSquare.Core
         /// </summary>
         public List<VenueTimeSerie> GetVenueTimeSeriesData (Dictionary<string, string> parameters)
         {
-            return GetMultiple<VenueTimeSerie>("/venues/timeseries", parameters, true).response["timeseries"];
+            return GetMultiple<VenueTimeSerie>("/venues/timeseries", parameters).response["timeseries"];
         }
 
         /// <summary>
@@ -498,7 +496,7 @@ namespace FourSquare.SharpSquare.Core
         /// </summary>
         public List<Venue> GetSuggestCompletionVenues(Dictionary<string, string> parameters)
         {
-            return GetMultiple<Venue>("/venues/suggestcompletion", parameters, true).response["minivenues"];
+            return GetMultiple<Venue>("/venues/suggestcompletion", parameters).response["minivenues"];
         }
         
         /// <summary>
@@ -508,7 +506,7 @@ namespace FourSquare.SharpSquare.Core
         /// </summary>
         public List<Venue> GetTrendingVenues(Dictionary<string, string> parameters)
         {
-            return GetMultiple<Venue>("/venues/trending", parameters, true).response["venues"];
+            return GetMultiple<Venue>("/venues/trending", parameters).response["venues"];
         }
 
         /// <summary>
@@ -523,7 +521,7 @@ namespace FourSquare.SharpSquare.Core
 
         public List<Checkin> GetVenueHereNow(string venueId, Dictionary<string, string> parameters)
         {
-            FourSquareEntityItems<Checkin> checkins = GetSingle<FourSquareEntityItems<Checkin>>("/venues/" + venueId + "/herenow", parameters, true).response["hereNow"];
+            FourSquareEntityItems<Checkin> checkins = GetSingle<FourSquareEntityItems<Checkin>>("/venues/" + venueId + "/herenow", parameters).response["hereNow"];
            
             return checkins.items;
         }
@@ -539,7 +537,7 @@ namespace FourSquare.SharpSquare.Core
 
         public List<Tip> GetVenueTips(string venueId, Dictionary<string, string> parameters)
         {
-            FourSquareEntityItems<Tip> tips = GetSingle<FourSquareEntityItems<Tip>>("/venues/" + venueId + "/tips", parameters, true).response["tips"];
+            FourSquareEntityItems<Tip> tips = GetSingle<FourSquareEntityItems<Tip>>("/venues/" + venueId + "/tips", parameters).response["tips"];
             
             return tips.items;
         }
@@ -550,7 +548,7 @@ namespace FourSquare.SharpSquare.Core
         /// </summary>
         public List<Photo> GetVenuePhotos(string venueId, Dictionary<string, string> parameters)
         {
-            FourSquareEntityItems<Photo> photos = GetSingle<FourSquareEntityItems<Photo>>("/venues/" + venueId + "/photos", parameters, true).response["photos"];
+            FourSquareEntityItems<Photo> photos = GetSingle<FourSquareEntityItems<Photo>>("/venues/" + venueId + "/photos", parameters).response["photos"];
             return photos.items;
         }
 
@@ -561,7 +559,7 @@ namespace FourSquare.SharpSquare.Core
         /// </summary>
         public List<Link> GetVenueLinks(string venueId)
         {
-            FourSquareEntityItems<Link> links = GetSingle<FourSquareEntityItems<Link>>("/venues/" + venueId + "/links", true).response["links"];
+            FourSquareEntityItems<Link> links = GetSingle<FourSquareEntityItems<Link>>("/venues/" + venueId + "/links").response["links"];
             
             return links.items;
         }
@@ -675,7 +673,7 @@ namespace FourSquare.SharpSquare.Core
         /// </summary>
         public Tip GetTip(string tipId)
         {
-            return GetSingle<Tip>("/tips/" + tipId, true).response["tip"];
+            return GetSingle<Tip>("/tips/" + tipId).response["tip"];
         }
 
         /// <summary>
@@ -693,7 +691,7 @@ namespace FourSquare.SharpSquare.Core
         /// </summary>
         public List<Tip> SearchTips(Dictionary<string, string> parameters)
         {
-            return GetMultiple<Tip>("/tips/search", parameters, true).response["tips"];
+            return GetMultiple<Tip>("/tips/search", parameters).response["tips"];
         }
 
         /// <summary>

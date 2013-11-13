@@ -10,79 +10,92 @@
 
 @Html.AntiForgeryToken()
 
-<h2>@Html.DisplayFor(model => model.Establecimiento.Nombre)</h2>
-<br />
-<div class="media">
-  <a class="pull-left" href="#">
-    <div id="foto">
-    </div>
-  </a>
-    <div class="media-body">
-        <div class="table-responsive">
-            <table class="table">
-               @* <tr>
+
+<div class="row">
+    <div class="media col-md-8 col-md-offset-2">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <h2>@Html.DisplayFor(model => model.Establecimiento.Nombre)</h2>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="media col-md-3 col-md-offset-1">
+                        <div id="foto">
+                        </div>
+                    </div>
+                    <div class="media-body col-md-6">
+                        <div class="table-responsive">
+                            <table class="table">
+                                @* <tr>
                     <th>Atributo</th>
                     <th>Valor</th>
                 </tr>*@
-                <tr>
-                    <td></td>
-                    <td>@Html.LabelFor(model => model.Establecimiento.Codigo)</td>
-                    <td>@Html.DisplayFor(model => model.Establecimiento.Codigo)</td>
-        
-                </tr>
-        
-                <tr class="gestion">
-                    <td></td>
-                    <td>@Html.LabelFor(model => model.Establecimiento.Gestion)</td>
-                    <td>@Html.DisplayFor(model => model.Establecimiento.Gestion.Vista)</td>
-                </tr>
-    
-                @if (@Model.Establecimiento.Titulo != null)
-                {
-                    <tr class="titulo">
-                        <td></td>
-                        <td>@Html.LabelFor(model => model.Establecimiento.Titulo)</td>
-                        <td>@Html.DisplayFor(model => model.Establecimiento.Titulo.Vista)</td>
-                    </tr>
-                }
-        
-                <tr class="nivel-educativo">
-                    <td></td>
-                    <td>@Html.Label("Nivel Educativo - Tipo de Establecimiento")</td>
-                    <td>@String.Join(" | ", Model.Establecimiento.NivelTipo)</td>
-                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>@Html.LabelFor(model => model.Establecimiento.Codigo)</td>
+                                    <td>@Html.DisplayFor(model => model.Establecimiento.Codigo)</td>
 
-                @if (!String.IsNullOrWhiteSpace(@Model.Establecimiento.Telefonos))
-                {
-                    <tr class="telefonos">
-                        <td></td>
-                        <td>@Html.LabelFor(model => model.Establecimiento.Telefonos)</td>
-                        <td>@Html.DisplayFor(model => model.Establecimiento.Telefonos)</td>
-                    </tr>
-                }
-                @if (!String.IsNullOrWhiteSpace(@Model.Establecimiento.Email))
-                {
-                    <tr class="email">
-                        <td></td>
-                        <td>@Html.LabelFor(model => model.Establecimiento.Email)</td>
-                        <td>@Html.DisplayFor(model => model.Establecimiento.Email)</td>
-                    </tr>
-                }
-                @if (!String.IsNullOrWhiteSpace(@Model.Establecimiento.Direccion))
-                {
-                    <tr class="direccion">
-                        <td></td>
-                        <td>@Html.LabelFor(model => model.Establecimiento.Direccion)</td>
-                        <td>@Html.DisplayFor(model => model.Establecimiento.Direccion)</td>
-                    </tr>
-                }
-            </table>
+                                </tr>
+
+                                <tr class="gestion">
+                                    <td></td>
+                                    <td>@Html.LabelFor(model => model.Establecimiento.Gestion)</td>
+                                    <td>@Html.DisplayFor(model => model.Establecimiento.Gestion.Vista)</td>
+                                </tr>
+
+                                @if (@Model.Establecimiento.Titulo != null)
+                                {
+                                    <tr class="titulo">
+                                        <td></td>
+                                        <td>@Html.LabelFor(model => model.Establecimiento.Titulo)</td>
+                                        <td>@Html.DisplayFor(model => model.Establecimiento.Titulo.Vista)</td>
+                                    </tr>
+                                }
+
+                                <tr class="nivel-educativo">
+                                    <td></td>
+                                    <td>@Html.Label("Nivel Educativo - Tipo de Establecimiento")</td>
+                                    <td>@String.Join(" | ", Model.Establecimiento.NivelTipo)</td>
+                                </tr>
+
+                                @if (!String.IsNullOrWhiteSpace(@Model.Establecimiento.Telefonos))
+                                {
+                                    <tr class="telefonos">
+                                        <td></td>
+                                        <td>@Html.LabelFor(model => model.Establecimiento.Telefonos)</td>
+                                        <td>@Html.DisplayFor(model => model.Establecimiento.Telefonos)</td>
+                                    </tr>
+                                }
+                                @if (!String.IsNullOrWhiteSpace(@Model.Establecimiento.Email))
+                                {
+                                    <tr class="email">
+                                        <td></td>
+                                        <td>@Html.LabelFor(model => model.Establecimiento.Email)</td>
+                                        <td>@Html.DisplayFor(model => model.Establecimiento.Email)</td>
+                                    </tr>
+                                }
+                                @if (!String.IsNullOrWhiteSpace(@Model.Establecimiento.Direccion))
+                                {
+                                    <tr class="direccion">
+                                        <td></td>
+                                        <td>@Html.LabelFor(model => model.Establecimiento.Direccion)</td>
+                                        <td>@Html.DisplayFor(model => model.Establecimiento.Direccion)</td>
+                                    </tr>
+                                }
+                            </table>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="container" class="col-md-9 col-md-offset-1">
+                    @Html.Partial("_FourSquareInfo", Model.Venue)
+                </div>
+            </div>
         </div>
-    </div> 
-</div>       
-
-<div id="container">
-        @Html.Partial("_FourSquareInfo",Model.Venue)
+    </div>
 </div>
 
 <div id="mapa-google" class="mapa-google">
@@ -90,11 +103,11 @@
 
 
 
-<script >
+<script>
     var geoCoder = null;
     var mapa = null;
-      
-    function onLoadFotos() {	
+
+    function onLoadFotos() {
         /*fotosParcela.setFechaFoto($('.fecha-foto'));
         if (fotosParcela.numFotos() > 1) {
             $('div.foto-recorrido').show();
@@ -105,7 +118,7 @@
     }
 
     function onReverseGeoCoding(data) {
-        var fotosParcela = new usig.FotosParcela(data.parcela, {maxHeight : 350, maxWidth : 350, onLoad: onLoadFotos});
+        var fotosParcela = new usig.FotosParcela(data.parcela, { maxHeight: 350, maxWidth: 350, onLoad: onLoadFotos });
         fotosParcela.cargarFoto($("#foto"));
     }
 
@@ -118,14 +131,14 @@
         var longitud = '@Model.Establecimiento.Longitud.ToString(CultureInfo.InvariantCulture.NumberFormat)';
         var latitud = '@Model.Establecimiento.Latitud.ToString(CultureInfo.InvariantCulture.NumberFormat)';
         geoCoder.reverseGeoCoding(longitud, latitud, onReverseGeoCoding, onReverseGeoCodingError);
-        
-       @* var myOptions =
+
+        @* var myOptions =
         {
             zoom: 18,
             center: new google.maps.LatLng('@Model.Latitud', '@Model.Longitud'),
             mapTypeId: google.maps.MapTypeId.HYBRID
         };
         new google.maps.Map(document.getElementById("EsMapa-google"), myOptions);*@
-       
+
     });
 </script>

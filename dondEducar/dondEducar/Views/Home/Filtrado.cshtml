@@ -15,7 +15,7 @@
         <li><a href="@Url.Action("Index", "Home")">Home</a></li>
         <li class="active">Nivel @Model.Filtro.NivelEducativo.Vista</li>
     </ol>
-    
+
     <div class="row">
         <aside id="bar" role="complementary" class="sidebar options col-xs-6 col-md-2">
             @if (Model.Filtro.Filtrado == true)
@@ -28,10 +28,11 @@
                             @if (@Model.Filtro.Gestion.Vista != null)
                             {
                                 <li class="filtrado">
-                                    <h4>@Model.Filtro.Gestion.Vista</h4>
+                                    <h4>@Model.Filtro.Gestion.Vista&nbsp;
                                     <a id="@Model.Filtro.Gestion.CategoriaNombre" class="desfiltrar" href="#" >
-                                        <span class="glyphicon glyphicon-remove ch-icon-remove"></span>
+                                        <span class="glyphicon glyphicon-remove"></span>
                                     </a>
+                                    </h4>
                                 </li>
                             }
 
@@ -40,7 +41,7 @@
                                 <li class="filtrado">
                                     <h4>@Model.Filtro.TipoDeEstablecimiento.Vista</h4>
                                     <a id="@Model.Filtro.TipoDeEstablecimiento.CategoriaNombre"  class="desfiltrar" href="#" >
-                                        <span class="glyphicon glyphicon-remove ch-icon-remove"></span>
+                                        <span class="glyphicon glyphicon-remove"></span>
                                     </a>
                                 </li>
                             }
@@ -50,7 +51,7 @@
                                 <li class="filtrado">
                                     <h4>@Model.Filtro.Titulo.Vista</h4>
                                     <a id="@Model.Filtro.Titulo.CategoriaNombre"  class="desfiltrar" href="#" >
-                                        <span class="glyphicon glyphicon-remove ch-icon-remove"></span>
+                                        <span class="glyphicon glyphicon-remove"></span>
                                     </a>
                                 </li>
                             }
@@ -59,23 +60,23 @@
                 </div>
             }
             <div id="opciones" class="design-selection">
-                @if(Model.Filtro.NivelEducativo.Valor != "Otros")
+                @if (Model.Filtro.NivelEducativo.Valor != "Otros")
                 {
                     foreach (var categoria in Model.Categorias)
                     {
-                        <div id="@categoria.Nombre" class="design-selection categoria">
-                            <h3 class="select">@categoria.Vista</h3>
-                            <nav role="navigation">
-                                <ul>
-                                    @foreach (var tag in categoria.Tags)
-                                    {
-                                        <li class="tag">
-                                            <a id="@tag.Valor" href="#">@tag.Vista</a>
-                                        </li>
-                                    }
-                                </ul>
-                            </nav>
-                        </div>
+                    <div id="@categoria.Nombre" class="design-selection categoria">
+                        <h3 class="select">@categoria.Vista</h3>
+                        <nav role="navigation">
+                            <ul>
+                                @foreach (var tag in categoria.Tags)
+                                {
+                                    <li class="tag">
+                                        <a id="@tag.Valor" href="#">@tag.Vista</a>
+                                    </li>
+                                }
+                            </ul>
+                        </nav>
+                    </div>
                     }
                 }
             </div>
@@ -102,8 +103,7 @@
                     @if (Model.EsMapa == false)
                     {
                         <li class="dropdown">
-                            <a data-toggle="dropdown"  id="ordenarDropdown">
-                                Ordenado Por:
+                            <a data-toggle="dropdown" id="ordenarDropdown">Ordenado Por:
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="ordenarDropdown">
@@ -111,7 +111,7 @@
                                     <a id="puntaje-mayor" role="menuitem" tabindex="-1" href="#">Mayor puntaje</a>
                                 </li>
                                 <li role="presentation">
-                                    <a id="puntaje-menor"role="menuitem" tabindex="-1" href="#">Menor Puntaje</a>
+                                    <a id="puntaje-menor" role="menuitem" tabindex="-1" href="#">Menor Puntaje</a>
                                 </li>
                                 <li role="presentation" class="divider"></li>
                                 <li role="presentation">
@@ -124,7 +124,7 @@
                         </li>
                     }
                 </ul>
-     
+
                 @if (Model.EsMapa == true)
                 {
                     @Html.Partial("_MapaEstablecimientos", Model)
@@ -181,6 +181,6 @@
             $("#es-mapa").val('False');
             $("#formEstablecimientos").submit();
         });
-       
+
     });
 </script>

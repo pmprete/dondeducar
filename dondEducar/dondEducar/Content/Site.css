@@ -15,6 +15,11 @@ html, body {
     height: 100%;
     padding: 0;
     font-family: "Trebuchet MS", Tahoma, Lucida Sans, Arial, Verdana, Helvetica, sans-serif;
+    background-color: #444444;
+}
+
+.header-color {
+    color: #eAEAEA;
 }
 
 abbr, abbr {
@@ -90,7 +95,7 @@ div.main h3 {
 div.main abbr {
     border-bottom: 1px dotted #000;
 }
-
+/*
 footer {
     display: block;
     background: url(images/hbg.gif) left top repeat #000;
@@ -100,13 +105,16 @@ footer {
     text-align: center;
     margin-bottom: 10px;
     overflow: hidden;
-}
+}*/
 
 .body-wrapper {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -80px; /* the bottom margin is the negative value of the footer's height */
+    /* Negative indent footer by its height */
+    margin: 0 auto -80px;
+    /* Pad bottom by footer height */
+    padding: 0 0 80px;
 }
 
 footer, .push {
@@ -233,9 +241,10 @@ footer, .push {
     column-gap: 0;
     width: 1200px;
     list-style-type: none;
+    box-shadow: 10px 10px 5px #343434;
 }
 
-#tabs-vista li.dropdown{
+#tabs-vista li.dropdown {
     float: right;
     margin-right: 20%;
 }
@@ -301,7 +310,7 @@ footer, .push {
         font-weight: bold;
         font-size: 12px;
         /*text-transform: uppercase;*/
-        margin: 10px 0 0 10px;
+        margin: auto; /*10px 0 0 10px;*/
     }
 
 .desfiltrar {
@@ -357,3 +366,9 @@ footer, .push {
             font-weight: normal;
             color: #E4DA00;
         }
+
+
+#footer {
+    height: 80px;
+    background-color: black;
+}
