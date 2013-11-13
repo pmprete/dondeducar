@@ -1,6 +1,4 @@
 ﻿using System.Web.Mvc;
-using FourSquare.SharpSquare.Core;
-using FourSquare.SharpSquare.Entities;
 using MongoDB.Driver.Builders;
 using dondEducar.Models;
 using dondEducar.ViewModel;

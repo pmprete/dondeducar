@@ -10,14 +10,16 @@
 
     @Styles.Render("~/Content/themes/base/css")
     @Styles.Render("~/Content/bootstrap")
-    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/css")    
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+    @Styles.Render("~/Content/leaflet") 
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/underscore")
-    @Scripts.Render("~/bundles/educar")
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
     <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+    @Scripts.Render("~/bundles/leaflet")
+    @Scripts.Render("~/bundles/educar")
 </head>
 <body>
     <nav class="navbar navbar-inverse" role="navigation">

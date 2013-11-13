@@ -54,6 +54,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.2.1.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -165,6 +168,7 @@
     <Compile Include="Controllers\EstablecimientoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImportarController.cs" />
+    <Compile Include="Controllers\ListaEstablecimientosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -224,8 +228,9 @@
     <Content Include="Content\images\ll_resources.gif" />
     <Content Include="Content\images\ll_selectadesign.gif" />
     <Content Include="Content\images\logo.gif" />
-    <Content Include="Content\leaflet.css" />
-    <Content Include="Content\leaflet.ie.css" />
+    <Content Include="Content\MarkerCluster.css" />
+    <Content Include="Content\MarkerCluster.Default.css" />
+    <Content Include="Content\MarkerCluster.Default.ie.css" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -318,6 +323,9 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\leaflet.markercluster-src.js" />
+    <Content Include="Scripts\leaflet.markercluster.js" />
+    <Content Include="Scripts\slick.responsiveness.js" />
     <Content Include="Scripts\SlickGrid\Controls\slick.columnpicker.js" />
     <Content Include="Scripts\SlickGrid\Controls\slick.pager.js" />
     <Content Include="Scripts\SlickGrid\Plugins\slick.autotooltips.js" />
@@ -337,7 +345,9 @@
     <Content Include="Scripts\SlickGrid\slick.groupitemmetadataprovider.js" />
     <Content Include="Scripts\SlickGrid\slick.remotemodel.js" />
     <Content Include="Scripts\underscore-min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -369,13 +379,14 @@
     </Content>
     <Content Include="Views\Importar\Importar.cshtml" />
     <Content Include="Views\Establecimiento\Establecimiento.cshtml" />
-    <Content Include="Views\Home\_ListaEstablecimientos.cshtml" />
-    <Content Include="Views\Home\_MapaEstablecimientos.cshtml" />
-    <Content Include="Views\Home\Filtrado.cshtml" />
+    <Content Include="Views\ListaEstablecimientos\_ListaEstablecimientos.cshtml" />
+    <Content Include="Views\ListaEstablecimientos\_MapaEstablecimientos.cshtml" />
+    <Content Include="Views\ListaEstablecimientos\Filtrado.cshtml" />
     <Content Include="Views\Home\Informacion.cshtml" />
     <Content Include="Views\Home\Contacto.cshtml" />
     <Content Include="Views\channel.html" />
     <Content Include="Views\Establecimiento\_FourSquareInfo.cshtml" />
+    <Content Include="Scripts\slickgrid.less" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

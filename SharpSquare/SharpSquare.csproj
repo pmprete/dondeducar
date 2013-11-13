@@ -35,6 +35,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\dondEducar\packages\Newtonsoft.Json.5.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\dondEducar\packages\NLog.2.1.0\lib\net40\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Extensions" />

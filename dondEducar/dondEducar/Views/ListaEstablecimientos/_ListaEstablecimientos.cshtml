@@ -1,0 +1,219 @@
+﻿@using dondEducar.ViewModel
+@model  ListaEstablecimientosViewModel
+
+
+     
+@* grid *@
+<div id="grid" class="establecimientos">
+    <ul>
+        @foreach (var establecimiento in Model.Establecimientos)
+        {
+            <li>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        @Html.ActionLink(establecimiento.Nombre, "Establecimiento", "Establecimiento", new { EstablecimientoId = establecimiento.Id }, new { @class = "panel-title" })
+                    </div>
+                    <div class="panel-body">
+                        <div class="media">
+
+                            <a class="pull-left" href="@Url.Action("Establecimiento", "Establecimiento", new { EstablecimientoId = establecimiento.Id })">
+                                <div class="media-object puntaje">
+                                    <div style="font-size: 70px; text-align: center;">@establecimiento.Likes</div>
+                                    <div style="text-align: center;">Me gusta</div>
+                                </div>
+                            </a>
+
+                            <div class="media-body contenido">
+
+                                @*Gestion*@
+                                @if (establecimiento.Gestion != null)
+                                {
+                                    <div class="gestion">
+                                        <label>Gestion: </label>
+                                        @establecimiento.Gestion.Vista;
+                                    </div>
+                                }
+                                    
+                                @*Titulo*@
+                                @if (establecimiento.Titulo != null)
+                                {
+                                    <div class="titulo">
+                                        <label>Titulo: </label>
+                                        @establecimiento.Titulo.Vista;
+                                    </div>
+                                }
+                                    
+                                @*Nivel Educativo*@
+                                @if (establecimiento.NivelTipo != null)
+                                {
+                                    @*Tipos De Establecimiento*@
+                                    var nivelTipo = string.Join(" | ", establecimiento.NivelTipo);
+                                        
+                                    <div class="nivel-tipo">
+                                        <label>Nivel Educativo - Tipo de Establecimiento: </label>
+                                        @nivelTipo
+                                    </div>
+                                }   
+
+                                @*Email*@
+                                @if (!String.IsNullOrWhiteSpace(establecimiento.Email))
+                                {
+                                    <div class="email">
+                                        <label>Email: </label>
+                                        @establecimiento.Email;
+                                    </div>
+                                }
+                                    
+                                @*Telefono*@
+                                @if (!String.IsNullOrWhiteSpace(establecimiento.Telefonos))
+                                {
+                                    <div class="telefono">
+                                        <label>Telefono: </label>
+                                        @establecimiento.Telefonos;
+                                    </div>
+                                }
+                                    
+                                @*Direccion*@
+                                @if (!String.IsNullOrWhiteSpace(establecimiento.Direccion))
+                                {
+                                    <div class="direccion">
+                                        <label>Direccion: </label>
+                                        @establecimiento.Direccion;
+                                    </div>
+                                }
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+        }
+    </ul>
+</div>
+
+<ul id="pager" class="pagination">
+</ul>
+
+<script type="text/javascript">
+   
+    function InicializarPaginas() {
+        
+        var offset = (EDUCAR.Grids.BloqueActual * EDUCAR.Grids.TamañoDeBloque);
+        var limite = EDUCAR.Grids.TamañoDeBloque;
+        
+        if (EDUCAR.Grids.BloqueActual == (EDUCAR.Grids.TotalDeBloques - 1)) {
+            limite = Math.ceil(EDUCAR.Grids.TotalDePaginas % EDUCAR.Grids.TamañoDeBloque);
+        }
+        
+        $("#pager").html('');
+        
+        var divlaquo = document.createElement("li");
+        if (EDUCAR.Grids.BloqueActual == 0) {
+            divlaquo.class = "disabled";
+        }
+        divlaquo.innerHTML = '<a id="laquo" href="#">&laquo;</a>';
+        $("#pager").append(divlaquo);
+        
+        for (var iPag = (1 + offset); iPag <= (limite + offset); iPag++) {
+            
+            var divLi = document.createElement("li");
+            if(iPag == EDUCAR.Grids.PaginaActual) {
+                divLi.setAttribute("class","active");
+            }
+            $("#pager").append(divLi);
+            
+            var divAnchor = document.createElement("a");
+            divAnchor.id = "pagina-"+ iPag;
+            divAnchor.href = "#";
+            divAnchor.setAttribute("class","pagina");
+            divAnchor.innerHTML = iPag;
+            divLi.appendChild(divAnchor);
+        }
+        var divraquo = document.createElement("li");
+        if (EDUCAR.Grids.BloqueActual == (EDUCAR.Grids.TotalDeBloques - 1)) {
+            divraquo.class = "disabled";
+        }
+        divraquo.innerHTML = '<a id="raquo" href="#">&raquo;</a>';
+        $("#pager").append(divraquo);
+                 
+        $("#laquo").click(laquo);
+        
+        $(".pagina").click(paginas);
+        
+        $("#raquo").click(raquo);
+    }
+    
+    function laquo(event) {
+        event.preventDefault();
+        if(EDUCAR.Grids.BloqueActual > 0) {
+            EDUCAR.Grids.BloqueActual--;
+            InicializarPaginas();
+        }
+    }
+    
+    function paginas(event) {
+        event.preventDefault();
+        var paginaSeleccionada = $(this).text();
+        $("#pagina-selecionada").val(paginaSeleccionada); 
+        $("#formEstablecimientos").submit();
+    }
+    
+    function raquo (event) {
+        event.preventDefault();
+        if(EDUCAR.Grids.BloqueActual < (EDUCAR.Grids.TotalDeBloques - 1)) {
+            EDUCAR.Grids.BloqueActual++;
+            InicializarPaginas();
+        }
+    }
+
+    function seleccionarTag (event) {
+        event.preventDefault();
+        var valor = $(this).attr("id");
+        var categoria = $(this).closest(".categoria");
+        var nombreCategoria = categoria.attr("id");
+        $("#filtro-"+nombreCategoria).val(valor); 
+        $("#formEstablecimientos").submit();
+    }
+    
+    function desSeleccionarTag (event) {
+        event.preventDefault();
+        var nombreCategoria = $(this).attr("id");
+        $("#filtro-"+nombreCategoria).val(''); 
+        $("#formEstablecimientos").submit();
+    }
+
+    $(document).ready(function () {
+        EDUCAR.Grids.PaginaActual = @Model.Pagina;
+        EDUCAR.Grids.BloqueActual = 0;
+        EDUCAR.Grids.TotalDePaginas = @Model.TotalDePaginas;
+        EDUCAR.Grids.TotalDeBloques = Math.ceil(EDUCAR.Grids.TotalDePaginas / EDUCAR.Grids.TamañoDeBloque);
+        
+        $("#puntaje-mayor").click(function(event) {
+            event.preventDefault();
+            $("#orden-selecionado").val('@Ordenamiento.MayorPuntaje');
+            $("#formEstablecimientos").submit();
+        });
+        
+        $("#puntaje-menor").click(function (event) {
+            event.preventDefault();
+            $("#orden-selecionado").val('@Ordenamiento.MenorPuntaje');
+            $("#formEstablecimientos").submit();
+        });
+        
+        $("#nombre-ascendente").click(function (event) {
+            event.preventDefault();
+            $("#orden-selecionado").val('@Ordenamiento.NombreAscendente');
+            $("#formEstablecimientos").submit();
+        });
+        
+        $("#nombre-descendente").click(function (event) {
+            event.preventDefault();
+            $("#orden-selecionado").val('@Ordenamiento.NombreDescendente');
+            $("#formEstablecimientos").submit();
+        });
+
+        InicializarPaginas();
+        
+    });
+</script>

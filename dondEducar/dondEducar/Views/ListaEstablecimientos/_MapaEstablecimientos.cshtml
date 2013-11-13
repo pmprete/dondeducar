@@ -1,0 +1,51 @@
+﻿@model  dondEducar.ViewModel.ListaEstablecimientosViewModel
+
+@*<script src="http://servicios.usig.buenosaires.gov.ar/usig-js/3.0/usig.MapaInteractivo.min.js" type="text/javascript"></script> 
+<script src="http://servicios.usig.buenosaires.gov.ar/usig-js/3.0/usig.Punto.min.js" type="text/javascript"></script> 
+ *@   
+
+ <div id="mapa-completo" class="mapa-completo" style="height:500px; width: 100%">
+ </div>
+
+<script type="text/javascript">
+    
+    var nivelEducativo = $("#filtro-NivelEducativo").val();
+    var gestion =  $("#filtro-Gestion").val();
+    var titulo =  $("#filtro-Titulo").val();
+    var tipoDeEstablecimiento =  $("#filtro-TipoDeEstablecimiento").val();
+    
+    $(document).ready(function () {
+        
+        var markers = new L.MarkerClusterGroup();
+        var geoJsonFeature = @Html.Raw(Model.GeoJsonEstablecimientos);
+        var geoJsonLayer = L.geoJson(geoJsonFeature, {
+            style: function(feature) {
+                return { color: feature.properties.color };
+            },
+            onEachFeature: function(feature, layer) {
+                layer.bindPopup( '<a href="../Establecimiento?' + feature.properties.id +'">'
+                    + '<h4>' + feature.properties.nombre + '</h4></a>'
+                    + '<strong>Nivel Educativo: </strong>' + feature.properties.nivelTipo + '<br />'
+                    + '<strong>Direccion: </strong>' + feature.properties.direccion + '<br />'
+                    + '<strong>Likes: </strong>' + feature.properties.likes + '<br />'
+                );
+            }
+        });
+        
+        markers.addLayer(geoJsonLayer);
+
+        var titleLayer = L.tileLayer('http://{s}.tile.cloudmade.com/8967791e9dc94b14b46d61c08e9e0d41/997/256/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
+        });
+        
+        var map = L.map('mapa-completo', {
+            center: new L.LatLng(-34.599722, -58.381944),
+            zoom: 11,
+            minZoom:12,
+            maxZoom:17,
+            layers: [markers, titleLayer],
+        });
+        
+
+    });
+</script>

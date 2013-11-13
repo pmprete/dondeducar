@@ -7,12 +7,15 @@ using System.Web.Mvc;
 using FourSquare.SharpSquare.Core;
 using FourSquare.SharpSquare.Entities;
 using MongoDB.Driver;
+using NLog;
 using dondEducar.Models;
 
 namespace dondEducar.Controllers
 {
     public abstract class BaseController : Controller
     {
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
         protected BaseController()
         {
             var url = new MongoUrl(ConnectionString());
@@ -96,7 +99,7 @@ namespace dondEducar.Controllers
                     }
                 }
                 parametros.Add("categoryId", String.Join(",", categorias));
-
+                Logger.Debug("Hago un Search Venues");
                 var listaDeLugares = sharpSquare.SearchVenues(parametros);
 
                 Venue lugar = null;
@@ -132,15 +135,15 @@ namespace dondEducar.Controllers
                             venue.Add("primaryCategoryId", "4d4b7105d754a06372d81259");
                         }
                     }
-
+                    Logger.Debug("Agrego un Venue");
                     fourSquareVenue = sharpSquare.AddVenue(venue);
                     return fourSquareVenue;
                 }
-
+                Logger.Debug("Hago un getvenue por Id");
                 fourSquareVenue = sharpSquare.GetVenue(lugar.id);
                 return fourSquareVenue;
             }
-
+            Logger.Debug("Hago un getvenue por Id que ya tengo guardada");
             fourSquareVenue = sharpSquare.GetVenue(establecimiento.FourSquareVenueId);
             return fourSquareVenue;
         }

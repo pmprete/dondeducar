@@ -22,6 +22,10 @@ namespace dondEducar
                 "~/Content/foursquare-main.css",
                 "~/Content/foursquare-venue.css"));
 
+            bundles.Add(new ScriptBundle("~/Content/leaflet").Include(
+                       //"~/Content/leaflet.css",
+                       "~/Content/MarkerCluster.css",
+                       "~/Content/MarkerCluster.Default.css"));
             
             //****************************** JS *************************************
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
@@ -29,13 +33,16 @@ namespace dondEducar
                         "~/Scripts/jquery-ui-{version}.js",
                         "~/Scripts/jquery.unobtrusive*",
                         "~/Scripts/jquery.validate*"));
-
-    
+            
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                        "~/Scripts/bootstrap.js"));
             
             bundles.Add(new ScriptBundle("~/bundles/underscore").Include(
-                      "~/Scripts/underscore-min.js"));
+                    "~/Scripts/underscore-min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/leaflet").Include(
+                    //"~/Scripts/leaflet.js",
+                    "~/Scripts/leaflet.markercluster-src.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/educar").Include(
                        "~/Scripts/educar.js"));

@@ -4,12 +4,14 @@ using System.Net;
 using System.Text;
 using System.IO;
 using FourSquare.SharpSquare.Entities;
+using NLog;
 using Newtonsoft.Json;
 
 namespace FourSquare.SharpSquare.Core
 {
     public class SharpSquare
     {
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
         private enum HttpMethod
         {
             GET,
@@ -48,24 +50,24 @@ namespace FourSquare.SharpSquare.Core
 
         private string Request(string url, HttpMethod httpMethod, string data)
         {
-            string result = string.Empty;
+            var result = string.Empty;
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
             httpWebRequest.Method = httpMethod.ToString();
 
             if (data != null)
             {
-                byte[] bytes = UTF8Encoding.UTF8.GetBytes(data.ToString());
+                var bytes = Encoding.UTF8.GetBytes(data);
                 httpWebRequest.ContentLength = bytes.Length;
-                Stream stream = httpWebRequest.GetRequestStream();
+                var stream = httpWebRequest.GetRequestStream();
                 stream.Write(bytes, 0, bytes.Length);
                 stream.Dispose();
             }
-            
+            Logger.Debug("Hago un request al url" + url + "con la data" + data);
             var httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
             var reader = new StreamReader(httpWebResponse.GetResponseStream());
             result = reader.ReadToEnd();
             reader.Dispose();
-
+            Logger.Debug("Response:" + result);
             return result;
         }
 
@@ -200,6 +202,16 @@ namespace FourSquare.SharpSquare.Core
         public string GetAuthenticateUrl(string redirectUri)
         {
             return string.Format("{0}?client_id={1}&response_type=code&redirect_uri={2}", authenticateUrl, clientId, redirectUri);
+        }
+
+        public string GetAuthenticateUrl(string redirectUri, string display)
+        {
+            return string.Format("{0}?client_id={1}&response_type=code&redirect_uri={2}&display={3}", authenticateUrl, clientId, redirectUri,display);
+        }
+
+        public string GetAuthenticateUrlPopUp(string redirectUri)
+        {
+            return GetAuthenticateUrl(redirectUri, "webpopup");
         }
 
         public string GetAccessToken(string redirectUri, string code)
