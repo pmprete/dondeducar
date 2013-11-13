@@ -278,7 +278,6 @@ C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Microsoft.Data.Edm.
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Microsoft.Data.OData.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
-C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Microsoft.Web.WebPages.OAuth.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\MongoDB.Bson.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\MongoDB.Driver.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Newtonsoft.Json.dll
@@ -314,7 +313,6 @@ C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\System.Web.WebPages
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\System.Web.WebPages.Deployment.xml
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\System.Web.WebPages.Razor.xml
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\WebMatrix.Data.xml
-C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Microsoft.Web.WebPages.OAuth.xml
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\WebMatrix.WebData.xml
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\System.Web.Http.OData.xml
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Microsoft.Data.Edm.xml

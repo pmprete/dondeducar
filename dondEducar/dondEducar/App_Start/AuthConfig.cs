@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Microsoft.Web.WebPages.OAuth;
 using dondEducar.Models;
 
 namespace dondEducar
@@ -22,9 +21,9 @@ namespace dondEducar
             //    consumerKey: "",
             //    consumerSecret: "");
 
-            OAuthWebSecurity.RegisterFacebookClient(
-                appId: "558824540867090",
-                appSecret: "8ee9acb7c11f1c72046562803844dfdb");
+            //OAuthWebSecurity.RegisterFacebookClient(
+            //    appId: "558824540867090",
+            //    appSecret: "8ee9acb7c11f1c72046562803844dfdb");
 
             //OAuthWebSecurity.RegisterGoogleClient();
         }
