@@ -256,6 +256,8 @@ C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\bin\zh-Hant\System.Spat
 C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.csprojResolveAssemblyReference.cache
 C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.dll
 C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.pdb
+C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\bin\NLog.dll
+C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\bin\NLog.xml
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\dondEducar.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\dondEducar.pdb
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Antlr3.Runtime.dll
@@ -267,6 +269,7 @@ C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Microsoft.Web.Mvc.F
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\MongoDB.Bson.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\MongoDB.Driver.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Newtonsoft.Json.dll
+C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\NLog.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\SharpSquare.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\System.Net.Http.Formatting.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\System.Spatial.dll
@@ -289,6 +292,7 @@ C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\CsvHelper.xml
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\MongoDB.Bson.xml
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\MongoDB.Driver.xml
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Newtonsoft.Json.xml
+C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\NLog.xml
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\System.Net.Http.Formatting.xml
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\System.Web.Helpers.xml
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\System.Web.Http.xml
@@ -334,5 +338,3 @@ C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\zh-Hant\System.Spat
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.csprojResolveAssemblyReference.cache
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.dll
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\obj\Debug\dondEducar.pdb
-C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\bin\NLog.dll
-C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\bin\NLog.xml
