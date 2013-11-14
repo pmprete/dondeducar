@@ -19,9 +19,26 @@ namespace dondEducar.Controllers
             return View("Index");
         }
 
+   
+        public ActionResult CerrarSesion()
+        {
+            var sharpSquare = (SharpSquare)Session["SharpSquare"];
+            const string accessToken = "";
+            Session["AccessToken"] = accessToken;
+            sharpSquare.SetAccessToken(accessToken);
+           
+            return View("Index");
+        }
+
+
         public ActionResult Informacion()
         {
             return View("Informacion");
+        }
+
+        public ActionResult Donaciones()
+        {
+            return View("Donaciones");
         }
 
         public ActionResult Contacto()

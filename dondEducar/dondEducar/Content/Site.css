@@ -240,7 +240,7 @@ h3.select {
         float: left;
         color: #357EBD;
         /*background-color: #202020;*/
-        background-image: linear-gradient(to top, #202020 80%, #CCCCCC 100%);
+        background-image: linear-gradient(to top, #202020 80%, #777777 100%);
     }
 
     .establecimientos li .contenido {
@@ -350,3 +350,23 @@ h3.select {
     height: 80px;
     background-color: black;
 }
+
+
+.bqstart {
+     float: left;
+     height: 45px;
+     margin-top: -20px;
+     padding-top: 45px;
+     margin-bottom: -50px;
+     font-size: 700%;
+     color: #cccccc;
+ }
+
+ .bqend {
+     float: right;
+     height: 25px;
+     margin-top: 0px;
+     padding-top: 45px;
+     font-size: 700%;
+     color: #cccccc;
+ }
