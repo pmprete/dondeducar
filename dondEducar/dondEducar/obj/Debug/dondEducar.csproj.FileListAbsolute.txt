@@ -342,7 +342,6 @@ C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\bootstrap-t
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\bootstrap-theme.min.css
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\bootstrap.css
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\bootstrap.min.css
-C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\fonts\glyphicons-halflings-regular.svg
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\foursquare-main.css
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\foursquare-venue.css
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\foursquare\activitystream-sprite@2x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png
@@ -387,10 +386,6 @@ C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\MarkerClust
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Scripts\bootstrap.js
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Scripts\bootstrap.min.js
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Scripts\educar.js
-C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\fonts\glyphicons-halflings-regular.woff
-C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\fonts\glyphicons-halflings-regular.ttf
-C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\fonts\glyphicons-halflings-regular.eot
-C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\fonts\dk_crayon_crumble-webfont.woff
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\foursquare\foursquare-logo-border.eps
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\foursquare\foursquare-logo.eps
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\foursquare\onecolor.eps
@@ -415,3 +410,8 @@ C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Scripts\_references
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Scripts\slickgrid.less
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Scripts\jquery-1.9.1.intellisense.js
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Scripts\jquery.validate-vsdoc.js
+C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\fonts\glyphicons-halflings-regular.svg
+C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\fonts\glyphicons-halflings-regular.woff
+C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\fonts\glyphicons-halflings-regular.ttf
+C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\fonts\glyphicons-halflings-regular.eot
+C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\fonts\dk_crayon_crumble-webfont.woff
