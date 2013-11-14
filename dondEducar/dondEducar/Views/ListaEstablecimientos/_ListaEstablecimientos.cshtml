@@ -19,7 +19,12 @@
                             <a class="pull-left" href="@Url.Action("Establecimiento", "Establecimiento", new { EstablecimientoId = establecimiento.Id })">
                                 <div class="media-object puntaje">
                                     <div style="font-size: 70px; text-align: center;">@establecimiento.Likes</div>
-                                    <div style="text-align: center;">Me gusta</div>
+                                    <div style="text-align: center;">
+                                        <span>
+                                            <img width="16" height="16" data-retina-url="@Url.Content("~/Content/foursquare/poweredByFoursquare_36x36.png")" alt="foursquare " src="@Url.Content("~/Content/foursquare/poweredByFoursquare_16x16.png")" /> 
+                                            Me gusta 
+                                        </span>
+                                    </div>
                                 </div>
                             </a>
 
@@ -91,9 +96,10 @@
         }
     </ul>
 </div>
-
-<ul id="pager" class="pagination">
-</ul>
+<div class="content-wrapper">
+    <ul id="pager" class="pagination">
+    </ul>
+</div>
 
 <script type="text/javascript">
    

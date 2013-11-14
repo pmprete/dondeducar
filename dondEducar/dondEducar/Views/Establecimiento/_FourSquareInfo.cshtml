@@ -5,7 +5,6 @@
 <div class="venueDetail">
     <div class="wideColumn">
         @*<img  class="separator" data-retina-url="https://ss0.4sqi.net/img/footer-top@2x-ef6ccfa1b4ce50e9257b922d1c8935ac.png" alt="" src="https://ss1.4sqi.net/img/footer-top-fa1353033c43b8d9c1ea995d2b66371e.png">*@
-        @*<img  alt="" src="@Url.Content("~/Content/foursquare/poweredByFoursquare_gray.png")">*@
         @*<div class="photosSection">
             <ul class="photos">
                 <li data-photoid="4e7bc1fa62e1b601280a939c" class="photo photoWithContent">
@@ -104,7 +103,7 @@
                     </div>
                     <div id="dislike" title="" class="comboRatingButtonDislike dislike @((Model.dislike)? "active": "")"><span class="icon"></span></div>
                 </div>
-                <a href="@Model.canonicalUrl" target="_blank">Ver en foursquare</a>
+                <a href="@Model.canonicalUrl" target="_blank">Ver en <img height="20" alt="foursquare" src="@Url.Content("~/Content/foursquare/foursquare-logo.png")" /></a>
                 @*<div title="" class="saveButton saveToListAction inactive">
                     <span class="buttonLeft">
                         <img width="16" height="16" data-retina-url="https://ss1.4sqi.net/img/lists/button_icon_saveribbon@2x-d809e5af932a66d1725c40dfddcc2855.png" src="https://ss0.4sqi.net/img/lists/button_icon_saveribbon-9c5999c47028ca670954422ee53e7d96.png"></span>
@@ -209,7 +208,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     </div>
 </div>
 

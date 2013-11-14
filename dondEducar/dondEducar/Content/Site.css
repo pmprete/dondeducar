@@ -8,23 +8,25 @@
    designer's written permission. However, feel free to study the CSS and use 
    techniques you learn from it elsewhere. */
 
-/*@colorPrimario: #444444;*/
-
 html, body {
     /*background: url(images/bg.gif) left top repeat-y #F06;*/
     /*background-attachment: fixed;*/
     height: 100%;
     padding: 0;
     font-family: "Trebuchet MS", Tahoma, Lucida Sans, Arial, Verdana, Helvetica, sans-serif;
-    background-color: #444444;
+    /*background-color: #eAEAEA;*/
 }
 
 .header-color {
-    color: #eAEAEA;
+    color: #444444;
+}
+
+.panel-primary > .panel-heading {
+    background-image: linear-gradient(to bottom, #357EBD 0%, #353EBD 100%);
 }
 
 abbr, abbr {
-    border-bottom: 1px dotted #FFE6F0;
+    border-bottom: 1px dotted #eAEAEA;
 }
 
 header h1, header h2, .sidebar h3 {
@@ -79,7 +81,7 @@ div.main h3 {
     text-transform: lowercase;
 }
 
-.sidebar p {
+/*.sidebar p {
     font-size: 14px;
     color: #000;
     line-height: 1.5em;
@@ -91,22 +93,12 @@ div.main h3 {
 
     .sidebar a:hover {
         color: #FFF;
-    }
+    }*/
 
 div.main abbr {
     border-bottom: 1px dotted #000;
 }
-/*
-footer {
-    display: block;
-    background: url(images/hbg.gif) left top repeat #000;
-    padding: 3px;
-    font-size: 12px;
-    line-height: 20px;
-    text-align: center;
-    margin-bottom: 10px;
-    overflow: hidden;
-}*/
+
 
 .body-wrapper {
     min-height: 100%;
@@ -132,108 +124,20 @@ footer, .push {
         }
 
 
-/*.sidebar {
-    top: 0;
-    height: 100%;
-    font-family: Baskerville, Georgia, Garamond, Times New Roman, serif;
-}
-
-    .sidebar.selected {
-        background-color: #F06;
-        color: #FFF;
-    }
-
-    .sidebar.options {
-        background-color: #FFF;
-    }
-
-    .sidebar ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .sidebar ul {
-        list-style: none;
-    }
-
-        .sidebar ul li {
-            border-bottom: 1px solid #CCC;
-        }
-
-            .sidebar ul li a {
-                display: block;
-                padding: 5px;
-                padding-left: 20px;
-                padding-right: 20px;
-                font-weight: bold;
-                font-size: 12px;
-                text-transform: uppercase;
-                text-decoration: none;
-            }
-
-    .sidebar.selected ul li a {
-        color: #FFF;
-    }
-
-    .sidebar.options ul li a {
-        color: #F06;
-    }
-
-
-    .sidebar ul li a:hover {
-        background-color: #000;
-        color: #FFF;
-    }
-
-    .sidebar div.design-selection ul li {
-        padding: 5px;
-        padding-left: 20px;
-        padding-right: 20px;
-        font-size: 10px;
-    }
-
-        .sidebar div.design-selection ul li a {
-            padding: 0;
-            font-size: 12px;
-        }
-
-            .sidebar div.design-selection ul li a:hover {
-                color: #000;
-                background-color: #FFF;
-            }
-
-            .sidebar div.design-selection ul li a.designer-name {
-                display: inline;
-                text-transform: none;
-                font-size: 10px;
-                color: #000;
-            }
-
-                .sidebar div.design-selection ul li a.designer-name:hover {
-                    text-decoration: underline;
-                }
-
-    .sidebar div.design-selection {
-        display: block;
-        margin-top: 10px;
-    }
-
-        .sidebar div.design-selection h3 {
-            display: block;
-            height: 35px;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        .sidebar div.design-selection h3 {
-            white-space: nowrap;
-            overflow: hidden;
-        }*/
-
-
 /* All levels of nav */
+.bs-sidenav {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*text-shadow: 0 1px 0 #fff;*/
+    /*background-color: #000000;*/
+    background-image: linear-gradient(to left, #444444 0%, #101010 100%);
+    border-radius: 5px;
+}
+h3.select {
+    color: #CCCCCC
+}
 .bs-sidebar .nav > li > a {
   display: block;
   color: #716b7a;
@@ -309,12 +213,21 @@ footer, .push {
     float: right;
     margin-right: 20%;
 }
+.establecimiento {
+    background-color: #808080;
+}
 
+.establecimientos {
+    display: block;
+}
+    .establecimientos ul {
+        padding: 0px;
+    }
 .establecimientos li {
-    float: left;
+    
     min-height: 170px;
     margin: 5px 5px 0 0;
-    position: relative;
+    /*position: relative;*/
     min-width: 360px;
     width: 80%;
     list-style-type: none;
@@ -325,7 +238,9 @@ footer, .push {
         height: 150px;
         border: 1px solid;
         float: left;
-        background-color: #ebe4e4;
+        color: #357EBD;
+        /*background-color: #202020;*/
+        background-image: linear-gradient(to top, #202020 80%, #CCCCCC 100%);
     }
 
     .establecimientos li .contenido {
@@ -333,12 +248,7 @@ footer, .push {
         min-height: 170px;
         min-width: 200px;
     }
-
-.panel-title {
-    color: white;
-}
-
-.establecimientos li .contenido span {
+    .establecimientos li .contenido span {
     display: block;
     float: left;
     margin: 10px 0 0 10px;
@@ -348,6 +258,12 @@ footer, .push {
     color: #666;
     width: 90%;
 }
+
+.panel-title {
+    color: white;
+}
+
+
 
 .paginas a {
     margin: 2px;
@@ -404,14 +320,14 @@ footer, .push {
     display: table !important;
     font-size: 35px !important;
     line-height: 1em;
-    font-family: 'dk_crayon_crumbleregular';
-    color: #FFF;
+    font-family: 'dk_crayon_crumble-webfont';
     font-weight: bold;
     text-decoration: none;
     padding: 0 !important;
     margin: 0 !important;
+    /*color: #E4DAD4;
     transition: color .2s;
-    -webkit-transition: color .2s;
+    -webkit-transition: color .2s;*/
 }
 
     .btnInscribir span {
@@ -419,13 +335,14 @@ footer, .push {
         height: 100%;
         display: table-cell;
         vertical-align: middle;
+        color: #101010;
     }
 
         .btnInscribir span strong {
             font-family: Gotham;
             font-size: 20px;
             font-weight: normal;
-            color: #E4DA00;
+            color: #E4DAD4;
         }
 
 

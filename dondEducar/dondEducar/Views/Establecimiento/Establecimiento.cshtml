@@ -10,88 +10,89 @@
 
 @Html.AntiForgeryToken()
 
+<div class="establecimiento">
+    <div class="row">
+        <div class="media col-md-8 col-md-offset-2">
 
-<div class="row">
-    <div class="media col-md-8 col-md-offset-2">
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    <h2>@Html.DisplayFor(model => model.Establecimiento.Nombre)</h2>
-                </h3>
-            </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="media col-md-3 col-md-offset-1">
-                        <div id="foto">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <h2>@Html.DisplayFor(model => model.Establecimiento.Nombre)</h2>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="media col-md-3 col-md-offset-1">
+                            <div id="foto">
+                            </div>
                         </div>
-                    </div>
-                    <div class="media-body col-md-6">
-                        <div class="table-responsive">
-                            <table class="table">
-                                @* <tr>
+                        <div class="media-body col-md-6">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    @* <tr>
                     <th>Atributo</th>
                     <th>Valor</th>
                 </tr>*@
-                                <tr>
-                                    <td></td>
-                                    <td>@Html.LabelFor(model => model.Establecimiento.Codigo)</td>
-                                    <td>@Html.DisplayFor(model => model.Establecimiento.Codigo)</td>
-
-                                </tr>
-
-                                <tr class="gestion">
-                                    <td></td>
-                                    <td>@Html.LabelFor(model => model.Establecimiento.Gestion)</td>
-                                    <td>@Html.DisplayFor(model => model.Establecimiento.Gestion.Vista)</td>
-                                </tr>
-
-                                @if (@Model.Establecimiento.Titulo != null)
-                                {
-                                    <tr class="titulo">
+                                    <tr>
                                         <td></td>
-                                        <td>@Html.LabelFor(model => model.Establecimiento.Titulo)</td>
-                                        <td>@Html.DisplayFor(model => model.Establecimiento.Titulo.Vista)</td>
-                                    </tr>
-                                }
+                                        <td>@Html.LabelFor(model => model.Establecimiento.Codigo)</td>
+                                        <td>@Html.DisplayFor(model => model.Establecimiento.Codigo)</td>
 
-                                <tr class="nivel-educativo">
-                                    <td></td>
-                                    <td>@Html.Label("Nivel Educativo - Tipo de Establecimiento")</td>
-                                    <td>@String.Join(" | ", Model.Establecimiento.NivelTipo)</td>
-                                </tr>
+                                    </tr>
 
-                                @if (!String.IsNullOrWhiteSpace(@Model.Establecimiento.Telefonos))
-                                {
-                                    <tr class="telefonos">
+                                    <tr class="gestion">
                                         <td></td>
-                                        <td>@Html.LabelFor(model => model.Establecimiento.Telefonos)</td>
-                                        <td>@Html.DisplayFor(model => model.Establecimiento.Telefonos)</td>
+                                        <td>@Html.LabelFor(model => model.Establecimiento.Gestion)</td>
+                                        <td>@Html.DisplayFor(model => model.Establecimiento.Gestion.Vista)</td>
                                     </tr>
-                                }
-                                @if (!String.IsNullOrWhiteSpace(@Model.Establecimiento.Email))
-                                {
-                                    <tr class="email">
+
+                                    @if (@Model.Establecimiento.Titulo != null)
+                                    {
+                                        <tr class="titulo">
+                                            <td></td>
+                                            <td>@Html.LabelFor(model => model.Establecimiento.Titulo)</td>
+                                            <td>@Html.DisplayFor(model => model.Establecimiento.Titulo.Vista)</td>
+                                        </tr>
+                                    }
+
+                                    <tr class="nivel-educativo">
                                         <td></td>
-                                        <td>@Html.LabelFor(model => model.Establecimiento.Email)</td>
-                                        <td>@Html.DisplayFor(model => model.Establecimiento.Email)</td>
+                                        <td>@Html.Label("Nivel Educativo - Tipo de Establecimiento")</td>
+                                        <td>@String.Join(" | ", Model.Establecimiento.NivelTipo)</td>
                                     </tr>
-                                }
-                                @if (!String.IsNullOrWhiteSpace(@Model.Establecimiento.Direccion))
-                                {
-                                    <tr class="direccion">
-                                        <td></td>
-                                        <td>@Html.LabelFor(model => model.Establecimiento.Direccion)</td>
-                                        <td>@Html.DisplayFor(model => model.Establecimiento.Direccion)</td>
-                                    </tr>
-                                }
-                            </table>
-                            
+
+                                    @if (!String.IsNullOrWhiteSpace(@Model.Establecimiento.Telefonos))
+                                    {
+                                        <tr class="telefonos">
+                                            <td></td>
+                                            <td>@Html.LabelFor(model => model.Establecimiento.Telefonos)</td>
+                                            <td>@Html.DisplayFor(model => model.Establecimiento.Telefonos)</td>
+                                        </tr>
+                                    }
+                                    @if (!String.IsNullOrWhiteSpace(@Model.Establecimiento.Email))
+                                    {
+                                        <tr class="email">
+                                            <td></td>
+                                            <td>@Html.LabelFor(model => model.Establecimiento.Email)</td>
+                                            <td>@Html.DisplayFor(model => model.Establecimiento.Email)</td>
+                                        </tr>
+                                    }
+                                    @if (!String.IsNullOrWhiteSpace(@Model.Establecimiento.Direccion))
+                                    {
+                                        <tr class="direccion">
+                                            <td></td>
+                                            <td>@Html.LabelFor(model => model.Establecimiento.Direccion)</td>
+                                            <td>@Html.DisplayFor(model => model.Establecimiento.Direccion)</td>
+                                        </tr>
+                                    }
+                                </table>
+
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="container" class="col-md-9 col-md-offset-1">
-                    @Html.Partial("_FourSquareInfo", Model.Venue)
+                    <div id="container" class="col-md-9 col-md-offset-1">
+                        @Html.Partial("_FourSquareInfo", Model.Venue)
+                    </div>
                 </div>
             </div>
         </div>

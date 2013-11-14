@@ -1,4 +1,5 @@
-﻿@model  dondEducar.ViewModel.ListaEstablecimientosViewModel
+﻿@using dondEducar.ViewModel
+@model  dondEducar.ViewModel.ListaEstablecimientosViewModel
 
 <form id="formEstablecimientos" action="@Url.Action("ListaEstablecimientos", "ListaEstablecimientos")" method="post">
 
@@ -11,10 +12,10 @@
     @Html.HiddenFor(x => x.Filtro.TipoDeEstablecimiento.Valor, new { Id = "filtro-TipoDeEstablecimiento" })
     @Html.HiddenFor(x => x.Filtro.Titulo.Valor, new { Id = "filtro-Titulo" })
 
-    <ol class="breadcrumb">
+  @*  <ol class="breadcrumb">
         <li><a href="@Url.Action("Index", "Home")">Home</a></li>
         <li class="active">Nivel @Model.Filtro.NivelEducativo.Vista</li>
-    </ol>
+    </ol>*@
 
     <div class="row">
         <div class="options col-xs-6 col-md-3">
@@ -24,7 +25,7 @@
                     {
                         @*<div id="filtradas" class="design-selection">*@
                         <li>
-                            <h3>Filtrado por:</h3>
+                            <h3 class="select">Filtrado por:</h3>
                         </li>
                         if (Model.Filtro.Gestion.Vista != null)
                         {
@@ -64,7 +65,9 @@
                         foreach (var categoria in Model.Categorias)
                         {
                         <div id="@categoria.Nombre" class="design-selection categoria">
-                            <h3 class="select">@categoria.Vista</h3>
+                           <li>
+                                <h3 class="select">@categoria.Vista</h3>
+                            </li>
                             @foreach (var tag in categoria.Tags)
                             {
                                 <li class="tag">
@@ -89,7 +92,7 @@
 
 
         <div role="main" id="main" class="main col-xs-12 col-sm-6 col-md-9">
-            <div role="article" id="zen-explanation" class="explanation">
+          @*  <div role="article" id="zen-explanation" class="explanation">*@
                 <!-- Nav tabs -->
                 <ul id="tabs-vista" class="nav nav-tabs">
                     <li  @(Model.EsMapa != true ? "class=active" : "")>
@@ -106,17 +109,41 @@
                             </a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="ordenarDropdown">
                                 <li role="presentation">
-                                    <a id="puntaje-mayor" role="menuitem" tabindex="-1" href="#">Mayor puntaje</a>
+                                    <a id="puntaje-mayor" role="menuitem" tabindex="-1" href="#">
+                                        <span>Mayor puntaje </span>  
+                                        @if(Model.Orden == Ordenamiento.MayorPuntaje)
+                                        {
+                                            <span class="glyphicon glyphicon-ok"></span>
+                                        }
+                                    </a>
                                 </li>
                                 <li role="presentation">
-                                    <a id="puntaje-menor" role="menuitem" tabindex="-1" href="#">Menor Puntaje</a>
+                                    <a id="puntaje-menor" role="menuitem" tabindex="-1" href="#">
+                                        <span>Menor Puntaje</span>  
+                                         @if(Model.Orden == Ordenamiento.MenorPuntaje)
+                                        {
+                                            <span class="glyphicon glyphicon-ok"></span>
+                                        }
+                                    </a>
                                 </li>
                                 <li role="presentation" class="divider"></li>
                                 <li role="presentation">
-                                    <a id="nombre-ascendente" role="menuitem" tabindex="-1" href="#">Nombre ascendente</a>
+                                    <a id="nombre-ascendente" role="menuitem" tabindex="-1" href="#">
+                                        <span>  Nombre ascendente</span>  
+                                         @if(Model.Orden == Ordenamiento.NombreAscendente)
+                                        {
+                                            <span class="glyphicon glyphicon-ok"></span>
+                                        }
+                                    </a>
                                 </li>
                                 <li role="presentation">
-                                    <a id="nombre-descendente" role="menuitem" tabindex="-1" href="#">Nombre descendente</a>
+                                    <a id="nombre-descendente" role="menuitem" tabindex="-1" href="#">
+                                        <span>  Nombre descendente</span>  
+                                         @if(Model.Orden == Ordenamiento.NombreDescendente)
+                                        {
+                                            <span class="glyphicon glyphicon-ok"></span>
+                                        }
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -134,7 +161,7 @@
 
             </div>
         </div>
-    </div>
+   @* </div>*@
 </form>
 
 <script type="text/javascript">
