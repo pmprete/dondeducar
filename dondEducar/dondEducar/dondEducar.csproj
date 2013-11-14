@@ -185,52 +185,144 @@
     <Compile Include="ViewModel\IndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Content\foursquare-main.css" />
-    <Content Include="Content\foursquare-venue.css" />
-    <Content Include="Content\foursquare\activitystream-sprite%402x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png" />
-    <Content Include="Content\foursquare\activitystream-sprite-ac2267a377053841f4d13adc9444165b.png" />
-    <Content Include="Content\foursquare\button-loading-3bb46079e9415b490f318918f98337dc.gif" />
-    <Content Include="Content\foursquare\button_icon_saveribbon%402x-d809e5af932a66d1725c40dfddcc2855.png" />
-    <Content Include="Content\foursquare\button_icon_saveribbon-9c5999c47028ca670954422ee53e7d96.png" />
-    <Content Include="Content\foursquare\checkinon-black.png" />
-    <Content Include="Content\foursquare\checkinon-blue.png" />
-    <Content Include="Content\foursquare\checkinon-white.png" />
-    <Content Include="Content\foursquare\connect-black.png" />
-    <Content Include="Content\foursquare\connect-blue.png" />
-    <Content Include="Content\foursquare\connect-white.png" />
-    <Content Include="Content\foursquare\footer-top%402x-ef6ccfa1b4ce50e9257b922d1c8935ac.png" />
-    <Content Include="Content\foursquare\footer-top-fa1353033c43b8d9c1ea995d2b66371e.png" />
-    <Content Include="Content\foursquare\foursquare-logo.png" />
-    <Content Include="Content\foursquare\icon-16x16.png" />
-    <Content Include="Content\foursquare\icon-36x36.png" />
-    <Content Include="Content\foursquare\icon-512x512.png" />
-    <Content Include="Content\foursquare\icon-grey-link%402x-fe123a731d90ac73122629804f10445d.png" />
-    <Content Include="Content\foursquare\icon-grey-link-578061970634420cbe2544e90723a127.png" />
-    <Content Include="Content\foursquare\icon-tipcarat%402x-7e425b8090106b75eaa5e38ccac6bc05.png" />
-    <Content Include="Content\foursquare\logo-cae1f44bd6db94bf44d62c8d306ba199.png" />
-    <Content Include="Content\foursquare\poweredByFoursquare_16x16.png" />
-    <Content Include="Content\foursquare\poweredByFoursquare_36x36.png" />
-    <Content Include="Content\foursquare\poweredByFoursquare_gray.png" />
-    <Content Include="Content\images\bg.gif" />
-    <Content Include="Content\images\botonInicial.png" />
-    <Content Include="Content\images\botonOtros.png" />
-    <Content Include="Content\images\botonPrimario.png" />
-    <Content Include="Content\images\botonSecundario.png" />
-    <Content Include="Content\images\botonSuperior.png" />
-    <Content Include="Content\images\btn-inscribir01.png" />
-    <Content Include="Content\images\hbg.gif" />
-    <Content Include="Content\images\ll_archives.gif" />
-    <Content Include="Content\images\ll_resources.gif" />
-    <Content Include="Content\images\ll_selectadesign.gif" />
-    <Content Include="Content\images\logo.gif" />
-    <Content Include="Content\MarkerCluster.css" />
-    <Content Include="Content\MarkerCluster.Default.css" />
-    <Content Include="Content\MarkerCluster.Default.ie.css" />
+    <Content Include="Content\bootstrap-theme.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap-theme.min.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap.min.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare-main.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare-venue.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\activitystream-sprite%402x-cf6ef6eca23d7068696ae4b4ebb7b8ef.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\activitystream-sprite-ac2267a377053841f4d13adc9444165b.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\button-loading-3bb46079e9415b490f318918f98337dc.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\button_icon_saveribbon%402x-d809e5af932a66d1725c40dfddcc2855.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\button_icon_saveribbon-9c5999c47028ca670954422ee53e7d96.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\checkinon-black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\checkinon-blue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\checkinon-white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\connect-black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\connect-blue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\connect-white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\footer-top%402x-ef6ccfa1b4ce50e9257b922d1c8935ac.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\footer-top-fa1353033c43b8d9c1ea995d2b66371e.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\foursquare-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\icon-16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\icon-36x36.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\icon-512x512.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\icon-grey-link%402x-fe123a731d90ac73122629804f10445d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\icon-grey-link-578061970634420cbe2544e90723a127.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\icon-tipcarat%402x-7e425b8090106b75eaa5e38ccac6bc05.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\logo-cae1f44bd6db94bf44d62c8d306ba199.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\poweredByFoursquare_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\poweredByFoursquare_36x36.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\poweredByFoursquare_gray.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\bg.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\botonInicial.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\botonOtros.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\botonPrimario.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\botonSecundario.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\botonSuperior.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\btn-inscribir01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\hbg.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\ll_archives.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\ll_resources.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\ll_selectadesign.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\logo.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\MarkerCluster.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\MarkerCluster.Default.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\MarkerCluster.Default.ie.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -294,38 +386,88 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\educar.js" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\fonts\dk_crayon_crumble-webfont.woff" />
-    <Content Include="Content\foursquare\foursquare-logo-border.eps" />
-    <Content Include="Content\foursquare\foursquare-logo.eps" />
-    <Content Include="Content\foursquare\onecolor.eps" />
-    <Content Include="Content\foursquare\popularcling.pdf" />
-    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery-ui-1.10.3.js" />
-    <Content Include="Scripts\jquery-ui-1.10.3.min.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\leaflet.markercluster-src.js" />
-    <Content Include="Scripts\leaflet.markercluster.js" />
-    <Content Include="Scripts\slick.responsiveness.js" />
+    <Content Include="Scripts\bootstrap.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\bootstrap.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\educar.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\dk_crayon_crumble-webfont.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\foursquare-logo-border.eps">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\foursquare-logo.eps">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\onecolor.eps">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\foursquare\popularcling.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Scripts\jquery-1.9.1.intellisense.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Scripts\jquery-1.9.1.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\jquery-1.9.1.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\jquery-1.9.1.min.map">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Scripts\jquery.validate-vsdoc.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Scripts\jquery-ui-1.10.3.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\jquery-ui-1.10.3.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\jquery.validate.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\jquery.validate.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\jquery.validate.unobtrusive.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\leaflet.markercluster-src.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\leaflet.markercluster.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\slick.responsiveness.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Scripts\SlickGrid\Controls\slick.columnpicker.js" />
     <Content Include="Scripts\SlickGrid\Controls\slick.pager.js" />
     <Content Include="Scripts\SlickGrid\Plugins\slick.autotooltips.js" />
@@ -344,7 +486,9 @@
     <Content Include="Scripts\SlickGrid\slick.formatters.js" />
     <Content Include="Scripts\SlickGrid\slick.groupitemmetadataprovider.js" />
     <Content Include="Scripts\SlickGrid\slick.remotemodel.js" />
-    <Content Include="Scripts\underscore-min.js" />
+    <Content Include="Scripts\underscore-min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -354,8 +498,12 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Content\site.css" />
-    <Content Include="Scripts\_references.js" />
+    <Content Include="Content\site.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\_references.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\heroAccent.png" />
@@ -386,7 +534,9 @@
     <Content Include="Views\Home\Contacto.cshtml" />
     <Content Include="Views\channel.html" />
     <Content Include="Views\Establecimiento\_FourSquareInfo.cshtml" />
-    <Content Include="Scripts\slickgrid.less" />
+    <Content Include="Scripts\slickgrid.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

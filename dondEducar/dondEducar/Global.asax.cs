@@ -53,7 +53,7 @@ namespace dondEducar
 
             // Code that runs when a new session is started
             if (HttpContext.Current.Session["SharpSquare"] != null) return;
-            Logger.Error("redirectUri:"+redirectUri);
+            Logger.Error("redirectUri:" + redirectUri);
             var sharpSquare = new SharpSquare(ClientId, ClientSecret);
             var autenticateUrl = sharpSquare.GetAuthenticateUrl(redirectUri);
             Session["AutenticateUrl"] = autenticateUrl;
