@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Text;
 using System.IO;
@@ -421,7 +422,25 @@ namespace FourSquare.SharpSquare.Core
         /// </summary>
         public Venue AddVenue(Dictionary<string, string> parameters)
         {
-            return Post<Venue>("/venues/add", parameters).response["venue"];
+            Venue venue;
+            try
+            {
+                venue = Post<Venue>("/venues/add", parameters).response["venue"];
+            }catch(WebException webException)
+            {
+                var httpWebResponse = (HttpWebResponse)webException.Response;
+                if (httpWebResponse.StatusCode != HttpStatusCode.Conflict)
+                {
+                    throw webException;
+                }
+                var reader = new StreamReader(httpWebResponse.GetResponseStream());
+                var json = reader.ReadToEnd();
+                reader.Dispose();
+                var fourSquareResponse = JsonConvert.DeserializeObject<FourSquareDuplicatedResponse<DuplicatedVenue>>(json);
+                venue = fourSquareResponse.response.candidateDuplicateVenues.First();
+               
+            }
+            return venue;
         }
         
         /// <summary>
@@ -465,11 +484,11 @@ namespace FourSquare.SharpSquare.Core
         /// </summary>
         public List<Venue> GetManagedVenues (Dictionary<string, string> parameters)
         {
-            List<FourSquareEntityItems<Venue>> venueGroups = GetMultiple<FourSquareEntityItems<Venue>>("/venues/managed", parameters, true).response["venues"];
+            var venueGroups = GetMultiple<FourSquareEntityItems<Venue>>("/venues/managed", parameters, true).response["venues"];
 
-            List<Venue> venueList = new List<Venue>();
+            var venueList = new List<Venue>();
 
-            foreach (FourSquareEntityItems<Venue> venueItems in venueGroups)
+            foreach (var venueItems in venueGroups)
             {
                 venueList.AddRange(venueItems.items);
             }

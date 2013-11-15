@@ -137,6 +137,7 @@ namespace dondEducar.Controllers
                     }
                     Logger.Error("Agrego un Venue");
                     fourSquareVenue = sharpSquare.AddVenue(venue);
+                    fourSquareVenue = sharpSquare.GetVenue(fourSquareVenue.id);
                     return fourSquareVenue;
                 }
                 Logger.Error("Hago un getvenue por Id");

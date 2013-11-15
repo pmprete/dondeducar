@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\FourSquareDuplicatedResponse.cs" />
     <Compile Include="Core\FourSquareMultipleResponse.cs" />
     <Compile Include="Core\FourSquareResponse.cs" />
     <Compile Include="Core\FourSquareSingleResponse.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Checkin.cs" />
     <Compile Include="Entities\Comment.cs" />
+    <Compile Include="Entities\DuplicatedVenue.cs" />
     <Compile Include="Entities\Contact.cs" />
     <Compile Include="Entities\Dimension.cs" />
     <Compile Include="Entities\FourSquareEntity.cs" />

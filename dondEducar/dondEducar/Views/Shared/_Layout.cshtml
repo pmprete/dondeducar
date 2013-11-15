@@ -37,14 +37,14 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                @if (String.IsNullOrWhiteSpace((string)Session["AccessToken"]))
+                @*@if (String.IsNullOrWhiteSpace((string)Session["AccessToken"]))
                 {
                     <li><a href="@Session["AutenticateUrl"]"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Iniciar sesión</a></li>
                 }
                 else
                 {
                     <li><a href="@Url.Action("CerrarSesion","Home")"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Cerrar sesión</a></li>
-                }
+                }*@
                 @*<li><a href="@Url.Action("Contacto", "Home")"><span class="glyphicon glyphicon-earphone"></span>&nbsp;Contacto</a></li>*@
                 <li><a href="@Url.Action("Informacion", "Home")"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;Información</a></li>
                 <li><a href="@Url.Action("Donaciones", "Home")"><span class="glyphicon glyphicon-heart-empty"></span>&nbsp;Donaciones</a></li>
