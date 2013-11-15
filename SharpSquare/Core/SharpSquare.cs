@@ -49,7 +49,7 @@ namespace FourSquare.SharpSquare.Core
             return Request(url, httpMethod, null);
         }
 
-        private string Request(string url, HttpMethod httpMethod, string data)
+        private static string Request(string url, HttpMethod httpMethod, string data)
         {
             var result = string.Empty;
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
@@ -94,7 +94,7 @@ namespace FourSquare.SharpSquare.Core
 
         private FourSquareSingleResponse<T> GetSingle<T>(string endpoint, Dictionary<string, string> parameters) where T : FourSquareEntity
         {
-            return GetSingle<T>(endpoint, parameters, false);
+            return GetSingle<T>(endpoint, parameters, string.IsNullOrWhiteSpace(accessToken));
         }
 
         private FourSquareSingleResponse<T> GetSingle<T>(string endpoint, Dictionary<string, string> parameters, bool unauthenticated) where T : FourSquareEntity
@@ -133,7 +133,7 @@ namespace FourSquare.SharpSquare.Core
 
         private FourSquareMultipleResponse<T> GetMultiple<T>(string endpoint, Dictionary<string, string> parameters) where T : FourSquareEntity
         {
-            return GetMultiple<T>(endpoint, parameters, false);
+            return GetMultiple<T>(endpoint, parameters, string.IsNullOrWhiteSpace(accessToken));
         }
 
         private FourSquareMultipleResponse<T> GetMultiple<T>(string endpoint, Dictionary<string, string> parameters, bool unauthenticated) where T : FourSquareEntity

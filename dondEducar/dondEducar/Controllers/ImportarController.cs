@@ -28,7 +28,7 @@ namespace dondEducar.Controllers
             var establecimientos = Database.GetCollection<Establecimiento>("Establecimiento");
             var query = Query<Establecimiento>.Where(x => x.FourSquareVenueId == null);
             var listaEstablecimientos = establecimientos.Find(query);
-            var cantidad = 0;
+
             foreach (var escuela in listaEstablecimientos)
             {
                 var fourSquareVenue = BuscarAgregarEstablecimiento(escuela);
