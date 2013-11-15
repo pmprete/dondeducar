@@ -368,18 +368,12 @@ C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\foursquare\
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\foursquare\poweredByFoursquare_16x16.png
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\foursquare\poweredByFoursquare_36x36.png
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\foursquare\poweredByFoursquare_gray.png
-C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\bg.gif
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\botonInicial.png
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\botonOtros.png
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\botonPrimario.png
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\botonSecundario.png
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\botonSuperior.png
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\btn-inscribir01.png
-C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\hbg.gif
-C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\ll_archives.gif
-C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\ll_resources.gif
-C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\ll_selectadesign.gif
-C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\logo.gif
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\MarkerCluster.css
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\MarkerCluster.Default.css
 C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\MarkerCluster.Default.ie.css
@@ -490,3 +484,7 @@ C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\dond
 C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\logo-16x16.png
 C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\logo-32x32.png
 C:\Users\pprete\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\logo-350x300.png
+C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\dondeducar-logo.png
+C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\logo-16x16.png
+C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\logo-32x32.png
+C:\Users\Pedrow\Dropbox\dondeducar\dondEducar\dondEducar\bin\Content\images\logo-350x300.png

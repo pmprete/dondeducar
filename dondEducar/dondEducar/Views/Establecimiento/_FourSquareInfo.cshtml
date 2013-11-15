@@ -1,5 +1,5 @@
 ﻿@using dondEducar.Helpers
-@model FourSquare.SharpSquare.Entities.Venue
+@model dondEducar.ViewModel.FourSquareViewModel
 
 
 <div class="venueDetail">
@@ -38,18 +38,18 @@
             </div>*@
             <div class="venueAttributes">
                 <div class="venueDescription">
-                    @if (Model.description != null)
+                    @if (Model.Venue.description != null)
                     {
                         <p>Model.description</p>
                     }
                 </div>
-                @if (Model.url != null)
+                @if (Model.Venue.url != null)
                 {
                     <div class="linkBar">
                         <div class="venueLinkAttr venueWebsite">
                             <div class="linkAttrValue">
 
-                                <a target="_blank" data-source="venue-detail" rel="nofollow" itemprop="url" class="url" href="@Model.url">@Model.url.Replace("http://", "")</a>
+                                <a target="_blank" data-source="venue-detail" rel="nofollow" itemprop="url" class="url" href="@Model.Venue.url">@Model.Venue.url.Replace("http://", "")</a>
 
                             </div>
                             @*<div class="linkAttrKey">
@@ -75,7 +75,7 @@
                 </div>*@
                 <div class="attrBar">
                     <div itemtype="http://schema.org/AggregateRating" itemscope="" itemprop="aggregateRating" class="leftColumn">
-                        <span title="" class="venueScore neutral"><span itemprop="ratingValue">@Model.rating</span><sup>/<span itemprop="bestRating">10</span></sup></span>
+                        <span title="" class="venueScore neutral"><span itemprop="ratingValue">@Model.Venue.rating</span><sup>/<span itemprop="bestRating">10</span></sup></span>
                         <div class="ratingJustification">
                             <p>Rating</p>
                         </div>
@@ -83,27 +83,27 @@
                     <div class="rightColumn">
                         <div class="venueStat">
                             Total de likes<br />
-                            <strong data-count="@Model.likes.count" class="venueStatCount">@Model.likes.count</strong>
+                            <strong data-count="@Model.Venue.likes.count" class="venueStatCount">@Model.Venue.likes.count</strong>
                         </div>
                         <div class="venueStat">
                             Total de visitantes<br />
-                            <strong data-count="@Model.stats.usersCount" class="venueStatCount">@Model.stats.usersCount</strong>
+                            <strong data-count="@Model.Venue.stats.usersCount" class="venueStatCount">@Model.Venue.stats.usersCount</strong>
                         </div>
                         <div class="venueStat">
                             Total de check-ins<br />
-                            <strong data-count="@Model.stats.checkinsCount" class="venueStatCount">@Model.stats.checkinsCount</strong>
+                            <strong data-count="@Model.Venue.stats.checkinsCount" class="venueStatCount">@Model.Venue.stats.checkinsCount</strong>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="venueActions" id="actionBar">
                 <div id="likeDislikeControls" class="likeDislikeControls comboRatingButton">
-                    <div id="like" title="" class="comboRatingButtonLike like @((Model.like)? "active": "")">
+                    <div id="like" title="" class="comboRatingButtonLike like @((Model.Venue.like)? "active": "")">
                         <span class="icon"></span>
                     </div>
-                    <div id="dislike" title="" class="comboRatingButtonDislike dislike @((Model.dislike)? "active": "")"><span class="icon"></span></div>
+                    <div id="dislike" title="" class="comboRatingButtonDislike dislike @((Model.Venue.dislike)? "active": "")"><span class="icon"></span></div>
                 </div>
-                <a href="@Model.canonicalUrl" target="_blank">Ver en <img height="20" alt="foursquare" src="@Url.Content("~/Content/foursquare/foursquare-logo.png")" /></a>
+                <a class="btn btn-primary" href="@Model.Venue.canonicalUrl" target="_blank">Ver en <img height="18" alt="foursquare" src="@Url.Content("~/Content/foursquare/foursquare-logo.png")" /></a>
                 @*<div title="" class="saveButton saveToListAction inactive">
                     <span class="buttonLeft">
                         <img width="16" height="16" data-retina-url="https://ss1.4sqi.net/img/lists/button_icon_saveribbon@2x-d809e5af932a66d1725c40dfddcc2855.png" src="https://ss0.4sqi.net/img/lists/button_icon_saveribbon-9c5999c47028ca670954422ee53e7d96.png"></span>
@@ -121,8 +121,8 @@
             <div class="addTipsSection">
                 <img width="16" height="10" data-retina-url="https://ss1.4sqi.net/img/venuepage/icon-tipcarat@2x-7e425b8090106b75eaa5e38ccac6bc05.png" class="addTipCarat" alt="" src="https://ss0.4sqi.net/img/venuepage/icon-tipcarat-4dce032fec85e404a01b7c757ac85c5e.png">
                 <div class="addTipBlock">
-                    <a class="userImage" href="/user/71159749">
-                        <img width="32" height="32" data-retina-url="https://irs1.4sqi.net/img/user/64x64/71159749-5NPS52V2TNP3CMXI" title="Pedro P." class="avatar " alt="Pedro P." src="https://irs1.4sqi.net/img/user/32x32/71159749-5NPS52V2TNP3CMXI"></a>
+                    <a class="userImage" href="/user/@Model.User.id">
+                        <img width="32" height="32" data-retina-url="@(Model.User.photo.prefix)64x64@(Model.User.photo.suffix)" title="@Model.User.firstName @Model.User.lastName" class="avatar " alt="@Model.User.firstName @Model.User.lastName" src="@(Model.User.photo.prefix)32x32@(Model.User.photo.suffix)"></a>
                     <div class="addItemArea addTipArea">
                         <span class="input-holder">
                             <textarea id="tip-input" rows="4" tabindex="1" cols="55" class="formStyle">Deja un tip para los demás...</textarea>
@@ -162,14 +162,14 @@
                             </div>
                         </div>
                     </div>*@
-                    <h3 class="tipCount">@Model.tips.count Tips</h3>
+                    <h3 class="tipCount">@Model.Venue.tips.count Tips</h3>
                 </div>
                 <div class="tipsSectionBody">
                     <div id="tipsContainer">
                         <ul id="tipsList">
-                            @if (Model.tips != null)
+                            @if (Model.Venue.tips != null)
                             {
-                                foreach (var tip in Model.tips.groups.SelectMany(grupo => grupo.items).OrderByDescending(x=> x.createdAt))
+                                foreach (var tip in Model.Venue.tips.groups.SelectMany(grupo => grupo.items).OrderByDescending(x => x.createdAt))
                                 {
                                     <li data-id="@tip.id" class="tip">
                                         <div class="authorImage">
@@ -228,7 +228,7 @@
 
         var request = $.ajax({
             type: 'POST',
-            url: 'https://api.foursquare.com/v2/venues/@Model.id/' + paraActivar,
+            url: 'https://api.foursquare.com/v2/venues/@Model.Venue.id/' + paraActivar,
                 data: { oauth_token: '@Session["AccessToken"]', set: doUndo }
             });
         request.done(function () {
@@ -266,7 +266,7 @@
             var request = $.ajax({
                 type: 'POST',
                 url: 'https://api.foursquare.com/v2/tips/add',
-                data: { oauth_token: '@Session["AccessToken"]', venueId:'@Model.id', text:text }
+                data: { oauth_token: '@Session["AccessToken"]', venueId:'@Model.Venue.id', text:text }
                 });
             request.done(function () {
                 location.reload(true);

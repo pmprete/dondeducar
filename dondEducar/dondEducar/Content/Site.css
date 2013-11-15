@@ -25,6 +25,10 @@ html, body {
     background-image: linear-gradient(to bottom, #357EBD 0%, #353EBD 100%);
 }
 
+.panel-primary > .panel-heading > a:hover {
+    color: lightblue;
+}
+
 abbr, abbr {
     border-bottom: 1px dotted #eAEAEA;
 }
@@ -68,32 +72,6 @@ div.summary {
         div.summary a:hover {
             color: #000;
         }
-
-div.main h3 {
-    display: block;
-    background: url(images/hbg.gif) left top repeat #000;
-    margin: 0;
-    padding: 0;
-    padding-left: 20px;
-    color: #FFF;
-    font-size: 24px;
-    line-height: 50px;
-    text-transform: lowercase;
-}
-
-/*.sidebar p {
-    font-size: 14px;
-    color: #000;
-    line-height: 1.5em;
-}
-
-.sidebar a {
-    color: #000;
-}
-
-    .sidebar a:hover {
-        color: #FFF;
-    }*/
 
 div.main abbr {
     border-bottom: 1px dotted #000;
@@ -208,7 +186,9 @@ h3.select {
     list-style-type: none;
     box-shadow: 10px 10px 5px #343434;
 }
-
+.blocks > a:hover {
+    opacity: 0.8;
+}
 #tabs-vista li.dropdown {
     float: right;
     margin-right: 20%;
@@ -243,6 +223,12 @@ h3.select {
         background-image: linear-gradient(to top, #202020 80%, #777777 100%);
     }
 
+     .establecimientos li .puntaje:hover {
+        color: #359EFD;
+        background-image: linear-gradient(to top, #202020 80%, #888888 100%);
+         opacity: 0.95;
+    }
+
     .establecimientos li .contenido {
         margin-left: 186px;
         min-height: 170px;
@@ -258,12 +244,21 @@ h3.select {
     color: #666;
     width: 90%;
 }
+.tag > a {
+    display: block;
+    width: 100%;
+}
+
+.tag > a:hover {
+    /*background: #CCC;*/
+    background-image: linear-gradient(to left, #AAAAAA 0%, #101010 100%);
+    opacity: 0.8; /* CSS3 */
+    color: #55FEFF;
+}
 
 .panel-title {
     color: white;
 }
-
-
 
 .paginas a {
     margin: 2px;
@@ -277,27 +272,25 @@ h3.select {
     -o-border-radius: 3px;
     margin: 4px 0 0;
     padding: 0;
-    position: relative;
     text-shadow: 0 1px 1px #fff;
 }
 
-    .filtrado h4 {
-        text-align: left;
-        padding: 0px;
-        font-weight: bold;
-        font-size: 12px;
-        /*text-transform: uppercase;*/
-        margin: auto; /*10px 0 0 10px;*/
-    }
-
 .desfiltrar {
     cursor: pointer;
-    font-size: 6px;
+    color: #404040;
+    font-weight: bold;
+    height: 28px;
+    display: block;
+    width: 100%;
     opacity: .7;
     filter: alpha(opacity=70);
-    position: absolute;
-    right: 7px;
-    top: 5px;
+}
+.desfiltrar .left {
+    float: left;
+}
+
+.desfiltrar .right {
+    float: right;
 }
 
 .ch-icon-remove {
@@ -351,22 +344,3 @@ h3.select {
     background-color: black;
 }
 
-
-.bqstart {
-     float: left;
-     height: 45px;
-     margin-top: -20px;
-     padding-top: 45px;
-     margin-bottom: -50px;
-     font-size: 700%;
-     color: #cccccc;
- }
-
- .bqend {
-     float: right;
-     height: 25px;
-     margin-top: 0px;
-     padding-top: 45px;
-     font-size: 700%;
-     color: #cccccc;
- }

@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using FourSquare.SharpSquare.Core;
 using MongoDB.Driver.Builders;
 using dondEducar.Models;
 using dondEducar.ViewModel;
@@ -20,10 +21,18 @@ namespace dondEducar.Controllers
             establecimiento.Likes = fourSquareVenue.likes.count;
             establecimientos.Save(establecimiento);
 
+            var sharpSquare = (SharpSquare)Session["SharpSquare"];
+
+            var fourSquareUser = sharpSquare.GetUser("self");
+
             var establecimientoViewModel = new EstablecimientoViewModel
                 {
                     Establecimiento = establecimiento,
-                    Venue = fourSquareVenue,
+                    FourSquareViewModel = new FourSquareViewModel
+                                              {
+                                                  Venue = fourSquareVenue,
+                                                  User = fourSquareUser
+                                              }
                 };
 
             return View("Establecimiento", establecimientoViewModel);

@@ -10,7 +10,7 @@ namespace dondEducar.ViewModel
     public class EstablecimientoViewModel
     {
         public Establecimiento Establecimiento { get; set; }
-        public Venue Venue { get; set; }
+        public FourSquareViewModel FourSquareViewModel { get; set; }
         public string OauthToken { get; set; }
     }
 }

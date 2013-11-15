@@ -30,20 +30,20 @@
                         if (Model.Filtro.Gestion.Vista != null)
                         {
                             <li class="filtrado">
-                                <h4>@Model.Filtro.Gestion.Vista&nbsp;
                                 <a id="@Model.Filtro.Gestion.CategoriaNombre" class="desfiltrar" href="#" >
-                                    <span class="glyphicon glyphicon-remove"></span>
+                                    <span class="left">@Model.Filtro.Gestion.Vista</span>
+                                    <span class="glyphicon glyphicon-remove right"></span>
                                 </a>
-                                </h4>
+                                
                             </li>
                         }
 
                         if (Model.Filtro.TipoDeEstablecimiento.Vista != null)
                         {
                             <li class="filtrado">
-                                <h4>@Model.Filtro.TipoDeEstablecimiento.Vista</h4>
                                 <a id="@Model.Filtro.TipoDeEstablecimiento.CategoriaNombre"  class="desfiltrar" href="#" >
-                                    <span class="glyphicon glyphicon-remove"></span>
+                                    <span class="left">@Model.Filtro.TipoDeEstablecimiento.Vista</span>                                
+                                    <span class="glyphicon glyphicon-remove right"></span>
                                 </a>
                             </li>
                         }
@@ -51,9 +51,9 @@
                         if (Model.Filtro.Titulo.Vista != null)
                         {
                             <li class="filtrado">
-                                <h4>@Model.Filtro.Titulo.Vista</h4>
                                 <a id="@Model.Filtro.Titulo.CategoriaNombre"  class="desfiltrar" href="#" >
-                                    <span class="glyphicon glyphicon-remove"></span>
+                                    <span class="left">@Model.Filtro.Titulo.Vista</span>                                
+                                    <span class="glyphicon glyphicon-remove right"></span>
                                 </a>
                             </li>
                         }
