@@ -95,7 +95,7 @@ namespace dondEducar.Controllers
                     }
                     else
                     {
-                        categorias.Add("4d4b7105d754a06372d81259"); //Facultad y Universidad
+                        categorias.Add("4d4b7105d754a06372d81259"); //Facultades y Universidades
                     }
                 }
                 parametros.Add("categoryId", String.Join(",", categorias));
@@ -122,17 +122,17 @@ namespace dondEducar.Controllers
 
                     if (establecimiento.NivelTipo.Any(x => listaNiveles.Contains(x.NivelEducativo.Valor)))
                     {
-                        venue.Add("primaryCategoryId", "4bf58dd8d48988d13b941735");
+                        venue.Add("primaryCategoryId", "4bf58dd8d48988d13b941735"); //Colegios
                     }
                     else
                     {
                         if (establecimiento.NivelTipo.Any(x => x.NivelEducativo.Valor == "Otros"))
                         {
-                            venue.Add("primaryCategoryId", "4bf58dd8d48988d1f2931735"); ;
+                            venue.Add("primaryCategoryId", "4bf58dd8d48988d1f2931735"); //Artes Interpretativas
                         }
                         else
                         {
-                            venue.Add("primaryCategoryId", "4d4b7105d754a06372d81259");
+                            venue.Add("primaryCategoryId", "4bf58dd8d48988d198941735"); //Edificio Universitario
                         }
                     }
                     Logger.Error("Agrego un Venue");

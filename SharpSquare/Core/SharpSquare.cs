@@ -156,7 +156,6 @@ namespace FourSquare.SharpSquare.Core
             var queryString = string.Format("{0}{1}?{2}{3}", apiUrl, endpoint, oauthToken, serializedParameters);
             var json = Request(queryString, HttpMethod.GET);
             var fourSquareResponse = JsonConvert.DeserializeObject<FourSquareMultipleResponse<T>>(json);
-            //var fourSquareResponse = JsonConvert.DeserializeObject<FourSquareMultipleResponse<T>>(json);
             return fourSquareResponse;
         }
         
@@ -167,7 +166,7 @@ namespace FourSquare.SharpSquare.Core
 
         private void Post(string endpoint, Dictionary<string, string> parameters)
         {
-            var serializedParameters = "";
+            var serializedParameters = "&v=" + DateTime.Now.ToString("yyyyMMdd"); 
             if (parameters != null)
             {
                 serializedParameters = "&" + SerializeDictionary(parameters);
@@ -179,7 +178,7 @@ namespace FourSquare.SharpSquare.Core
 
         private FourSquareSingleResponse<T> Post<T>(string endpoint) where T : FourSquareEntity
         {
-            var serializedParameters = "";
+            var serializedParameters = "&v=" + DateTime.Now.ToString("yyyyMMdd"); ;
             var queryString = string.Format("{0}{1}?oauth_token={2}{3}", apiUrl, endpoint, accessToken,
                                             serializedParameters);
             var json = Request(queryString, HttpMethod.POST);
@@ -189,7 +188,7 @@ namespace FourSquare.SharpSquare.Core
 
         private FourSquareSingleResponse<T> Post<T>(string endpoint, Dictionary<string, string> parameters) where T : FourSquareEntity
         {
-            var serializedParameters = "&v=" + DateTime.Now.ToString("yyyyMMdd");
+            var serializedParameters = "&v=" + DateTime.Now.ToString("yyyyMMdd"); ;
             if (parameters != null)
             {
                 serializedParameters += "&" + SerializeDictionary(parameters);
