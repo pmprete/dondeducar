@@ -23,7 +23,7 @@
                 return { color: feature.properties.color };
             },
             onEachFeature: function(feature, layer) {
-                layer.bindPopup( '<a href="../Establecimiento?' + feature.properties.id +'">'
+                layer.bindPopup( '<a href="../Establecimiento/Establecimiento?establecimientoId=' + feature.properties.id +'">'
                     + '<h4>' + feature.properties.nombre + '</h4></a>'
                     + '<strong>Nivel Educativo: </strong>' + feature.properties.nivelTipo + '<br />'
                     + '<strong>Direccion: </strong>' + feature.properties.direccion + '<br />'

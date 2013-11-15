@@ -22,10 +22,10 @@ namespace dondEducar
                 "~/Content/foursquare-main.css",
                 "~/Content/foursquare-venue.css"));
 
-            /*bundles.Add(new ScriptBundle("~/Content/leaflet").Include(
-                       //"~/Content/leaflet.css",
-                       "~/Content/MarkerCluster.css",
-                       "~/Content/MarkerCluster.Default.ie.css"));*/
+            //bundles.Add(new ScriptBundle("~/Content/leaflet").Include(
+            //           //"~/Content/leaflet.css",
+            //           "~/Content/MarkerCluster.css",
+            //           "~/Content/MarkerCluster.Default.ie.css"));
             
             //****************************** JS *************************************
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
