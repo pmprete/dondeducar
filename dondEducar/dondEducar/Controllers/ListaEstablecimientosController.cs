@@ -147,6 +147,7 @@ namespace dondEducar.Controllers
             {
                 EsMapa = esMapa,
                 Pagina = pagina,
+                Orden = orden,
                 TotalDePaginas = totalDePaginas,
                 Filtro = filtro,
                 Categorias = listaCategorias,
